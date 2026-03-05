@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MZ패밀리 크리에이티브 전략 | 지점장 채용 캠페인</title>
+<title>MZ패밀리 크리에이티브 전략</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&family=DM+Serif+Display:ital@0;1&family=Space+Mono:wght@400;700&display=swap');
 :root{
@@ -48,6 +48,16 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
 .info-box strong{color:var(--red);}
 
 /* ══ VER BADGE in header ══ */
+.copy-deploy-btn{
+  display:flex;align-items:center;gap:7px;
+  padding:9px 16px;background:#1A1A1A;color:#fff;
+  border:none;cursor:pointer;font-family:'Space Mono',monospace;
+  font-size:11px;letter-spacing:.8px;border-radius:2px;
+  transition:all .2s;white-space:nowrap;margin-top:4px;
+}
+.copy-deploy-btn:hover{background:var(--red);}
+.copy-deploy-btn.success{background:#1A6E40;}
+.copy-deploy-btn.error{background:var(--red);}
 .ver-active-badge{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-family:'Space Mono',monospace;font-size:10px;color:var(--ink-3);border:1px solid var(--rule);padding:4px 10px;background:var(--bg);}
 .ver-dot{width:6px;height:6px;border-radius:50%;background:var(--red);}
 
@@ -97,8 +107,19 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
 .cta-btn{display:inline-block;padding:7px 15px;background:var(--red);color:#fff;font-size:11px;font-weight:700;font-family:'Noto Sans KR',sans-serif;border-radius:2px;margin-top:auto;cursor:default;}
 .vnote{margin-top:10px;padding:8px 11px;background:var(--bg);border:1px dashed #CCC9C3;font-size:11px;color:var(--ink-3);line-height:1.6;border-radius:2px;}
 .vnote strong{color:var(--ink-2);}
+.dl-btn{
+  display:flex;align-items:center;justify-content:center;gap:5px;
+  width:100%;margin-top:8px;padding:6px 0;
+  background:transparent;border:1px dashed var(--rule);
+  color:var(--ink-3);font-size:10px;font-family:'Space Mono',monospace;
+  letter-spacing:.8px;cursor:pointer;border-radius:2px;
+  transition:all .15s;
+}
+.dl-btn:hover{border-color:var(--red);color:var(--red);background:var(--red-light);}
+.dl-btn svg{width:12px;height:12px;flex-shrink:0;}
+.dl-btn.loading{opacity:.5;pointer-events:none;}
 
-/* ══ 주언규 스타일 특별 카드 ══ */
+/* ══ 열일곱 스타일 특별 카드 ══ */
 .card.joo-style{border-left:3px solid #1A1A1A;}
 .card.joo-style .hook-copy{border-left-color:#1A1A1A;background:#F5F5F5;}
 .card.joo-style .cta-btn{background:#1A1A1A;}
@@ -150,6 +171,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
   .si:first-child{border-top:none;}
 }
 </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <body>
 
@@ -163,7 +185,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
     MZF-ver-2026-03-04-09:00:00 <span class="vtag">v1 · 초기안</span>
   </button>
   <button class="vbtn" onclick="switchVer('v2',this)">
-    MZF-ver-2026-03-04-10:30:00 <span class="vtag">v2 · 주언규식</span>
+    MZF-ver-2026-03-04-10:30:00 <span class="vtag">v2 · 열일곱식</span>
   </button>
   <button class="vbtn active" onclick="switchVer('v3',this)">
     MZF-ver-2026-03-04-14:00:00 <span class="vtag">v3 · 타겟수정</span>
@@ -179,13 +201,16 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
   <div class="header-inner">
     <div class="header-left">
       <div class="brand-pill"><span class="brand-dot"></span>MZ패밀리 · 지점장 채용 캠페인</div>
-      <h1>크리에이티브 전략 <em id="htitle">30종</em></h1>
-      <div class="header-sub" id="hsub">v1 라이트 리디자인 (15종) + v2 주언규식 후킹 구조 (15종)</div>
+      <h1>크리에이티브 전략 <em id="htitle">15종</em></h1>
+      <div class="header-sub" id="hsub">v1 라이트 리디자인 (15종) + v2 열일곱식 후킹 구조 (15종)</div>
       <div class="ver-active-badge"><span class="ver-dot"></span><span id="ver-label">MZF-ver-2026-03-04-14:00:00 활성</span></div>
     </div>
     <div class="header-right">
       <div class="info-box">KPI <strong>리크루팅 DB 확보 극대화</strong><br>타겟 경력설계사 / 팀빌더지점장 / 본부장지망</div>
       <div class="info-box">채널 META · 네이버 · 카카오 · 유튜브<br>포맷 이미지 · 영상 · SEO · 리타겟</div>
+      <button class="copy-deploy-btn" onclick="copyForDeploy()" id="copyBtn">
+        <span id="copyBtnIcon">⬆</span> GitHub Push용 코드 복사
+      </button>
     </div>
   </div>
 </header>
@@ -229,6 +254,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         <div class="body-copy">MZ패밀리는 생명보험 80%, 손해보험 672%를 투명하게 공개합니다. 비교해보세요. 숫자가 말해줍니다.</div>
         <span class="cta-btn">수수료 전체 보기 →</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 타사 "??%" vs MZ패밀리 "80%" 나란히 배치. 붉은 강조. 신문 스타일.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -245,6 +274,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         <div class="body-copy">전직 설계사 인터뷰 형식. "MZ패밀리 오고 나서 영업만 합니다." 올케어 7가지 서비스 자막으로 나열. 15~30초.</div>
         <span class="cta-btn">무료 상담 신청</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 지친 얼굴 → 미소 전환. Before/After 대비. 실제 지점장 출연 권장.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -261,6 +294,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         <div class="body-copy">직접 영업 없이도 팀 실적에서 오버라이딩 수수료가 발생합니다. MZ패밀리는 AI 디지털 시스템으로 팀원 DB까지 자동 공급. 지점장이 팀 관리에만 집중할 수 있는 구조.</div>
         <span class="cta-btn">팀빌딩 구조 확인 →</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 오버라이딩 수익 구조 인포그래픽. 팀원 수 → 수입 증가 곡선 시각화.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -277,6 +314,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         <div class="body-copy">실제 MZ패밀리 지점장의 하루 공개. 오전 상담 신청 확인 → 팀원 배정 → 본사 올케어 처리 → 오후 성과 확인. "내가 관리자가 맞나 싶을 정도로 편합니다." 15~30초 영상.</div>
         <span class="cta-btn">지점장 하루 구경 →</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 타임라인 vlog 스타일. 알림 화면 클로즈업. 실제 지점장 출연 권장.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -293,6 +334,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         <div class="body-copy">지점장 30명 → 10명 완화. 월납 1,000만원 → 500만원 완화. 이 조건, 2026년에만 적용. 지금 시작하면 내년엔 본부장.</div>
         <span class="cta-btn">승급 조건 전체 확인 →</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 빨간 "D-DAY" 카운트다운 + 조건 Before/After 비교표. 뉴스 속보 스타일.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -309,6 +354,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         <div class="body-copy">① 수수료 공개 여부 ② DB 공급 방식 ③ 이행보증 부담 주체 ④ 디지털 지원 시스템 ⑤ 본부장 승급 로드맵.</div>
         <span class="cta-btn">MZ패밀리 조건 보기 →</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 체크리스트 인포그래픽 5장 카드뉴스. 마지막 장 CTA. SEO 블로그 포스팅 세트.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -325,6 +374,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         <div class="body-copy">지점장 최대 고민은 팀원 수급. MZ패밀리는 후불제 DB + 디지털 광고 시스템으로 지원 설계사를 함께 유입시킵니다. 지점장이 직접 리크루팅하지 않아도 됩니다.</div>
         <span class="cta-btn">팀원 수급 방식 확인 →</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 카카오 채널 메시지 UI. "팀원 리크루팅 지원" 핵심 메시지 강조.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -341,6 +394,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         <div class="body-copy">실제 지점장의 하루 루틴 공개. 아침 상담 확인 → 오전 상담 → 본사 설계서 제작 → 오후 클로징. "나머지는 시스템이 합니다."</div>
         <span class="cta-btn">나도 이렇게 일하기 →</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 하루 타임라인 vlog. 모바일 세로형 15~30초.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -357,6 +414,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         <div class="body-copy">오버라이딩 수수료 구조 공개. 직접 영업 + 팀 수입 합산 시뮬레이션. '26년 완화로 10명이면 본부장. 클릭 → 랜딩 수입 계산기.</div>
         <span class="cta-btn">내 예상 수입 계산 →</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 수입 시뮬레이션 인포그래픽. "월 ###만원" 강조.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -373,6 +434,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         <div class="body-copy">오버라이딩 수수료 구조 15초 설명. 팀 총 실적 × 오버라이딩율 = 지점장 수동 수입. "직접 영업 안 해도 팀이 클수록 수입이 커지는 구조입니다." 공유 유도 콘텐츠.</div>
         <span class="cta-btn">수입 구조 계산해보기 →</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 팀원 수 증가 → 지점장 수입 증가 애니메이션. 수입 계산기 랜딩 연결.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -389,6 +454,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         <div class="body-copy">이직 최대 리스크는 초기 DB 비용. MZ패밀리는 후불제로 해결. 이행보증도 본부장·지점장 부담.</div>
         <span class="cta-btn">후불제 조건 확인 →</span>
         <div class="vnote"><strong>📐 비주얼:</strong> "0원으로 시작" 큰 텍스트. 카카오 자동 안내 메시지 플로우 연계.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -405,6 +474,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         <div class="body-copy">본부장 다이렉트 지원. 전용 단톡방 24시간 운영. 고난도 설계도 즉시 해결. 당신 혼자 싸우지 않아도 됩니다.</div>
         <span class="cta-btn">팀 합류 상담 →</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 팀 단톡방 스크린샷 (모자이크) + 따뜻한 톤. 연대감 강조.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -421,6 +494,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         <div class="body-copy">키워드: 보험지점장이직, GA지점장, 보험설계사관리자. 수수료·DB·올케어·본부장 로드맵 4가지 체크리스트 제공. 마지막 CTA로 상담 DB 유도. SEO 상위 노출 목표.</div>
         <span class="cta-btn">이직 체크리스트 받기 →</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 블로그 정보성 글. 4가지 체크리스트 인포그래픽. 실제 지점장 후기 형식.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -437,6 +514,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         <div class="body-copy">실제 지점장 출연. 이전 직장 vs MZ패밀리 수입 비교 (구체적 수치). "믿기 어려우면 직접 확인해보세요." 30~60초.</div>
         <span class="cta-btn">직접 확인하기 →</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 인터뷰 형식. 통장 캡처 (금액 일부 공개). 자막 필수.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -453,6 +534,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         <div class="body-copy">랜딩 방문 후 미전환 유저 재공략. "1:1 무료 상담 15분, 부담 없이 확인만 해보세요." 소프트 CTA.</div>
         <span class="cta-btn">15분 무료 상담 →</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 카운트다운 GIF. 픽셀 기반 리타겟팅 세팅 필수.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -471,13 +556,13 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
 
 
 <!-- ════════════════════════════════════
-     V2 PANEL — 주언규식 후킹 구조
+     V2 PANEL — 열일곱식 후킹 구조
 ════════════════════════════════════ -->
 <div class="version-panel" id="panel-v2">
 
   <div class="ver2-heading">
     <div class="ver2-heading-inner">
-      <h2>주언규 스타일 <em>후킹 구조</em> 15종</h2>
+      <h2>열일곱 스타일 <em>후킹 구조</em> 15종</h2>
       <p>비즈니스PT 후킹 공식 적용 · 문제제기→공감→반전→증거→CTA 5단계 구조</p>
     </div>
     <div class="joo-badge">JOO STYLE · v2</div>
@@ -485,7 +570,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
 
   <!-- 구조 설명 박스 -->
   <div style="margin:16px 52px 0;padding:16px 20px;background:var(--white);border:1px solid var(--rule);border-left:4px solid #1A1A1A;">
-    <div style="font-family:'Space Mono',monospace;font-size:9px;color:#888;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;">주언규 후킹 5단계 공식</div>
+    <div style="font-family:'Space Mono',monospace;font-size:9px;color:#888;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;">열일곱 후킹 5단계 공식</div>
     <div style="display:flex;gap:0;flex-wrap:wrap;">
       <div style="flex:1;min-width:130px;padding:8px 14px;background:#1A1A1A;color:#fff;font-size:11px;font-family:'Noto Sans KR',sans-serif;text-align:center;margin:2px;">①&nbsp;<strong>충격 후크</strong><br><span style="font-size:10px;color:#aaa;">스크롤 멈춤</span></div>
       <div style="flex:1;min-width:130px;padding:8px 14px;background:#2d2d2d;color:#fff;font-size:11px;font-family:'Noto Sans KR',sans-serif;text-align:center;margin:2px;">②&nbsp;<strong>공감 & 문제</strong><br><span style="font-size:10px;color:#aaa;">"맞아" 유발</span></div>
@@ -501,7 +586,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
     <div class="card joo-style featured" data-tags="경력설계사 META 이미지">
       <div class="card-strip s-joo"></div><div class="card-num">J01</div>
       <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">이미지 피드</span><span class="tag tag-channel">META</span><span class="tag tag-joo">주언규 공식</span></div>
+        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">이미지 피드</span><span class="tag tag-channel">META</span><span class="tag tag-joo">열일곱 공식</span></div>
         <div class="card-title">수수료 착취 폭로 — "당신은 얼마 받았나요"</div>
       </div>
       <div class="card-body">
@@ -515,6 +600,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         </div>
         <span class="cta-btn" style="background:#1A1A1A;">수수료 비교 5분 →</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 수수료 파이차트 — "내 몫 vs 회사 몫" 시각화. 충격적 비율.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -522,7 +611,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
     <div class="card joo-style" data-tags="경력설계사 META 영상">
       <div class="card-strip s-joo"></div><div class="card-num">J02</div>
       <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">숏폼 영상</span><span class="tag tag-channel">META · 유튜브</span><span class="tag tag-joo">주언규 공식</span></div>
+        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">숏폼 영상</span><span class="tag tag-channel">META · 유튜브</span><span class="tag tag-joo">열일곱 공식</span></div>
         <div class="card-title">이직 망설임 제거 — "3가지 걱정, 3가지 해법"</div>
       </div>
       <div class="card-body">
@@ -536,6 +625,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         </div>
         <span class="cta-btn" style="background:#1A1A1A;">15분 무료 상담</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 걱정 3개 텍스트 → 하나씩 취소선 처리. 영상 30초. 강한 자막.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -543,7 +636,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
     <div class="card joo-style" data-tags="팀빌더 META 이미지">
       <div class="card-strip s-joo"></div><div class="card-num">J03</div>
       <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">이미지 피드</span><span class="tag tag-channel">META · IG</span><span class="tag tag-joo">주언규 공식</span></div>
+        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">이미지 피드</span><span class="tag tag-channel">META · IG</span><span class="tag tag-joo">열일곱 공식</span></div>
         <div class="card-title">팀 수입 역산 충격형 — "혼자 버는 것보다 팀이 낫다"</div>
       </div>
       <div class="card-body">
@@ -557,6 +650,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         </div>
         <span class="cta-btn" style="background:#1A1A1A;">팀 수입 계산하기</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 혼자 영업 수입 vs 팀 오버라이딩 수입 비교 차트. 팀 규모별 수입 시뮬레이션.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -564,7 +661,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
     <div class="card joo-style featured" data-tags="팀빌더 META 카카오 영상">
       <div class="card-strip s-joo"></div><div class="card-num">J04</div>
       <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">릴스 영상</span><span class="tag tag-channel">IG · 카카오</span><span class="tag tag-joo">주언규 공식</span></div>
+        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">릴스 영상</span><span class="tag tag-channel">IG · 카카오</span><span class="tag tag-joo">열일곱 공식</span></div>
         <div class="card-title">설계사 이탈 원인 제거형 — "왜 팀원이 3개월 만에 나갈까"</div>
       </div>
       <div class="card-body">
@@ -578,6 +675,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         </div>
         <span class="cta-btn" style="background:#1A1A1A;">15분 설명 듣기</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 팀원 이탈 → 본사 지원 시스템 화면 전환. 15~30초 릴스. 강한 자막.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -585,7 +686,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
     <div class="card joo-style" data-tags="본부장 META 이미지">
       <div class="card-strip s-joo"></div><div class="card-num">J05</div>
       <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">본부장 지망</span><span class="tag tag-format">이미지 피드</span><span class="tag tag-channel">META · 네이버</span><span class="tag tag-joo">주언규 공식</span></div>
+        <div class="tags"><span class="tag tag-persona">본부장 지망</span><span class="tag tag-format">이미지 피드</span><span class="tag tag-channel">META · 네이버</span><span class="tag tag-joo">열일곱 공식</span></div>
         <div class="card-title">기회 비용 각인 — "지금 안 하면 1년 후 후회"</div>
       </div>
       <div class="card-body">
@@ -599,6 +700,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         </div>
         <span class="cta-btn" style="background:#1A1A1A;">조건 확인 (무료)</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 타임라인 — 2026 "기회의 창" vs 2027 "문 닫힘". 긴박감 강조.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -606,7 +711,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
     <div class="card joo-style" data-tags="경력설계사 네이버 이미지">
       <div class="card-strip s-joo"></div><div class="card-num">J06</div>
       <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">블로그 SEO</span><span class="tag tag-channel">네이버</span><span class="tag tag-joo">주언규 공식</span></div>
+        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">블로그 SEO</span><span class="tag tag-channel">네이버</span><span class="tag tag-joo">열일곱 공식</span></div>
         <div class="card-title">이직 후회 공감글 — "나는 왜 진작 안 옮겼을까"</div>
       </div>
       <div class="card-body">
@@ -620,6 +725,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         </div>
         <span class="cta-btn" style="background:#1A1A1A;">상담 신청 (부담 없음)</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 실제 후기 형식 블로그. 1인칭 서술. 공감 유도 → SEO 유입.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -627,7 +736,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
     <div class="card joo-style" data-tags="팀빌더 카카오 이미지">
       <div class="card-strip s-joo"></div><div class="card-num">J07</div>
       <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">카카오 비즈보드</span><span class="tag tag-channel">카카오</span><span class="tag tag-joo">주언규 공식</span></div>
+        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">카카오 비즈보드</span><span class="tag tag-channel">카카오</span><span class="tag tag-joo">열일곱 공식</span></div>
         <div class="card-title">지점 확장 로드맵 — "지점장 1년 차, 본부장 2년 차"</div>
       </div>
       <div class="card-body">
@@ -641,6 +750,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         </div>
         <span class="cta-btn" style="background:#1A1A1A;">로드맵 구경하기</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 1년 타임라인 — 입사 → 팀 5명 → 10명 → 본부장. 카카오 비즈보드 최적화.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -648,7 +761,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
     <div class="card joo-style" data-tags="경력설계사 META 영상">
       <div class="card-strip s-joo"></div><div class="card-num">J08</div>
       <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">숏폼 영상</span><span class="tag tag-channel">META · 유튜브</span><span class="tag tag-joo">주언규 공식</span></div>
+        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">숏폼 영상</span><span class="tag tag-channel">META · 유튜브</span><span class="tag tag-joo">열일곱 공식</span></div>
         <div class="card-title">숨겨진 비용 폭로 — "이행보증, 당신 돈으로 냈나요"</div>
       </div>
       <div class="card-body">
@@ -662,6 +775,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         </div>
         <span class="cta-btn" style="background:#1A1A1A;">계약 조건 받기</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 계약서 빨간 동그라미 강조. "이 항목 확인하셨나요?" 자막.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -669,7 +786,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
     <div class="card joo-style" data-tags="본부장 네이버 이미지">
       <div class="card-strip s-joo"></div><div class="card-num">J09</div>
       <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">본부장 지망</span><span class="tag tag-format">이미지 광고</span><span class="tag tag-channel">네이버</span><span class="tag tag-joo">주언규 공식</span></div>
+        <div class="tags"><span class="tag tag-persona">본부장 지망</span><span class="tag tag-format">이미지 광고</span><span class="tag tag-channel">네이버</span><span class="tag tag-joo">열일곱 공식</span></div>
         <div class="card-title">수입 시뮬레이션 — "팀 10명이면 월 수입이"</div>
       </div>
       <div class="card-body">
@@ -683,6 +800,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         </div>
         <span class="cta-btn" style="background:#1A1A1A;">수입 계산기 →</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 구체적 수입 표. "월 ###만원 가능" 빨간 강조. 계산기 랜딩 연결.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -690,7 +811,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
     <div class="card joo-style featured" data-tags="팀빌더 META 영상">
       <div class="card-strip s-joo"></div><div class="card-num">J10</div>
       <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">릴스 영상</span><span class="tag tag-channel">IG · META</span><span class="tag tag-joo">주언규 공식</span></div>
+        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">릴스 영상</span><span class="tag tag-channel">IG · META</span><span class="tag tag-joo">열일곱 공식</span></div>
         <div class="card-title">AI 디지털 지점 역설 — "관리할수록 수입이 느는 구조"</div>
       </div>
       <div class="card-body">
@@ -704,6 +825,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         </div>
         <span class="cta-btn" style="background:#1A1A1A;">구조 설명 듣기</span>
         <div class="vnote"><strong>📐 비주얼:</strong> "지점장 영업 OUT → 팀 관리 IN" 대비. AI 시스템 화면 공개. 15~30초 릴스.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -711,7 +836,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
     <div class="card joo-style" data-tags="경력설계사 카카오 이미지">
       <div class="card-strip s-joo"></div><div class="card-num">J11</div>
       <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">카카오 채널</span><span class="tag tag-channel">카카오</span><span class="tag tag-joo">주언규 공식</span></div>
+        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">카카오 채널</span><span class="tag tag-channel">카카오</span><span class="tag tag-joo">열일곱 공식</span></div>
         <div class="card-title">고객 없는 이직 공포 제거 — "DB 없이 시작해도 됩니다"</div>
       </div>
       <div class="card-body">
@@ -725,6 +850,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         </div>
         <span class="cta-btn" style="background:#1A1A1A;">DB 없이 가능한지 확인</span>
         <div class="vnote"><strong>📐 비주얼:</strong> "공백 기간 0일" 강조. 카카오 채널 1:1 문의 유도.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -732,7 +861,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
     <div class="card joo-style" data-tags="본부장 META 이미지">
       <div class="card-strip s-joo"></div><div class="card-num">J12</div>
       <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">본부장 지망</span><span class="tag tag-format">이미지 피드</span><span class="tag tag-channel">META · FB</span><span class="tag tag-joo">주언규 공식</span></div>
+        <div class="tags"><span class="tag tag-persona">본부장 지망</span><span class="tag tag-format">이미지 피드</span><span class="tag tag-channel">META · FB</span><span class="tag tag-joo">열일곱 공식</span></div>
         <div class="card-title">관리자 한계 돌파 — "지점장으로 멈추지 마세요"</div>
       </div>
       <div class="card-body">
@@ -746,6 +875,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         </div>
         <span class="cta-btn" style="background:#1A1A1A;">본부장 로드맵 확인</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 지점장 vs 본부장 수입 비교표. 직관적 숫자 차이.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -753,7 +886,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
     <div class="card joo-style" data-tags="팀빌더 네이버 이미지">
       <div class="card-strip s-joo"></div><div class="card-num">J13</div>
       <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">블로그 SEO</span><span class="tag tag-channel">네이버</span><span class="tag tag-joo">주언규 공식</span></div>
+        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">블로그 SEO</span><span class="tag tag-channel">네이버</span><span class="tag tag-joo">열일곱 공식</span></div>
         <div class="card-title">GA 지점장 이직 후회 공감글 — "팀원 다 데리고 나올걸"</div>
       </div>
       <div class="card-body">
@@ -767,6 +900,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         </div>
         <span class="cta-btn" style="background:#1A1A1A;">조건 비교해보기</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 1인칭 후기 블로그. 키워드: GA지점장이직, 보험지점장이직. SEO 최적화.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -774,7 +911,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
     <div class="card joo-style" data-tags="경력설계사 META 영상">
       <div class="card-strip s-joo"></div><div class="card-num">J14</div>
       <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">증언형 영상</span><span class="tag tag-channel">META · 유튜브</span><span class="tag tag-joo">주언규 공식</span></div>
+        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">증언형 영상</span><span class="tag tag-channel">META · 유튜브</span><span class="tag tag-joo">열일곱 공식</span></div>
         <div class="card-title">사회적 증거 폭발 — "저도 반신반의했습니다"</div>
       </div>
       <div class="card-body">
@@ -788,6 +925,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         </div>
         <span class="cta-btn" style="background:#1A1A1A;">직접 확인하기</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 반신반의 표정 → 통장 화면 → 미소. 가장 강력한 전환 소재.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -795,7 +936,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
     <div class="card joo-style featured" data-tags="경력설계사 본부장 팀빌더 META 카카오 이미지 영상">
       <div class="card-strip s-joo"></div><div class="card-num">J15</div>
       <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">전 타겟</span><span class="tag tag-format">리타겟팅</span><span class="tag tag-channel">META · 카카오</span><span class="tag tag-joo">주언규 공식</span></div>
+        <div class="tags"><span class="tag tag-persona">전 타겟</span><span class="tag tag-format">리타겟팅</span><span class="tag tag-channel">META · 카카오</span><span class="tag tag-joo">열일곱 공식</span></div>
         <div class="card-title">결정 장벽 제거 — "딱 하나만 물어봐도 됩니다"</div>
       </div>
       <div class="card-body">
@@ -809,13 +950,17 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         </div>
         <span class="cta-btn" style="background:#1A1A1A;">질문 하러 가기 →</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 카카오 채팅창 UI. "질문만 해도 됩니다" 강조. 진입 장벽 최저점 CTA.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
   </div><!-- /grid-v2 -->
 
   <div class="summary-wrap" style="margin-bottom:60px;">
-    <div class="summary-head">📊 v2 주언규 스타일 구성 요약</div>
+    <div class="summary-head">📊 v2 열일곱 스타일 구성 요약</div>
     <div class="summary-grid">
       <div class="si"><h4>후킹 단계 준수</h4><ul><li>① 충격 후크 — 스크롤 멈춤</li><li>② 공감 — "맞아" 유발</li><li>③ 반전 — "그런데" 전환</li><li>④ 증거 — 숫자·사례</li><li>⑤ 낮은 CTA — 장벽 최소화</li></ul></div>
       <div class="si"><h4>페르소나 배분</h4><ul><li>경력 설계사 — 5종 (J01,J02,J06,J08,J14)</li><li>팀빌더 지점장 — 6종 (J03,J04,J07,J10,J11,J13)</li><li>본부장 지망 — 3종 (J05,J09,J12)</li><li>전 타겟 리타겟 — 1종 (J15)</li></ul></div>
@@ -830,7 +975,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
 
   <div class="ver2-heading">
     <div class="ver2-heading-inner">
-      <h2>주언규 스타일 <em>후킹 구조</em> 15종</h2>
+      <h2>열일곱 스타일 <em>후킹 구조</em> 15종</h2>
       <p>v3 타겟 수정 · N잡러 삭제 → 팀빌더 지점장 6종 신규 교체</p>
     </div>
     <div class="joo-badge">TEAM BUILDER · v3</div>
@@ -838,7 +983,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
 
   <!-- 구조 설명 박스 -->
   <div style="margin:16px 52px 0;padding:16px 20px;background:var(--white);border:1px solid var(--rule);border-left:4px solid #1A1A1A;">
-    <div style="font-family:'Space Mono',monospace;font-size:9px;color:#888;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;">주언규 후킹 5단계 공식</div>
+    <div style="font-family:'Space Mono',monospace;font-size:9px;color:#888;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;">열일곱 후킹 5단계 공식</div>
     <div style="display:flex;gap:0;flex-wrap:wrap;">
       <div style="flex:1;min-width:130px;padding:8px 14px;background:#1A1A1A;color:#fff;font-size:11px;font-family:'Noto Sans KR',sans-serif;text-align:center;margin:2px;">①&nbsp;<strong>충격 후크</strong><br><span style="font-size:10px;color:#aaa;">스크롤 멈춤</span></div>
       <div style="flex:1;min-width:130px;padding:8px 14px;background:#2d2d2d;color:#fff;font-size:11px;font-family:'Noto Sans KR',sans-serif;text-align:center;margin:2px;">②&nbsp;<strong>공감 & 문제</strong><br><span style="font-size:10px;color:#aaa;">"맞아" 유발</span></div>
@@ -854,7 +999,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
     <div class="card joo-style featured" data-tags="경력설계사 META 이미지">
       <div class="card-strip s-joo"></div><div class="card-num">J01</div>
       <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">이미지 피드</span><span class="tag tag-channel">META</span><span class="tag tag-joo">주언규 공식</span></div>
+        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">이미지 피드</span><span class="tag tag-channel">META</span><span class="tag tag-joo">열일곱 공식</span></div>
         <div class="card-title">수수료 착취 폭로 — "당신은 얼마 받았나요"</div>
       </div>
       <div class="card-body">
@@ -868,6 +1013,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         </div>
         <span class="cta-btn" style="background:#1A1A1A;">수수료 비교 5분 →</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 수수료 파이차트 — "내 몫 vs 회사 몫" 시각화. 충격적 비율.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -875,7 +1024,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
     <div class="card joo-style" data-tags="경력설계사 META 영상">
       <div class="card-strip s-joo"></div><div class="card-num">J02</div>
       <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">숏폼 영상</span><span class="tag tag-channel">META · 유튜브</span><span class="tag tag-joo">주언규 공식</span></div>
+        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">숏폼 영상</span><span class="tag tag-channel">META · 유튜브</span><span class="tag tag-joo">열일곱 공식</span></div>
         <div class="card-title">이직 망설임 제거 — "3가지 걱정, 3가지 해법"</div>
       </div>
       <div class="card-body">
@@ -889,6 +1038,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         </div>
         <span class="cta-btn" style="background:#1A1A1A;">15분 무료 상담</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 걱정 3개 텍스트 → 하나씩 취소선 처리. 영상 30초. 강한 자막.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -896,7 +1049,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
     <div class="card joo-style" data-tags="팀빌더 META 이미지">
       <div class="card-strip s-joo"></div><div class="card-num">J03</div>
       <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">이미지 피드</span><span class="tag tag-channel">META · IG</span><span class="tag tag-joo">주언규 공식</span></div>
+        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">이미지 피드</span><span class="tag tag-channel">META · IG</span><span class="tag tag-joo">열일곱 공식</span></div>
         <div class="card-title">팀 수입 역산 충격형 — "혼자 버는 것보다 팀이 낫다"</div>
       </div>
       <div class="card-body">
@@ -910,6 +1063,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         </div>
         <span class="cta-btn" style="background:#1A1A1A;">팀 수입 계산하기</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 혼자 영업 수입 vs 팀 오버라이딩 수입 비교 차트. 팀 규모별 수입 시뮬레이션.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -917,7 +1074,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
     <div class="card joo-style featured" data-tags="팀빌더 META 카카오 영상">
       <div class="card-strip s-joo"></div><div class="card-num">J04</div>
       <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">릴스 영상</span><span class="tag tag-channel">IG · 카카오</span><span class="tag tag-joo">주언규 공식</span></div>
+        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">릴스 영상</span><span class="tag tag-channel">IG · 카카오</span><span class="tag tag-joo">열일곱 공식</span></div>
         <div class="card-title">설계사 이탈 원인 제거형 — "왜 팀원이 3개월 만에 나갈까"</div>
       </div>
       <div class="card-body">
@@ -931,6 +1088,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         </div>
         <span class="cta-btn" style="background:#1A1A1A;">15분 설명 듣기</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 팀원 이탈 → 본사 지원 시스템 화면 전환. 15~30초 릴스. 강한 자막.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -938,7 +1099,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
     <div class="card joo-style" data-tags="본부장 META 이미지">
       <div class="card-strip s-joo"></div><div class="card-num">J05</div>
       <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">본부장 지망</span><span class="tag tag-format">이미지 피드</span><span class="tag tag-channel">META · 네이버</span><span class="tag tag-joo">주언규 공식</span></div>
+        <div class="tags"><span class="tag tag-persona">본부장 지망</span><span class="tag tag-format">이미지 피드</span><span class="tag tag-channel">META · 네이버</span><span class="tag tag-joo">열일곱 공식</span></div>
         <div class="card-title">기회 비용 각인 — "지금 안 하면 1년 후 후회"</div>
       </div>
       <div class="card-body">
@@ -952,6 +1113,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         </div>
         <span class="cta-btn" style="background:#1A1A1A;">조건 확인 (무료)</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 타임라인 — 2026 "기회의 창" vs 2027 "문 닫힘". 긴박감 강조.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -959,7 +1124,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
     <div class="card joo-style" data-tags="경력설계사 네이버 이미지">
       <div class="card-strip s-joo"></div><div class="card-num">J06</div>
       <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">블로그 SEO</span><span class="tag tag-channel">네이버</span><span class="tag tag-joo">주언규 공식</span></div>
+        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">블로그 SEO</span><span class="tag tag-channel">네이버</span><span class="tag tag-joo">열일곱 공식</span></div>
         <div class="card-title">이직 후회 공감글 — "나는 왜 진작 안 옮겼을까"</div>
       </div>
       <div class="card-body">
@@ -973,6 +1138,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         </div>
         <span class="cta-btn" style="background:#1A1A1A;">상담 신청 (부담 없음)</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 실제 후기 형식 블로그. 1인칭 서술. 공감 유도 → SEO 유입.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -980,7 +1149,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
     <div class="card joo-style" data-tags="팀빌더 카카오 이미지">
       <div class="card-strip s-joo"></div><div class="card-num">J07</div>
       <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">카카오 비즈보드</span><span class="tag tag-channel">카카오</span><span class="tag tag-joo">주언규 공식</span></div>
+        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">카카오 비즈보드</span><span class="tag tag-channel">카카오</span><span class="tag tag-joo">열일곱 공식</span></div>
         <div class="card-title">지점 확장 로드맵 — "지점장 1년 차, 본부장 2년 차"</div>
       </div>
       <div class="card-body">
@@ -994,6 +1163,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         </div>
         <span class="cta-btn" style="background:#1A1A1A;">로드맵 구경하기</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 1년 타임라인 — 입사 → 팀 5명 → 10명 → 본부장. 카카오 비즈보드 최적화.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -1001,7 +1174,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
     <div class="card joo-style" data-tags="경력설계사 META 영상">
       <div class="card-strip s-joo"></div><div class="card-num">J08</div>
       <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">숏폼 영상</span><span class="tag tag-channel">META · 유튜브</span><span class="tag tag-joo">주언규 공식</span></div>
+        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">숏폼 영상</span><span class="tag tag-channel">META · 유튜브</span><span class="tag tag-joo">열일곱 공식</span></div>
         <div class="card-title">숨겨진 비용 폭로 — "이행보증, 당신 돈으로 냈나요"</div>
       </div>
       <div class="card-body">
@@ -1015,6 +1188,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         </div>
         <span class="cta-btn" style="background:#1A1A1A;">계약 조건 받기</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 계약서 빨간 동그라미 강조. "이 항목 확인하셨나요?" 자막.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -1022,7 +1199,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
     <div class="card joo-style" data-tags="본부장 네이버 이미지">
       <div class="card-strip s-joo"></div><div class="card-num">J09</div>
       <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">본부장 지망</span><span class="tag tag-format">이미지 광고</span><span class="tag tag-channel">네이버</span><span class="tag tag-joo">주언규 공식</span></div>
+        <div class="tags"><span class="tag tag-persona">본부장 지망</span><span class="tag tag-format">이미지 광고</span><span class="tag tag-channel">네이버</span><span class="tag tag-joo">열일곱 공식</span></div>
         <div class="card-title">수입 시뮬레이션 — "팀 10명이면 월 수입이"</div>
       </div>
       <div class="card-body">
@@ -1036,6 +1213,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         </div>
         <span class="cta-btn" style="background:#1A1A1A;">수입 계산기 →</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 구체적 수입 표. "월 ###만원 가능" 빨간 강조. 계산기 랜딩 연결.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -1043,7 +1224,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
     <div class="card joo-style featured" data-tags="팀빌더 META 영상">
       <div class="card-strip s-joo"></div><div class="card-num">J10</div>
       <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">릴스 영상</span><span class="tag tag-channel">IG · META</span><span class="tag tag-joo">주언규 공식</span></div>
+        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">릴스 영상</span><span class="tag tag-channel">IG · META</span><span class="tag tag-joo">열일곱 공식</span></div>
         <div class="card-title">AI 디지털 지점 역설 — "관리할수록 수입이 느는 구조"</div>
       </div>
       <div class="card-body">
@@ -1057,6 +1238,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         </div>
         <span class="cta-btn" style="background:#1A1A1A;">구조 설명 듣기</span>
         <div class="vnote"><strong>📐 비주얼:</strong> "지점장 영업 OUT → 팀 관리 IN" 대비. AI 시스템 화면 공개. 15~30초 릴스.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -1064,7 +1249,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
     <div class="card joo-style" data-tags="경력설계사 카카오 이미지">
       <div class="card-strip s-joo"></div><div class="card-num">J11</div>
       <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">카카오 채널</span><span class="tag tag-channel">카카오</span><span class="tag tag-joo">주언규 공식</span></div>
+        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">카카오 채널</span><span class="tag tag-channel">카카오</span><span class="tag tag-joo">열일곱 공식</span></div>
         <div class="card-title">고객 없는 이직 공포 제거 — "DB 없이 시작해도 됩니다"</div>
       </div>
       <div class="card-body">
@@ -1078,6 +1263,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         </div>
         <span class="cta-btn" style="background:#1A1A1A;">DB 없이 가능한지 확인</span>
         <div class="vnote"><strong>📐 비주얼:</strong> "공백 기간 0일" 강조. 카카오 채널 1:1 문의 유도.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -1085,7 +1274,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
     <div class="card joo-style" data-tags="본부장 META 이미지">
       <div class="card-strip s-joo"></div><div class="card-num">J12</div>
       <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">본부장 지망</span><span class="tag tag-format">이미지 피드</span><span class="tag tag-channel">META · FB</span><span class="tag tag-joo">주언규 공식</span></div>
+        <div class="tags"><span class="tag tag-persona">본부장 지망</span><span class="tag tag-format">이미지 피드</span><span class="tag tag-channel">META · FB</span><span class="tag tag-joo">열일곱 공식</span></div>
         <div class="card-title">관리자 한계 돌파 — "지점장으로 멈추지 마세요"</div>
       </div>
       <div class="card-body">
@@ -1099,6 +1288,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         </div>
         <span class="cta-btn" style="background:#1A1A1A;">본부장 로드맵 확인</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 지점장 vs 본부장 수입 비교표. 직관적 숫자 차이.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -1106,7 +1299,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
     <div class="card joo-style" data-tags="팀빌더 네이버 이미지">
       <div class="card-strip s-joo"></div><div class="card-num">J13</div>
       <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">블로그 SEO</span><span class="tag tag-channel">네이버</span><span class="tag tag-joo">주언규 공식</span></div>
+        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">블로그 SEO</span><span class="tag tag-channel">네이버</span><span class="tag tag-joo">열일곱 공식</span></div>
         <div class="card-title">GA 지점장 이직 후회 공감글 — "팀원 다 데리고 나올걸"</div>
       </div>
       <div class="card-body">
@@ -1120,6 +1313,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         </div>
         <span class="cta-btn" style="background:#1A1A1A;">조건 비교해보기</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 1인칭 후기 블로그. 키워드: GA지점장이직, 보험지점장이직. SEO 최적화.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -1127,7 +1324,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
     <div class="card joo-style" data-tags="경력설계사 META 영상">
       <div class="card-strip s-joo"></div><div class="card-num">J14</div>
       <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">증언형 영상</span><span class="tag tag-channel">META · 유튜브</span><span class="tag tag-joo">주언규 공식</span></div>
+        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">증언형 영상</span><span class="tag tag-channel">META · 유튜브</span><span class="tag tag-joo">열일곱 공식</span></div>
         <div class="card-title">사회적 증거 폭발 — "저도 반신반의했습니다"</div>
       </div>
       <div class="card-body">
@@ -1141,6 +1338,10 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         </div>
         <span class="cta-btn" style="background:#1A1A1A;">직접 확인하기</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 반신반의 표정 → 통장 화면 → 미소. 가장 강력한 전환 소재.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
@@ -1148,7 +1349,7 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
     <div class="card joo-style featured" data-tags="경력설계사 본부장 팀빌더 META 카카오 이미지 영상">
       <div class="card-strip s-joo"></div><div class="card-num">J15</div>
       <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">전 타겟</span><span class="tag tag-format">리타겟팅</span><span class="tag tag-channel">META · 카카오</span><span class="tag tag-joo">주언규 공식</span></div>
+        <div class="tags"><span class="tag tag-persona">전 타겟</span><span class="tag tag-format">리타겟팅</span><span class="tag tag-channel">META · 카카오</span><span class="tag tag-joo">열일곱 공식</span></div>
         <div class="card-title">결정 장벽 제거 — "딱 하나만 물어봐도 됩니다"</div>
       </div>
       <div class="card-body">
@@ -1162,13 +1363,17 @@ header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52p
         </div>
         <span class="cta-btn" style="background:#1A1A1A;">질문 하러 가기 →</span>
         <div class="vnote"><strong>📐 비주얼:</strong> 카카오 채팅창 UI. "질문만 해도 됩니다" 강조. 진입 장벽 최저점 CTA.</div>
+        <button class="dl-btn" onclick="downloadCard(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PNG 다운로드
+        </button>
       </div>
     </div>
 
   </div><!-- /grid-v2 -->
 
   <div class="summary-wrap" style="margin-bottom:60px;">
-    <div class="summary-head">📊 v2 주언규 스타일 구성 요약</div>
+    <div class="summary-head">📊 v2 열일곱 스타일 구성 요약</div>
     <div class="summary-grid">
       <div class="si"><h4>후킹 단계 준수</h4><ul><li>① 충격 후크 — 스크롤 멈춤</li><li>② 공감 — "맞아" 유발</li><li>③ 반전 — "그런데" 전환</li><li>④ 증거 — 숫자·사례</li><li>⑤ 낮은 CTA — 장벽 최소화</li></ul></div>
       <div class="si"><h4>페르소나 배분</h4><ul><li>경력 설계사 — 5종 (J01,J02,J06,J08,J14)</li><li>팀빌더 지점장 — 6종 (J03,J04,J07,J10,J11,J13)</li><li>본부장 지망 — 3종 (J05,J09,J12)</li><li>전 타겟 리타겟 — 1종 (J15)</li></ul></div>
@@ -1191,9 +1396,9 @@ function switchVer(vid, btn) {
   btn.classList.add('active');
   // 헤더 업데이트
   const labels = {
-    v1: { ver:'MZF-ver-2026-03-04-09:00:00', title:'30종', sub:'v1 라이트 리디자인 (15종) + v2 주언규식 후킹 구조 (15종)' },
-    v2: { ver:'MZF-ver-2026-03-04-10:30:00', title:'30종', sub:'v1 라이트 리디자인 (15종) + v2 주언규식 후킹 구조 (15종)' },
-    v3: { ver:'MZF-ver-2026-03-04-14:00:00', title:'30종', sub:'v3 타겟 수정 — N잡러 삭제, 팀빌더 지점장으로 전면 교체' }
+    v1: { ver:'MZF-ver-2026-03-04-09:00:00', title:'15종', sub:'v1 라이트 리디자인 (15종) + v2 열일곱식 후킹 구조 (15종)' },
+    v2: { ver:'MZF-ver-2026-03-04-10:30:00', title:'15종', sub:'v1 라이트 리디자인 (15종) + v2 열일곱식 후킹 구조 (15종)' },
+    v3: { ver:'MZF-ver-2026-03-04-14:00:00', title:'15종', sub:'v3 타겟 수정 — N잡러 삭제, 팀빌더 지점장으로 전면 교체' }
   };
   const l = labels[vid];
   document.getElementById('ver-label').textContent = l.ver + ' 활성';
@@ -1229,6 +1434,87 @@ function resetFilter() {
 
 // 초기 배지 세팅
 window.onload = () => resetFilter();
+
+/* ── GitHub Push용 코드 복사 ── */
+async function copyForDeploy() {
+  const btn = document.getElementById('copyBtn');
+  const icon = document.getElementById('copyBtnIcon');
+  
+  try {
+    // 현재 페이지 전체 HTML 가져오기
+    const fullHtml = document.documentElement.outerHTML;
+    
+    await navigator.clipboard.writeText(fullHtml);
+    
+    btn.classList.add('success');
+    icon.textContent = '✓';
+    btn.childNodes[1].textContent = ' 복사 완료! Claude Code에 붙여넣기 하세요';
+    
+    // 3초 후 원상복구
+    setTimeout(() => {
+      btn.classList.remove('success');
+      icon.textContent = '⬆';
+      btn.childNodes[1].textContent = ' GitHub Push용 코드 복사';
+    }, 3000);
+    
+  } catch(e) {
+    // clipboard API 실패 시 textarea 방식으로 폴백
+    const ta = document.createElement('textarea');
+    ta.value = document.documentElement.outerHTML;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    
+    btn.classList.add('success');
+    icon.textContent = '✓';
+    btn.childNodes[1].textContent = ' 복사 완료!';
+    setTimeout(() => {
+      btn.classList.remove('success');
+      icon.textContent = '⬆';
+      btn.childNodes[1].textContent = ' GitHub Push용 코드 복사';
+    }, 3000);
+  }
+}
+
+/* ── 카드 PNG 다운로드 ── */
+async function downloadCard(btn) {
+  const card = btn.closest('.card');
+  btn.classList.add('loading');
+  btn.textContent = '생성 중...';
+  
+  // 다운로드 버튼 임시 숨김
+  btn.style.display = 'none';
+  
+  try {
+    const canvas = await html2canvas(card, {
+      scale: 2,
+      useCORS: true,
+      backgroundColor: '#ffffff',
+      logging: false
+    });
+    
+    // 카드 제목 추출
+    const titleEl = card.querySelector('.card-title');
+    const numEl = card.querySelector('.card-num');
+    const title = titleEl ? titleEl.textContent.trim().replace(/[^가-힣a-zA-Z0-9]/g, '_').slice(0, 30) : 'card';
+    const num = numEl ? numEl.textContent.trim() : '';
+    const filename = `MZF_${num}_${title}.png`;
+    
+    const link = document.createElement('a');
+    link.download = filename;
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+  } catch(e) {
+    alert('다운로드 실패: ' + e.message);
+  } finally {
+    btn.style.display = '';
+    btn.classList.remove('loading');
+    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> PNG 다운로드';
+  }
+}
 </script>
 </body>
 </html>
