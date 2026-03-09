@@ -3,1517 +3,1146 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MZ패밀리 크리에이티브 전략</title>
+<title>MZ패밀리 × META 지점장 채용 캠페인 광고 소재 기획안</title>
+
+<!-- Pretendard — 열일곱 메인 폰트 -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<!-- Space Mono — 라벨/뱃지 전용 -->
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&family=DM+Serif+Display:ital@0;1&family=Space+Mono:wght@400;700&display=swap');
-:root{
-  --red:#C8202A;--red-light:#FDECEA;--ink:#1A1A1A;--ink-2:#3D3D3D;--ink-3:#6B6B6B;
-  --rule:#E0DDD9;--bg:#F4F1ED;--white:#FFFFFF;
-  --gold:#8A5E1E;--gold-bg:#FDF4E2;--blue:#1A52A0;--blue-bg:#E8F0FA;
-  --green:#1A6E40;--green-bg:#E6F4ED;--purple:#5C2E9A;--purple-bg:#EEE6F8;
+/* ═══════════════════════════════════════
+   열일곱 디자인 시스템 v2
+   레퍼런스: unibest.1x3.kr 실화면 + 첨부 이미지
+   ─────────────────────────────────────
+   핵심: Pretendard 900 + 밝은 에메랄드 + 순백
+═══════════════════════════════════════ */
+:root {
+  /* 컬러 */
+  --G:     #2CBB6B;   /* 메인 그린 — 이미지 픽셀 추출값 */
+  --G2:    #23A35C;   /* 호버 그린 */
+  --G3:    #E8F8EF;   /* 그린 틴트 */
+  --G4:    #F4FCF7;   /* 그린 극연 */
+  --INK:   #111111;   /* 주 텍스트 */
+  --INK2:  #3D3D3D;   /* 보조 */
+  --INK3:  #767676;   /* 설명 */
+  --INK4:  #B0B0B0;   /* 힌트 */
+  --LINE:  #E6E6E6;   /* 구분선 */
+  --LINE2: #F2F2F2;   /* 연 구분선 */
+  --BG:    #FFFFFF;   /* 순백 */
+  --BG2:   #F9FAF9;   /* 오프화이트 */
+  --RED:   #CC2A1E;   /* 도발 레드 */
+  --RED2:  #FEF3F2;   /* 레드 배경 */
+
+  /* 폰트 */
+  --FP: 'Pretendard', -apple-system, 'Apple SD Gothic Neo', sans-serif;
+  --FM: 'Space Mono', monospace;
 }
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{background:var(--bg);color:var(--ink);font-family:'Noto Sans KR',sans-serif;-webkit-font-smoothing:antialiased;}
 
-/* ══ VERSION HISTORY BAR ══ */
-.vhist-bar{background:#1A1A1A;padding:10px 52px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;border-bottom:3px solid var(--red);}
-.vhist-label{font-family:'Space Mono',monospace;font-size:9px;color:#888;letter-spacing:2px;text-transform:uppercase;white-space:nowrap;}
-.vhist-sep{width:1px;height:16px;background:#333;}
-.vbtn{
-  font-family:'Space Mono',monospace;font-size:10px;padding:4px 12px;
-  border:1px solid #333;background:transparent;color:#999;cursor:pointer;
-  transition:all .15s;letter-spacing:.5px;border-radius:2px;white-space:nowrap;
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  font-family: var(--FP);
+  background: var(--BG);
+  color: var(--INK);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-.vbtn:hover{border-color:#888;color:#ccc;}
-.vbtn.active{background:var(--red);border-color:var(--red);color:#fff;}
-.vbtn .vtag{
-  display:inline-block;margin-left:6px;font-size:8px;padding:1px 6px;
-  background:#333;color:#aaa;border-radius:2px;
+::-webkit-scrollbar { width:3px; }
+::-webkit-scrollbar-thumb { background:var(--G); }
+
+/* ═══ 헬퍼 ═══ */
+.mono { font-family:var(--FM); }
+
+/* ═══════════════════════════════════════
+   최상단 네비 바
+═══════════════════════════════════════ */
+.nav {
+  height:46px;
+  background:var(--INK);
+  border-bottom:2px solid var(--G);
+  display:flex; align-items:center;
+  padding:0 64px; gap:16px;
 }
-.vbtn.active .vtag{background:rgba(255,255,255,.2);color:#fff;}
-.vhist-right{margin-left:auto;font-family:'Space Mono',monospace;font-size:9px;color:#555;white-space:nowrap;}
-
-/* ══ HEADER ══ */
-header{background:var(--white);border-bottom:1px solid var(--rule);padding:0 52px;position:relative;}
-.header-top-bar{height:4px;background:var(--red);}
-.header-inner{display:flex;justify-content:space-between;align-items:center;padding:32px 0 28px;gap:32px;}
-.brand-pill{display:inline-flex;align-items:center;gap:7px;background:var(--red);color:#fff;font-size:10px;font-family:'Space Mono',monospace;letter-spacing:1.8px;text-transform:uppercase;padding:5px 13px;margin-bottom:12px;}
-.brand-dot{width:5px;height:5px;border-radius:50%;background:#fff;display:inline-block;}
-.header-left h1{font-family:'DM Serif Display',serif;font-size:clamp(26px,3vw,44px);letter-spacing:-1px;line-height:1.1;color:var(--ink);}
-.header-left h1 em{color:var(--red);font-style:normal;}
-.header-sub{margin-top:8px;font-size:12px;color:var(--ink-3);font-family:'Space Mono',monospace;letter-spacing:.8px;}
-.header-right{display:flex;flex-direction:column;gap:8px;align-items:flex-end;flex-shrink:0;}
-.info-box{background:var(--bg);border:1px solid var(--rule);padding:9px 15px;font-size:11px;font-family:'Space Mono',monospace;color:var(--ink-2);text-align:right;line-height:1.65;}
-.info-box strong{color:var(--red);}
-
-/* ══ VER BADGE in header ══ */
-.copy-deploy-btn{
-  display:flex;align-items:center;gap:7px;
-  padding:9px 16px;background:#1A1A1A;color:#fff;
-  border:none;cursor:pointer;font-family:'Space Mono',monospace;
-  font-size:11px;letter-spacing:.8px;border-radius:2px;
-  transition:all .2s;white-space:nowrap;margin-top:4px;
+.nav-brand {
+  font-family:var(--FM); font-size:10px;
+  letter-spacing:3px; text-transform:uppercase;
+  color:var(--G); font-weight:700;
 }
-.copy-deploy-btn:hover{background:var(--red);}
-.copy-deploy-btn.success{background:#1A6E40;}
-.copy-deploy-btn.error{background:var(--red);}
-.ver-active-badge{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-family:'Space Mono',monospace;font-size:10px;color:var(--ink-3);border:1px solid var(--rule);padding:4px 10px;background:var(--bg);}
-.ver-dot{width:6px;height:6px;border-radius:50%;background:var(--red);}
-
-/* ══ FILTER BAR ══ */
-.filter-bar{background:var(--white);border-bottom:1px solid var(--rule);padding:12px 52px;display:flex;gap:7px;flex-wrap:wrap;align-items:center;position:sticky;top:0;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,.07);}
-.flabel{font-size:9px;font-family:'Space Mono',monospace;color:var(--ink-3);letter-spacing:1px;text-transform:uppercase;align-self:center;padding-right:6px;border-right:1px solid var(--rule);margin-right:2px;}
-.fsep{width:1px;height:18px;background:var(--rule);align-self:center;}
-.filter-btn{padding:5px 12px;border:1px solid var(--rule);background:var(--white);color:var(--ink-2);font-family:'Noto Sans KR',sans-serif;font-size:12px;font-weight:500;cursor:pointer;transition:all .15s;border-radius:2px;}
-.filter-btn:hover{border-color:var(--red);color:var(--red);background:var(--red-light);}
-.filter-btn.active{background:var(--red);border-color:var(--red);color:#fff;}
-.count-badge{margin-left:auto;font-family:'Space Mono',monospace;font-size:11px;color:var(--ink-3);background:var(--bg);border:1px solid var(--rule);padding:4px 10px;align-self:center;}
-
-/* ══ VERSION PANELS ══ */
-.version-panel{display:none;}
-.version-panel.active{display:block;}
-
-/* ══ GRID ══ */
-.grid{padding:28px 52px 52px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-
-/* ══ CARD ══ */
-.card{background:var(--white);border:1px solid var(--rule);position:relative;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s;overflow:hidden;}
-.card:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.10);}
-.card.hidden{display:none;}
-.card.featured{border-left:3px solid var(--red);}
-.card-strip{height:3px;width:100%;}
-.s-persona{background:var(--gold);}
-.s-njob{background:var(--blue);}
-.s-manager{background:var(--green);}
-.s-all{background:linear-gradient(90deg,var(--red) 33%,var(--blue) 66%,var(--green) 100%);}
-.s-joo{background:linear-gradient(90deg,#1A1A1A 50%,var(--red) 100%);}
-.card-num{position:absolute;top:12px;right:14px;font-family:'DM Serif Display',serif;font-size:48px;color:rgba(0,0,0,.04);line-height:1;pointer-events:none;user-select:none;}
-.card.featured .card-num{color:rgba(200,32,42,.07);}
-.card-header{padding:16px 18px 12px;border-bottom:1px solid var(--rule);}
-.tags{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:9px;}
-.tag{font-size:9px;font-family:'Space Mono',monospace;letter-spacing:.7px;padding:2px 7px;border-radius:2px;font-weight:700;text-transform:uppercase;white-space:nowrap;}
-.tag-persona{background:var(--gold-bg);color:var(--gold);}
-.tag-format{background:var(--blue-bg);color:var(--blue);}
-.tag-channel{background:var(--green-bg);color:var(--green);}
-.tag-emotion{background:var(--purple-bg);color:var(--purple);}
-.tag-joo{background:#1A1A1A;color:#fff;}
-.card-title{font-family:'Noto Serif KR',serif;font-size:14px;font-weight:700;color:var(--ink);line-height:1.45;}
-.card-body{padding:14px 18px 18px;flex:1;display:flex;flex-direction:column;}
-.slabel{font-size:9px;font-family:'Space Mono',monospace;letter-spacing:1.8px;text-transform:uppercase;color:var(--ink-3);margin-bottom:5px;}
-.slabel.red{color:var(--red);}
-.hook-copy{font-family:'Noto Serif KR',serif;font-size:14px;font-weight:700;color:var(--ink);line-height:1.65;border-left:3px solid var(--red);padding:7px 0 7px 11px;background:var(--red-light);margin-bottom:12px;}
-.body-copy{font-size:12px;color:var(--ink-2);line-height:1.8;margin-bottom:10px;flex:1;}
-.cta-btn{display:inline-block;padding:7px 15px;background:var(--red);color:#fff;font-size:11px;font-weight:700;font-family:'Noto Sans KR',sans-serif;border-radius:2px;margin-top:auto;cursor:default;}
-.vnote{margin-top:10px;padding:8px 11px;background:var(--bg);border:1px dashed #CCC9C3;font-size:11px;color:var(--ink-3);line-height:1.6;border-radius:2px;}
-.vnote strong{color:var(--ink-2);}
-.dl-btn{
-  display:flex;align-items:center;justify-content:center;gap:5px;
-  width:100%;margin-top:8px;padding:6px 0;
-  background:transparent;border:1px dashed var(--rule);
-  color:var(--ink-3);font-size:10px;font-family:'Space Mono',monospace;
-  letter-spacing:.8px;cursor:pointer;border-radius:2px;
-  transition:all .15s;
+.nav-divider { width:1px; height:14px; background:#2A2A2A; }
+.nav-tag {
+  font-family:var(--FM); font-size:9px;
+  letter-spacing:1.5px; text-transform:uppercase; color:#555;
 }
-.dl-btn:hover{border-color:var(--red);color:var(--red);background:var(--red-light);}
-.dl-btn svg{width:12px;height:12px;flex-shrink:0;}
-.dl-btn.loading{opacity:.5;pointer-events:none;}
-
-/* ══ 열일곱 스타일 특별 카드 ══ */
-.card.joo-style{border-left:3px solid #1A1A1A;}
-.card.joo-style .hook-copy{border-left-color:#1A1A1A;background:#F5F5F5;}
-.card.joo-style .cta-btn{background:#1A1A1A;}
-.card.joo-style .cta-btn:hover{background:#333;}
-
-/* 구조 라벨 강조 */
-.structure-box{margin-bottom:10px;padding:8px 11px;border:1px solid var(--rule);background:#FAFAFA;border-radius:2px;}
-.structure-box .s-row{display:flex;gap:6px;align-items:baseline;margin-bottom:3px;font-size:11px;}
-.structure-box .s-row:last-child{margin-bottom:0;}
-.structure-box .s-key{font-family:'Space Mono',monospace;font-size:9px;color:var(--red);font-weight:700;letter-spacing:1px;text-transform:uppercase;min-width:52px;flex-shrink:0;}
-.structure-box .s-val{color:var(--ink-2);line-height:1.5;}
-
-/* ══ SUMMARY ══ */
-.summary-wrap{margin:0 52px 60px;background:var(--white);border:1px solid var(--rule);border-top:3px solid var(--red);overflow:hidden;}
-.summary-head{padding:13px 26px;border-bottom:1px solid var(--rule);font-family:'Space Mono',monospace;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-3);}
-.summary-grid{display:grid;grid-template-columns:repeat(4,1fr);}
-.si{padding:20px 24px;border-right:1px solid var(--rule);}
-.si:last-child{border-right:none;}
-.si h4{font-size:9px;font-family:'Space Mono',monospace;letter-spacing:1.5px;text-transform:uppercase;color:var(--red);margin-bottom:11px;padding-bottom:7px;border-bottom:1px solid var(--rule);}
-.si ul{list-style:none;}
-.si li{font-size:11.5px;color:var(--ink-2);padding:4px 0;display:flex;align-items:baseline;gap:7px;border-bottom:1px solid #F0EDE9;line-height:1.4;}
-.si li:last-child{border-bottom:none;}
-.si li::before{content:'';width:4px;height:4px;background:var(--red);border-radius:50%;flex-shrink:0;margin-top:5px;}
-
-/* ══ VER2 SECTION HEADING ══ */
-.ver2-heading{padding:24px 52px 0;display:flex;align-items:center;gap:14px;}
-.ver2-heading-inner{flex:1;border-bottom:2px solid #1A1A1A;padding-bottom:12px;}
-.ver2-heading h2{font-family:'DM Serif Display',serif;font-size:22px;color:var(--ink);}
-.ver2-heading h2 em{color:var(--red);font-style:normal;}
-.ver2-heading p{font-size:12px;color:var(--ink-3);margin-top:4px;font-family:'Space Mono',monospace;letter-spacing:.5px;}
-.joo-badge{background:#1A1A1A;color:#fff;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;white-space:nowrap;}
-
-@media(max-width:1100px){
-  .grid{grid-template-columns:repeat(2,1fr);padding:20px 28px 40px;}
-  .vhist-bar,.filter-bar,header{padding-left:28px;padding-right:28px;}
-  .summary-wrap,.ver2-heading{margin-left:28px;margin-right:28px;}
-  .summary-grid{grid-template-columns:repeat(2,1fr);}
-  .si:nth-child(2){border-right:none;}
-  .si:nth-child(3){border-top:1px solid var(--rule);}
-  .si:nth-child(4){border-top:1px solid var(--rule);border-right:none;}
+.nav-right { margin-left:auto; display:flex; align-items:center; gap:10px; }
+.nav-ver {
+  font-family:var(--FM); font-size:9px; color:#444; letter-spacing:1px;
 }
-@media(max-width:680px){
-  .grid{grid-template-columns:1fr;padding:14px 14px 36px;}
-  .vhist-bar,.filter-bar,header{padding-left:14px;padding-right:14px;}
-  .summary-wrap,.ver2-heading{margin-left:14px;margin-right:14px;}
-  .header-inner{flex-direction:column;align-items:flex-start;padding:24px 0 20px;}
-  .summary-grid{grid-template-columns:1fr;}
-  .si{border-right:none;border-top:1px solid var(--rule);}
-  .si:first-child{border-top:none;}
+.nav-copy-btn {
+  font-family:var(--FM); font-size:9px; letter-spacing:1px; text-transform:uppercase;
+  padding:5px 12px; background:transparent;
+  border:1px solid #2A2A2A; color:#666; cursor:pointer;
+  transition:all .2s;
+}
+.nav-copy-btn:hover, .nav-copy-btn.done {
+  background:var(--G); border-color:var(--G); color:#fff;
+}
+
+/* ═══════════════════════════════════════
+   히어로 섹션
+   — 첨부 이미지 레이아웃 1:1 재현
+═══════════════════════════════════════ */
+.hero {
+  padding:64px 64px 56px;
+  background:var(--BG);
+  border-bottom:1px solid var(--LINE);
+  position:relative; overflow:hidden;
+}
+/* 오른쪽 그린 그라디언트 힌트 */
+.hero::before {
+  content:'';
+  position:absolute; right:0; top:0; width:45%; height:100%;
+  background:linear-gradient(135deg, transparent 30%, var(--G4) 100%);
+  pointer-events:none;
+}
+
+/* 상단 배지 */
+.hero-badge {
+  display:inline-flex; align-items:center; gap:8px;
+  border:1px solid var(--G);
+  padding:5px 12px; margin-bottom:28px;
+}
+.hero-badge-dot { width:6px; height:6px; border-radius:50%; background:var(--G); }
+.hero-badge-txt {
+  font-family:var(--FM); font-size:9px;
+  letter-spacing:2.5px; text-transform:uppercase; color:var(--G);
+}
+
+/* 메인 타이틀 — Pretendard 900, 이미지 매칭 크기 */
+.hero-h1 {
+  font-family:var(--FP);
+  font-size:clamp(48px, 6vw, 80px);
+  font-weight:900;
+  line-height:1.08;
+  letter-spacing:-3px;
+  color:var(--INK);
+  margin-bottom:20px;
+}
+.hero-h1 .green { color:var(--G); }
+
+/* 설명 텍스트 */
+.hero-desc {
+  font-size:14px; line-height:1.85;
+  color:var(--INK3); max-width:500px;
+  margin-bottom:40px;
+}
+.hero-desc strong { color:var(--INK); font-weight:700; }
+
+/* KPI 박스 — 이미지와 동일한 구조 */
+.kpi-wrap {
+  display:inline-flex;
+  border:1px solid var(--LINE);
+  background:var(--BG2);
+}
+.kpi {
+  padding:14px 26px;
+  border-right:1px solid var(--LINE);
+  display:flex; flex-direction:column; gap:5px;
+}
+.kpi:last-child { border-right:none; }
+.kpi-n {
+  font-family:var(--FP);
+  font-size:26px; font-weight:900; line-height:1;
+  color:var(--INK); letter-spacing:-1px;
+}
+.kpi-n sup { color:var(--G); font-size:22px; }  /* 종/개/KPI */
+.kpi-lbl {
+  font-family:var(--FM); font-size:8px;
+  letter-spacing:2px; text-transform:uppercase; color:var(--INK4);
+}
+
+/* ═══════════════════════════════════════
+   필터 바 — sticky
+═══════════════════════════════════════ */
+.fbar {
+  position:sticky; top:0; z-index:200;
+  background:var(--BG); border-bottom:1px solid var(--LINE);
+  padding:0 64px; height:50px;
+  display:flex; align-items:center; gap:5px;
+  box-shadow:0 2px 12px rgba(0,0,0,.05);
+}
+.fbar-lbl {
+  font-family:var(--FM); font-size:8px; letter-spacing:2px;
+  text-transform:uppercase; color:var(--INK4);
+  padding-right:10px; border-right:1px solid var(--LINE2);
+  margin-right:3px; white-space:nowrap;
+}
+.fb {
+  font-family:var(--FP); font-size:12px; font-weight:500;
+  color:var(--INK3); padding:5px 12px;
+  background:none; border:1px solid transparent;
+  cursor:pointer; transition:all .15s; white-space:nowrap;
+}
+.fb:hover { color:var(--G); border-color:var(--G); }
+.fb.on { background:var(--G); color:#fff; border-color:var(--G); font-weight:700; }
+.fbar-cnt {
+  margin-left:auto; font-family:var(--FM); font-size:10px; color:var(--INK4);
+}
+
+/* ═══════════════════════════════════════
+   섹션 공통
+═══════════════════════════════════════ */
+.sec {
+  padding:60px 64px 0;
+}
+.sec:last-of-type { padding-bottom:60px; }
+.sec-eye {
+  font-family:var(--FM); font-size:9px;
+  letter-spacing:3px; text-transform:uppercase; color:var(--G);
+  margin-bottom:8px;
+}
+.sec-ttl {
+  font-family:var(--FP);
+  font-size:clamp(22px, 2.6vw, 32px);
+  font-weight:900; letter-spacing:-1px;
+  color:var(--INK); line-height:1.1;
+  padding-bottom:18px;
+  border-bottom:2px solid var(--INK);
+  margin-bottom:32px;
+  display:flex; align-items:center; gap:14px;
+}
+.sec-badge {
+  font-family:var(--FM); font-size:9px; letter-spacing:1.5px;
+  text-transform:uppercase; padding:4px 10px;
+  background:var(--G); color:#fff; font-weight:400;
+}
+
+/* ═══════════════════════════════════════
+   01 카피 원칙 그리드
+═══════════════════════════════════════ */
+.principles {
+  display:grid; grid-template-columns:repeat(3,1fr);
+  gap:1px; background:var(--LINE);
+}
+.pr {
+  background:var(--BG); padding:28px 26px;
+  transition:background .15s;
+}
+.pr:hover { background:var(--G4); }
+.pr-no {
+  font-family:var(--FM); font-size:9px; font-weight:700;
+  color:var(--G); letter-spacing:1px; margin-bottom:14px;
+}
+.pr-name {
+  font-family:var(--FP); font-size:17px; font-weight:800;
+  color:var(--INK); letter-spacing:-.4px; margin-bottom:4px;
+}
+.pr-eng {
+  font-family:var(--FM); font-size:8px; letter-spacing:2px;
+  text-transform:uppercase; color:var(--G); margin-bottom:12px;
+}
+.pr-desc { font-size:13px; color:var(--INK3); line-height:1.8; }
+.pr-tag {
+  display:inline-block; margin-top:12px;
+  font-family:var(--FM); font-size:8px; letter-spacing:1px;
+  text-transform:uppercase; padding:3px 8px;
+  background:var(--G3); color:var(--G2);
+}
+.pr-tag.r { background:var(--RED2); color:var(--RED); }
+
+/* ═══════════════════════════════════════
+   02 타겟 그리드
+═══════════════════════════════════════ */
+.targets { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.tg {
+  border:1px solid var(--LINE); background:var(--BG);
+  transition:border-color .15s;
+}
+.tg:hover { border-color:var(--G); }
+.tg-head {
+  padding:16px 20px; border-bottom:1px solid var(--LINE);
+  display:flex; align-items:center; gap:10px;
+}
+.tg-seg {
+  font-family:var(--FM); font-size:8px; letter-spacing:1.5px;
+  text-transform:uppercase; padding:3px 8px; color:#fff; background:var(--G);
+}
+.tg-seg.s2 { background:var(--INK2); }
+.tg-seg.s3 { background:var(--INK); }
+.tg-name { font-size:14px; font-weight:800; color:var(--INK); }
+.tg-body { padding:18px 20px; }
+.tg-body ul { list-style:none; }
+.tg-body li {
+  font-size:13px; color:var(--INK2); line-height:1.8;
+  padding-left:14px; position:relative;
+}
+.tg-body li::before { content:'—'; position:absolute; left:0; color:var(--G); }
+
+/* ═══════════════════════════════════════
+   03 앵글 테이블
+═══════════════════════════════════════ */
+.atbl { width:100%; border-collapse:collapse; }
+.atbl thead tr { border-bottom:2px solid var(--INK); }
+.atbl th {
+  padding:10px 16px; text-align:left;
+  font-family:var(--FM); font-size:8px; letter-spacing:2px;
+  text-transform:uppercase; color:var(--INK3); font-weight:400;
+}
+.atbl td { padding:14px 16px; border-bottom:1px solid var(--LINE2); vertical-align:top; }
+.atbl tr:hover td { background:var(--G4); }
+.a-no { font-family:var(--FM); font-size:10px; font-weight:700; color:var(--G); }
+.a-nm { font-size:14px; font-weight:800; color:var(--INK); white-space:nowrap; }
+.a-msg { font-size:13px; color:var(--INK2); line-height:1.75; }
+.a-tgt { font-size:12px; color:var(--INK3); line-height:1.65; }
+.bp { display:inline-block; margin-top:5px; font-family:var(--FM); font-size:8px; letter-spacing:1px; padding:2px 7px; background:var(--G3); color:var(--G2); }
+.br { display:inline-block; margin-top:5px; font-family:var(--FM); font-size:8px; letter-spacing:1px; padding:2px 7px; background:var(--RED2); color:var(--RED); }
+
+/* ═══════════════════════════════════════
+   04 소재 카드 그리드
+═══════════════════════════════════════ */
+.legend {
+  display:flex; gap:20px; align-items:center;
+  font-size:12px; color:var(--INK3); margin-bottom:20px;
+}
+.ldot { width:8px; height:8px; border-radius:50%; display:inline-block; margin-right:5px; }
+.ldot.g { background:var(--G); }
+.ldot.r { background:var(--RED); }
+
+.cards {
+  display:grid; grid-template-columns:repeat(3,1fr);
+  gap:1px; background:var(--LINE);
+}
+.card { background:var(--BG); display:flex; flex-direction:column; transition:background .15s; }
+.card:hover { background:var(--G4); }
+.card.hidden { display:none; }
+
+/* 상단 컬러 바 */
+.cbar { height:3px; }
+.cbar.p { background:var(--G); }
+.cbar.a { background:var(--RED); }
+
+.c-inner { padding:24px 24px 0; flex:1; }
+
+/* 메타 */
+.cmeta {
+  display:flex; align-items:center; gap:6px;
+  flex-wrap:wrap; margin-bottom:14px;
+}
+.cno {
+  font-family:var(--FM); font-size:11px; font-weight:700;
+  color:var(--G); min-width:22px;
+}
+.cno.a { color:var(--RED); }
+.cang {
+  font-family:var(--FM); font-size:8px; letter-spacing:1px;
+  text-transform:uppercase; padding:2px 7px;
+}
+.cang.p { background:var(--G3); color:var(--G2); }
+.cang.a { background:var(--RED2); color:var(--RED); }
+.cfmt {
+  font-family:var(--FM); font-size:8px; letter-spacing:.5px;
+  padding:2px 7px; background:#F3F3F3; color:var(--INK4);
+}
+.ctype {
+  margin-left:auto; font-family:var(--FM); font-size:8px;
+  letter-spacing:1px; text-transform:uppercase; padding:3px 9px; color:#fff;
+}
+.ctype.p { background:var(--G); }
+.ctype.a { background:var(--RED); }
+
+/* 헤드라인 */
+.chl {
+  font-family:var(--FP); font-weight:900;
+  font-size:clamp(15px, 1.4vw, 18px);
+  line-height:1.4; letter-spacing:-.4px;
+  color:var(--INK); margin-bottom:18px;
+}
+.chl em { color:var(--G); font-style:normal; }
+.chl.a em { color:var(--RED); }
+
+/* 카피 블록 */
+.cpb { margin-bottom:14px; }
+.cplbl {
+  font-family:var(--FM); font-size:8px; letter-spacing:2px;
+  text-transform:uppercase; color:var(--INK4); margin-bottom:5px;
+}
+.cptxt { font-size:13px; color:var(--INK2); line-height:1.78; }
+
+/* 씬 리스트 */
+.scl { list-style:none; }
+.scl li {
+  font-size:12.5px; color:var(--INK3); line-height:1.7;
+  padding:5px 0 5px 26px; border-bottom:1px solid var(--LINE2); position:relative;
+}
+.scl li:last-child { border-bottom:none; }
+.scl li::before {
+  content:attr(data-n); position:absolute; left:0;
+  font-family:var(--FM); font-size:8px; font-weight:700; color:var(--G);
+}
+
+/* 팁 */
+.ctip {
+  margin:0 24px 0; padding:9px 12px;
+  font-size:11.5px; color:var(--G2); line-height:1.65;
+  border-left:3px solid var(--G); background:var(--G3);
+}
+.ctip.a { border-left-color:var(--RED); background:var(--RED2); color:var(--RED); }
+
+/* 카드 하단 */
+.cfoot {
+  padding:14px 24px; border-top:1px solid var(--LINE2);
+  display:flex; align-items:center; justify-content:space-between;
+  gap:8px; flex-wrap:wrap; margin-top:16px;
+}
+.cta {
+  font-family:var(--FM); font-size:9px; font-weight:700;
+  letter-spacing:.8px; text-transform:uppercase;
+  padding:7px 14px; color:#fff; background:var(--G);
+  border:none; cursor:default;
+}
+.cta.a { background:var(--RED); }
+.ctgt { font-family:var(--FM); font-size:9px; color:var(--INK4); }
+
+/* ═══════════════════════════════════════
+   05 Phase 1
+═══════════════════════════════════════ */
+.phnote { font-size:14px; color:var(--INK3); margin-bottom:24px; line-height:1.8; }
+.phnote strong { color:var(--G); font-weight:700; }
+.phgrid {
+  display:grid; grid-template-columns:repeat(2,1fr);
+  gap:1px; background:var(--LINE);
+}
+.phcard {
+  background:var(--BG); padding:28px 28px;
+  display:flex; gap:20px; align-items:flex-start;
+  transition:background .15s;
+}
+.phcard:hover { background:var(--G4); }
+.phnum {
+  font-family:var(--FP); font-size:52px; font-weight:900;
+  color:var(--G); line-height:1; flex-shrink:0; letter-spacing:-2px;
+}
+.phnum.a { color:var(--RED); }
+.phang {
+  font-family:var(--FM); font-size:9px; letter-spacing:1.5px;
+  text-transform:uppercase; color:var(--INK4); margin-bottom:6px;
+}
+.phhook {
+  font-family:var(--FP); font-size:15px; font-weight:800;
+  color:var(--INK); line-height:1.55; margin-bottom:7px; letter-spacing:-.3px;
+}
+.phstr { font-family:var(--FM); font-size:9px; color:var(--G); }
+.phstr.a { color:var(--RED); }
+
+/* ═══════════════════════════════════════
+   06 교훈 & 다음 작업
+═══════════════════════════════════════ */
+.lesson {
+  background:var(--INK); padding:32px 36px;
+  margin-bottom:28px; border-left:5px solid var(--G);
+}
+.lesson-lbl {
+  font-family:var(--FM); font-size:9px; letter-spacing:2px;
+  text-transform:uppercase; color:var(--G); margin-bottom:12px;
+}
+.lesson-txt { font-size:14px; color:#AAA; line-height:1.9; }
+.lesson-txt strong { color:#fff; }
+.lesson-txt em { color:var(--G); font-style:normal; }
+
+.nxgrid {
+  display:grid; grid-template-columns:repeat(3,1fr);
+  gap:1px; background:var(--LINE);
+}
+.nxcard {
+  background:var(--BG); padding:24px;
+  display:flex; gap:14px; transition:background .15s;
+}
+.nxcard:hover { background:var(--G4); }
+.nxidx { font-family:var(--FM); font-size:10px; font-weight:700; color:var(--G); flex-shrink:0; width:20px; }
+.nxttl { font-size:14px; font-weight:800; color:var(--INK); margin-bottom:6px; }
+.nxdesc { font-size:12.5px; color:var(--INK3); line-height:1.7; }
+
+/* ═══════════════════════════════════════
+   푸터
+═══════════════════════════════════════ */
+footer {
+  background:var(--INK); padding:24px 64px;
+  border-top:2px solid var(--G);
+  display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap;
+}
+.ft-brand { font-family:var(--FM); font-size:10px; color:var(--G); letter-spacing:2px; font-weight:700; }
+.ft-meta { font-family:var(--FM); font-size:9px; color:#444; letter-spacing:.8px; }
+
+/* ═══════════════════════════════════════
+   반응형
+═══════════════════════════════════════ */
+@media (max-width:960px) {
+  .nav, .hero, .fbar, .sec, footer { padding-left:20px; padding-right:20px; }
+  .fbar { overflow-x:auto; height:auto; padding-top:10px; padding-bottom:10px; }
+  .cards, .principles, .targets, .phgrid, .nxgrid { grid-template-columns:1fr; }
+  .hero-h1 { letter-spacing:-1.5px; }
+  .kpi-wrap { flex-wrap:wrap; }
 }
 </style>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <body>
 
-<!-- ════════════════════════════════════
-     VERSION HISTORY BAR
-════════════════════════════════════ -->
-<div class="vhist-bar">
-  <span class="vhist-label">🕐 Ver History</span>
-  <div class="vhist-sep"></div>
-  <button class="vbtn" onclick="switchVer('v1',this)">
-    MZF-ver-2026-03-04-09:00:00 <span class="vtag">v1 · 초기안</span>
-  </button>
-  <button class="vbtn" onclick="switchVer('v2',this)">
-    MZF-ver-2026-03-04-10:30:00 <span class="vtag">v2 · 열일곱식</span>
-  </button>
-  <button class="vbtn active" onclick="switchVer('v3',this)">
-    MZF-ver-2026-03-04-14:00:00 <span class="vtag">v3 · 타겟수정</span>
-  </button>
-  <span class="vhist-right" id="vhist-now">현재 활성 → MZF-ver-2026-03-04-14:00:00</span>
+<!-- ──────────── NAV ──────────── -->
+<nav class="nav">
+  <span class="nav-brand">열일곱하기</span>
+  <span class="nav-divider"></span>
+  <span class="nav-tag">MZ패밀리 × META 지점장 채용 캠페인</span>
+  <div class="nav-right">
+    <span class="nav-ver">v1.1 · 2026.03</span>
+    <button class="nav-copy-btn" id="copyBtn" onclick="copyHTML()">⬆ GitHub Push용 복사</button>
+  </div>
+</nav>
+
+<!-- ──────────── HERO ──────────── -->
+<section class="hero">
+  <div class="hero-badge">
+    <span class="hero-badge-dot"></span>
+    <span class="hero-badge-txt">Campaign Brief · 2026.03</span>
+  </div>
+
+  <h1 class="hero-h1">
+    MZ패밀리<br>
+    <span class="green">지점장 채용 캠페인</span><br>
+    광고 소재 기획안
+  </h1>
+
+  <p class="hero-desc">
+    지점장 채용 DB 수집 목적의 META 광고 소재 기획안입니다.<br>
+    열일곱 카피 원칙을 적용한 <strong>12종 베리에이션</strong>으로 구성됩니다.
+  </p>
+
+  <div class="kpi-wrap">
+    <div class="kpi">
+      <span class="kpi-n">12<sup>종</sup></span>
+      <span class="kpi-lbl">Total Creatives</span>
+    </div>
+    <div class="kpi">
+      <span class="kpi-n">5<sup>개</sup></span>
+      <span class="kpi-lbl">Persuasion Angles</span>
+    </div>
+    <div class="kpi">
+      <span class="kpi-n">4<sup>개</sup></span>
+      <span class="kpi-lbl">Ad Formats</span>
+    </div>
+    <div class="kpi">
+      <span class="kpi-n" style="font-size:20px;letter-spacing:0">KPI</span>
+      <span class="kpi-lbl">Lead Maximization</span>
+    </div>
+  </div>
+</section>
+
+<!-- ──────────── FILTER BAR ──────────── -->
+<div class="fbar">
+  <span class="fbar-lbl">Filter</span>
+  <button class="fb on"   onclick="filt('all',this)">전체 12종</button>
+  <button class="fb"      onclick="filt('pos',this)">✅ 긍정형 9종</button>
+  <button class="fb"      onclick="filt('atk',this)">🔴 도발형 3종</button>
+  <button class="fb"      onclick="filt('고통',this)">고통 포인트</button>
+  <button class="fb"      onclick="filt('권위',this)">권위 신뢰</button>
+  <button class="fb"      onclick="filt('무료',this)">무료 혜택</button>
+  <button class="fb"      onclick="filt('FOMO',this)">FOMO</button>
+  <button class="fb"      onclick="filt('소셜',this)">소셜 프루프</button>
+  <span class="fbar-cnt" id="fcnt">12 / 12</span>
 </div>
 
-<!-- ════════════════════════════════════
-     HEADER
-════════════════════════════════════ -->
-<header>
-  <div class="header-top-bar"></div>
-  <div class="header-inner">
-    <div class="header-left">
-      <div class="brand-pill"><span class="brand-dot"></span>MZ패밀리 · 지점장 채용 캠페인</div>
-      <h1>크리에이티브 전략 <em id="htitle">15종</em></h1>
-      <div class="header-sub" id="hsub">v1 라이트 리디자인 (15종) + v2 열일곱식 후킹 구조 (15종)</div>
-      <div class="ver-active-badge"><span class="ver-dot"></span><span id="ver-label">MZF-ver-2026-03-04-14:00:00 활성</span></div>
+<!-- ──────────── 01 카피 원칙 ──────────── -->
+<section class="sec" id="s01">
+  <div class="sec-eye">01</div>
+  <div class="sec-ttl">카피 원칙 — 열일곱 스타일 <span class="sec-badge">6 Principles</span></div>
+  <div class="principles">
+    <div class="pr">
+      <div class="pr-no">P.01</div>
+      <div class="pr-name">직구 도발</div>
+      <div class="pr-eng">Direct Attack</div>
+      <div class="pr-desc">불편한 진실, 정면 돌파. 독자가 움찔할 만큼 날카롭게 던진다. 나머지는 긍정 방향으로 전환.</div>
+      <span class="pr-tag r">3종에만 적용</span>
     </div>
-    <div class="header-right">
-      <div class="info-box">KPI <strong>리크루팅 DB 확보 극대화</strong><br>타겟 경력설계사 / 팀빌더지점장 / 본부장지망</div>
-      <div class="info-box">채널 META · 네이버 · 카카오 · 유튜브<br>포맷 이미지 · 영상 · SEO · 리타겟</div>
-      <button class="copy-deploy-btn" onclick="copyForDeploy()" id="copyBtn">
-        <span id="copyBtnIcon">⬆</span> GitHub Push용 코드 복사
-      </button>
+    <div class="pr">
+      <div class="pr-no">P.02</div>
+      <div class="pr-name">단문 끊어치기</div>
+      <div class="pr-eng">Short Punch</div>
+      <div class="pr-desc">긴 문장 1개보다 짧은 문장 3개. 리듬감이 스크롤을 멈춘다. 읽히는 광고가 팔리는 광고.</div>
+      <span class="pr-tag">전 소재 적용</span>
     </div>
-  </div>
-</header>
-
-<!-- ════════════════════════════════════
-     FILTER BAR
-════════════════════════════════════ -->
-<div class="filter-bar">
-  <span class="flabel">전체</span>
-  <button class="filter-btn active" onclick="fc('all',event)">전체</button>
-  <div class="fsep"></div>
-  <span class="flabel">페르소나</span>
-  <button class="filter-btn" onclick="fc('경력설계사',event)">경력 설계사</button>
-  <button class="filter-btn" onclick="fc('팀빌더',event)">팀빌더 지점장</button>
-  <button class="filter-btn" onclick="fc('본부장',event)">본부장 지망</button>
-  <div class="fsep"></div>
-  <span class="flabel">채널</span>
-  <button class="filter-btn" onclick="fc('META',event)">META</button>
-  <button class="filter-btn" onclick="fc('네이버',event)">네이버</button>
-  <button class="filter-btn" onclick="fc('카카오',event)">카카오</button>
-  <button class="filter-btn" onclick="fc('영상',event)">영상</button>
-  <span class="count-badge" id="badge">15 / 15</span>
-</div>
-
-<!-- ════════════════════════════════════
-     V1 PANEL — 라이트 리디자인 (저장본)
-════════════════════════════════════ -->
-<div class="version-panel" id="panel-v1">
-  <div class="grid" id="grid-v1">
-
-    <div class="card featured" data-tags="경력설계사 META 이미지">
-      <div class="card-strip s-persona"></div><div class="card-num">01</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">이미지 카드</span><span class="tag tag-channel">META</span><span class="tag tag-emotion">분노 / 공감</span></div>
-        <div class="card-title">수수료 비교 폭로형</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">Hook Copy</div>
-        <div class="hook-copy">"타사 수수료율,<br>왜 아무도 공개 안 할까요?"</div>
-        <div class="slabel">Body Copy</div>
-        <div class="body-copy">MZ패밀리는 생명보험 80%, 손해보험 672%를 투명하게 공개합니다. 비교해보세요. 숫자가 말해줍니다.</div>
-        <span class="cta-btn">수수료 전체 보기 →</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 타사 "??%" vs MZ패밀리 "80%" 나란히 배치. 붉은 강조. 신문 스타일.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
+    <div class="pr">
+      <div class="pr-no">P.03</div>
+      <div class="pr-name">숫자 충격</div>
+      <div class="pr-eng">Number First</div>
+      <div class="pr-desc">추상 표현 금지. '많은 경험'이 아니라 '28년'. '대부분'이 아니라 '10명 중 7명'. 구체적 수치가 신뢰를 만든다.</div>
+      <span class="pr-tag">가능한 모든 소재</span>
     </div>
-
-    <div class="card" data-tags="경력설계사 META 영상">
-      <div class="card-strip s-persona"></div><div class="card-num">02</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">숏폼 영상</span><span class="tag tag-channel">META · 유튜브</span><span class="tag tag-emotion">공감 / 전환</span></div>
-        <div class="card-title">설계사 독백 영상 — "나 혼자 다 했다"</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">Hook Copy</div>
-        <div class="hook-copy">"DB 구하고, 설계하고,<br>증권 만들고, 문자 보내고…<br>나 혼자 다 했습니다."</div>
-        <div class="slabel">Body Copy</div>
-        <div class="body-copy">전직 설계사 인터뷰 형식. "MZ패밀리 오고 나서 영업만 합니다." 올케어 7가지 서비스 자막으로 나열. 15~30초.</div>
-        <span class="cta-btn">무료 상담 신청</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 지친 얼굴 → 미소 전환. Before/After 대비. 실제 지점장 출연 권장.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
+    <div class="pr">
+      <div class="pr-no">P.04</div>
+      <div class="pr-name">당신 지목</div>
+      <div class="pr-eng">Direct Pointer</div>
+      <div class="pr-desc">'설계사들은' 대신 '당신은'. 직접 지목이 관여도를 3배 높인다. 내 얘기처럼 느끼게.</div>
+      <span class="pr-tag">전 소재 적용</span>
     </div>
-
-    <div class="card" data-tags="팀빌더 META 이미지">
-      <div class="card-strip s-manager"></div><div class="card-num">03</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">이미지 카드</span><span class="tag tag-channel">META · IG</span><span class="tag tag-emotion">야망 / 성취</span></div>
-        <div class="card-title">온라인 팀빌딩 비전 — "잠자는 동안 팀이 자랍니다"</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">Hook Copy</div>
-        <div class="hook-copy">"설계사 10명이<br>일하는 동안<br>지점장 수입은 계속 쌓입니다."</div>
-        <div class="slabel">Body Copy</div>
-        <div class="body-copy">직접 영업 없이도 팀 실적에서 오버라이딩 수수료가 발생합니다. MZ패밀리는 AI 디지털 시스템으로 팀원 DB까지 자동 공급. 지점장이 팀 관리에만 집중할 수 있는 구조.</div>
-        <span class="cta-btn">팀빌딩 구조 확인 →</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 오버라이딩 수익 구조 인포그래픽. 팀원 수 → 수입 증가 곡선 시각화.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
+    <div class="pr">
+      <div class="pr-no">P.05</div>
+      <div class="pr-name">반전 구조</div>
+      <div class="pr-eng">Reversal Frame</div>
+      <div class="pr-desc">도발형: 공감 → 충격 → 희망. 긍정형: 가능성 → 구조 → 기회 순으로 전개.</div>
+      <span class="pr-tag">소재별 적용</span>
     </div>
-
-    <div class="card featured" data-tags="팀빌더 META 카카오 영상">
-      <div class="card-strip s-manager"></div><div class="card-num">04</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">릴스 / 숏폼</span><span class="tag tag-channel">IG · 카카오</span><span class="tag tag-emotion">욕망 자극</span></div>
-        <div class="card-title">디지털 지점 하루 루틴 공개 — "지점장이 할 일이 없습니다"</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">Hook Copy</div>
-        <div class="hook-copy">"팀원 DB는 AI가 채우고,<br>설계서는 본사가 만들고,<br>지점장은 클로징만 합니다."</div>
-        <div class="slabel">Body Copy</div>
-        <div class="body-copy">실제 MZ패밀리 지점장의 하루 공개. 오전 상담 신청 확인 → 팀원 배정 → 본사 올케어 처리 → 오후 성과 확인. "내가 관리자가 맞나 싶을 정도로 편합니다." 15~30초 영상.</div>
-        <span class="cta-btn">지점장 하루 구경 →</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 타임라인 vlog 스타일. 알림 화면 클로즈업. 실제 지점장 출연 권장.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-    <div class="card" data-tags="본부장 META 네이버 이미지">
-      <div class="card-strip s-manager"></div><div class="card-num">05</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">본부장 지망</span><span class="tag tag-format">이미지 카드</span><span class="tag tag-channel">META · 네이버</span><span class="tag tag-emotion">긴박감 / 기회</span></div>
-        <div class="card-title">'26년 한정 본부장 조건 완화 긴급 공지형</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">Hook Copy</div>
-        <div class="hook-copy">"2026년, 본부장 되기<br>가장 쉬운 해가 왔습니다."</div>
-        <div class="slabel">Body Copy</div>
-        <div class="body-copy">지점장 30명 → 10명 완화. 월납 1,000만원 → 500만원 완화. 이 조건, 2026년에만 적용. 지금 시작하면 내년엔 본부장.</div>
-        <span class="cta-btn">승급 조건 전체 확인 →</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 빨간 "D-DAY" 카운트다운 + 조건 Before/After 비교표. 뉴스 속보 스타일.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-    <div class="card" data-tags="경력설계사 네이버 이미지">
-      <div class="card-strip s-persona"></div><div class="card-num">06</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">카드뉴스</span><span class="tag tag-channel">네이버 블로그</span><span class="tag tag-emotion">정보 / 신뢰</span></div>
-        <div class="card-title">GA 이직 체크리스트 정보성 콘텐츠</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">Hook Copy</div>
-        <div class="hook-copy">"GA 이직 전, 반드시<br>확인해야 할 5가지"</div>
-        <div class="slabel">Body Copy</div>
-        <div class="body-copy">① 수수료 공개 여부 ② DB 공급 방식 ③ 이행보증 부담 주체 ④ 디지털 지원 시스템 ⑤ 본부장 승급 로드맵.</div>
-        <span class="cta-btn">MZ패밀리 조건 보기 →</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 체크리스트 인포그래픽 5장 카드뉴스. 마지막 장 CTA. SEO 블로그 포스팅 세트.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-    <div class="card" data-tags="팀빌더 카카오 이미지">
-      <div class="card-strip s-manager"></div><div class="card-num">07</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">카카오 메시지</span><span class="tag tag-channel">카카오 비즈보드</span><span class="tag tag-emotion">신뢰 / 정보</span></div>
-        <div class="card-title">설계사 팀 구성 노하우 — "어디서 어떻게 뽑나요"</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">Hook Copy</div>
-        <div class="hook-copy">"설계사 어디서 구하세요?<br>MZ패밀리는 본사가<br>DB까지 같이 줍니다."</div>
-        <div class="slabel">Body Copy</div>
-        <div class="body-copy">지점장 최대 고민은 팀원 수급. MZ패밀리는 후불제 DB + 디지털 광고 시스템으로 지원 설계사를 함께 유입시킵니다. 지점장이 직접 리크루팅하지 않아도 됩니다.</div>
-        <span class="cta-btn">팀원 수급 방식 확인 →</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 카카오 채널 메시지 UI. "팀원 리크루팅 지원" 핵심 메시지 강조.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-    <div class="card" data-tags="경력설계사 META 영상">
-      <div class="card-strip s-persona"></div><div class="card-num">08</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">숏폼 영상</span><span class="tag tag-channel">META · 유튜브</span><span class="tag tag-emotion">신뢰 / 검증</span></div>
-        <div class="card-title">디지털 비서 시스템 실사용 후기형</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">Hook Copy</div>
-        <div class="hook-copy">"설계사 10년 만에 처음으로<br>영업에만 집중해봤습니다."</div>
-        <div class="slabel">Body Copy</div>
-        <div class="body-copy">실제 지점장의 하루 루틴 공개. 아침 상담 확인 → 오전 상담 → 본사 설계서 제작 → 오후 클로징. "나머지는 시스템이 합니다."</div>
-        <span class="cta-btn">나도 이렇게 일하기 →</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 하루 타임라인 vlog. 모바일 세로형 15~30초.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-    <div class="card" data-tags="본부장 네이버 이미지">
-      <div class="card-strip s-manager"></div><div class="card-num">09</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">본부장 지망</span><span class="tag tag-format">이미지 광고</span><span class="tag tag-channel">네이버 파워링크</span><span class="tag tag-emotion">야망 / 성취</span></div>
-        <div class="card-title">본부장 수입 계산기 클릭베이트형</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">Hook Copy</div>
-        <div class="hook-copy">"지점장 10명 관리하면<br>월 수입이 얼마일까요?"</div>
-        <div class="slabel">Body Copy</div>
-        <div class="body-copy">오버라이딩 수수료 구조 공개. 직접 영업 + 팀 수입 합산 시뮬레이션. '26년 완화로 10명이면 본부장. 클릭 → 랜딩 수입 계산기.</div>
-        <span class="cta-btn">내 예상 수입 계산 →</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 수입 시뮬레이션 인포그래픽. "월 ###만원" 강조.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-    <div class="card featured" data-tags="팀빌더 META 영상">
-      <div class="card-strip s-manager"></div><div class="card-num">10</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">릴스 / 숏폼</span><span class="tag tag-channel">IG · META</span><span class="tag tag-emotion">놀라움 / 공유</span></div>
-        <div class="card-title">오버라이딩 수입 구조 충격 공개 — "팀이 팔면 내 돈"</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">Hook Copy</div>
-        <div class="hook-copy">"팀원 10명이<br>각자 500만원씩 팔면<br>지점장 통장엔 얼마 들어올까요?"</div>
-        <div class="slabel">Body Copy</div>
-        <div class="body-copy">오버라이딩 수수료 구조 15초 설명. 팀 총 실적 × 오버라이딩율 = 지점장 수동 수입. "직접 영업 안 해도 팀이 클수록 수입이 커지는 구조입니다." 공유 유도 콘텐츠.</div>
-        <span class="cta-btn">수입 구조 계산해보기 →</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 팀원 수 증가 → 지점장 수입 증가 애니메이션. 수입 계산기 랜딩 연결.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-    <div class="card" data-tags="경력설계사 카카오 이미지">
-      <div class="card-strip s-persona"></div><div class="card-num">11</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">카카오 메시지</span><span class="tag tag-channel">카카오 채널</span><span class="tag tag-emotion">신뢰 / 안심</span></div>
-        <div class="card-title">후불제 DB 리스크 제로 강조형</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">Hook Copy</div>
-        <div class="hook-copy">"DB 먼저 쓰고,<br>계약 되면 정산합니다.<br>초기 비용 없습니다."</div>
-        <div class="slabel">Body Copy</div>
-        <div class="body-copy">이직 최대 리스크는 초기 DB 비용. MZ패밀리는 후불제로 해결. 이행보증도 본부장·지점장 부담.</div>
-        <span class="cta-btn">후불제 조건 확인 →</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> "0원으로 시작" 큰 텍스트. 카카오 자동 안내 메시지 플로우 연계.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-    <div class="card" data-tags="본부장 META 이미지">
-      <div class="card-strip s-manager"></div><div class="card-num">12</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">본부장 지망</span><span class="tag tag-format">이미지 카드</span><span class="tag tag-channel">META · FB</span><span class="tag tag-emotion">소속감 / 커뮤니티</span></div>
-        <div class="card-title">패밀리 커뮤니티 소속감 자극형</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">Hook Copy</div>
-        <div class="hook-copy">"혼자가 아닙니다.<br>24시간 함께하는<br>MZ패밀리가 있습니다."</div>
-        <div class="slabel">Body Copy</div>
-        <div class="body-copy">본부장 다이렉트 지원. 전용 단톡방 24시간 운영. 고난도 설계도 즉시 해결. 당신 혼자 싸우지 않아도 됩니다.</div>
-        <span class="cta-btn">팀 합류 상담 →</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 팀 단톡방 스크린샷 (모자이크) + 따뜻한 톤. 연대감 강조.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-    <div class="card" data-tags="팀빌더 네이버 이미지">
-      <div class="card-strip s-manager"></div><div class="card-num">13</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">블로그 SEO</span><span class="tag tag-channel">네이버 검색</span><span class="tag tag-emotion">정보 / 탐색</span></div>
-        <div class="card-title">보험 지점장 이직 검색자 정보형 유입</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">Hook Copy (블로그 제목)</div>
-        <div class="hook-copy">"보험 GA 지점장 이직,<br>이것만 확인하면 됩니다 (2026)"</div>
-        <div class="slabel">Body Copy</div>
-        <div class="body-copy">키워드: 보험지점장이직, GA지점장, 보험설계사관리자. 수수료·DB·올케어·본부장 로드맵 4가지 체크리스트 제공. 마지막 CTA로 상담 DB 유도. SEO 상위 노출 목표.</div>
-        <span class="cta-btn">이직 체크리스트 받기 →</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 블로그 정보성 글. 4가지 체크리스트 인포그래픽. 실제 지점장 후기 형식.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-    <div class="card" data-tags="경력설계사 META 영상">
-      <div class="card-strip s-persona"></div><div class="card-num">14</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">증언형 영상</span><span class="tag tag-channel">META · 유튜브</span><span class="tag tag-emotion">사회적 증거</span></div>
-        <div class="card-title">실제 지점장 월수입 공개 리얼리티형</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">Hook Copy</div>
-        <div class="hook-copy">"이직 3개월 차,<br>솔직하게 공개합니다."</div>
-        <div class="slabel">Body Copy</div>
-        <div class="body-copy">실제 지점장 출연. 이전 직장 vs MZ패밀리 수입 비교 (구체적 수치). "믿기 어려우면 직접 확인해보세요." 30~60초.</div>
-        <span class="cta-btn">직접 확인하기 →</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 인터뷰 형식. 통장 캡처 (금액 일부 공개). 자막 필수.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-    <div class="card featured" data-tags="경력설계사 본부장 팀빌더 META 카카오 이미지 영상">
-      <div class="card-strip s-all"></div><div class="card-num">15</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">전 타겟</span><span class="tag tag-format">리타겟팅</span><span class="tag tag-channel">META · 카카오</span><span class="tag tag-emotion">긴박감 / 마감</span></div>
-        <div class="card-title">랜딩 이탈자 재타겟팅 — 마감 카운트다운</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">Hook Copy</div>
-        <div class="hook-copy">"아직 고민 중이신가요?<br>'26년 특별 조건은<br>올해만 적용됩니다."</div>
-        <div class="slabel">Body Copy</div>
-        <div class="body-copy">랜딩 방문 후 미전환 유저 재공략. "1:1 무료 상담 15분, 부담 없이 확인만 해보세요." 소프트 CTA.</div>
-        <span class="cta-btn">15분 무료 상담 →</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 카운트다운 GIF. 픽셀 기반 리타겟팅 세팅 필수.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-  </div><!-- /grid-v1 -->
-
-  <div class="summary-wrap" style="margin-bottom:60px;">
-    <div class="summary-head">📊 v1 캠페인 구성 요약</div>
-    <div class="summary-grid">
-      <div class="si"><h4>페르소나</h4><ul><li>경력 설계사 — 5종</li><li>팀빌더 지점장 — 6종</li><li>본부장 지망 — 3종</li><li>전 타겟 리타겟 — 1종</li></ul></div>
-      <div class="si"><h4>포맷</h4><ul><li>이미지 / 카드뉴스 — 9종</li><li>숏폼 영상 — 4종</li><li>블로그 SEO — 1종</li><li>리타겟팅 — 1종</li></ul></div>
-      <div class="si"><h4>채널</h4><ul><li>META (FB/IG) — 10종</li><li>네이버 — 3종</li><li>카카오 — 4종</li><li>유튜브 — 3종</li></ul></div>
-      <div class="si"><h4>집행 우선순위</h4><ul><li>1순위 — #01 수수료 폭로형</li><li>1순위 — #04 디지털 지점 루틴</li><li>1순위 — #10 오버라이딩 수입 구조</li><li>리타겟 — #15 마감 카운트</li></ul></div>
+    <div class="pr">
+      <div class="pr-no">P.06</div>
+      <div class="pr-name">구어체</div>
+      <div class="pr-eng">Conversational</div>
+      <div class="pr-desc">'안내드립니다' 보다 '알려드릴게요'. 가깝고 친근한 전문가 느낌. 거리감이 없어야 신청한다.</div>
+      <span class="pr-tag">전 소재 적용</span>
     </div>
   </div>
-</div><!-- /panel-v1 -->
+</section>
 
-
-<!-- ════════════════════════════════════
-     V2 PANEL — 열일곱식 후킹 구조
-════════════════════════════════════ -->
-<div class="version-panel" id="panel-v2">
-
-  <div class="ver2-heading">
-    <div class="ver2-heading-inner">
-      <h2>열일곱 스타일 <em>후킹 구조</em> 15종</h2>
-      <p>비즈니스PT 후킹 공식 적용 · 문제제기→공감→반전→증거→CTA 5단계 구조</p>
+<!-- ──────────── 02 타겟 ──────────── -->
+<section class="sec" id="s02">
+  <div class="sec-eye">02</div>
+  <div class="sec-ttl">타겟 오디언스 <span class="sec-badge">3 Segments</span></div>
+  <div class="targets">
+    <div class="tg">
+      <div class="tg-head"><span class="tg-seg">SEG 01</span><span class="tg-name">현직 설계사 · 팀빌더 지망</span></div>
+      <div class="tg-body"><ul>
+        <li>보험·금융 설계사 3~10년차</li>
+        <li>현재 혼자 영업 중, 팀 구조 고민</li>
+        <li>오버라이딩 수익 구조 인지 있으나 경험 없음</li>
+        <li>30~45세 남·여 / Facebook + Instagram</li>
+        <li>월 실수령 300~600만원 구간</li>
+      </ul></div>
     </div>
-    <div class="joo-badge">JOO STYLE · v2</div>
+    <div class="tg">
+      <div class="tg-head"><span class="tg-seg s2">SEG 02</span><span class="tg-name">본부장 지망 · 조직 빌더</span></div>
+      <div class="tg-body"><ul>
+        <li>소규모 팀 운영 중 (3~10명)</li>
+        <li>본부장 승격 조건 충족 가능성 인식</li>
+        <li>AI·디지털 영업 도구에 관심 높음</li>
+        <li>35~50세 남성 / Facebook 주 활동</li>
+        <li>팀 오버라이딩 수익 구조 최적화 니즈</li>
+      </ul></div>
+    </div>
+    <div class="tg">
+      <div class="tg-head"><span class="tg-seg s3">SEG 03</span><span class="tg-name">리타겟팅 · 결정 대기층</span></div>
+      <div class="tg-body"><ul>
+        <li>웹사이트 방문자 · 광고 반응자</li>
+        <li>경쟁사 GA·보험대리점 관심자</li>
+        <li>Lookalike — 기존 지점장 기반</li>
+        <li>정보 탐색 완료, 결심만 남은 층</li>
+        <li>소셜 프루프 + 무료 혜택에 반응</li>
+      </ul></div>
+    </div>
   </div>
+</section>
 
-  <!-- 구조 설명 박스 -->
-  <div style="margin:16px 52px 0;padding:16px 20px;background:var(--white);border:1px solid var(--rule);border-left:4px solid #1A1A1A;">
-    <div style="font-family:'Space Mono',monospace;font-size:9px;color:#888;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;">열일곱 후킹 5단계 공식</div>
-    <div style="display:flex;gap:0;flex-wrap:wrap;">
-      <div style="flex:1;min-width:130px;padding:8px 14px;background:#1A1A1A;color:#fff;font-size:11px;font-family:'Noto Sans KR',sans-serif;text-align:center;margin:2px;">①&nbsp;<strong>충격 후크</strong><br><span style="font-size:10px;color:#aaa;">스크롤 멈춤</span></div>
-      <div style="flex:1;min-width:130px;padding:8px 14px;background:#2d2d2d;color:#fff;font-size:11px;font-family:'Noto Sans KR',sans-serif;text-align:center;margin:2px;">②&nbsp;<strong>공감 & 문제</strong><br><span style="font-size:10px;color:#aaa;">"맞아" 유발</span></div>
-      <div style="flex:1;min-width:130px;padding:8px 14px;background:var(--red);color:#fff;font-size:11px;font-family:'Noto Sans KR',sans-serif;text-align:center;margin:2px;">③&nbsp;<strong>반전 & 해법</strong><br><span style="font-size:10px;color:#ffcdd2;">"그런데" 전환</span></div>
-      <div style="flex:1;min-width:130px;padding:8px 14px;background:#b01c24;color:#fff;font-size:11px;font-family:'Noto Sans KR',sans-serif;text-align:center;margin:2px;">④&nbsp;<strong>증거 & 신뢰</strong><br><span style="font-size:10px;color:#ffcdd2;">숫자·사례</span></div>
-      <div style="flex:1;min-width:130px;padding:8px 14px;background:#8a141b;color:#fff;font-size:11px;font-family:'Noto Sans KR',sans-serif;text-align:center;margin:2px;">⑤&nbsp;<strong>낮은 CTA</strong><br><span style="font-size:10px;color:#ffcdd2;">장벽 최소화</span></div>
+<!-- ──────────── 03 앵글 ──────────── -->
+<section class="sec" id="s03">
+  <div class="sec-eye">03</div>
+  <div class="sec-ttl">설득 앵글 프레임워크 <span class="sec-badge">5 Angles</span></div>
+  <table class="atbl">
+    <thead><tr>
+      <th style="width:44px">No.</th><th style="width:120px">앵글</th>
+      <th>핵심 메시지 방향</th><th style="width:200px">적합 타겟</th>
+    </tr></thead>
+    <tbody>
+      <tr>
+        <td class="a-no">01</td><td class="a-nm">고통 포인트</td>
+        <td class="a-msg">혼자 뛰는 한계 → 팀 구조 필요성 자각.<br><span class="br">도발형 2종 포함</span></td>
+        <td class="a-tgt">혼자 영업 중인 설계사, 3~10년차</td>
+      </tr>
+      <tr>
+        <td class="a-no">02</td><td class="a-nm">권위 신뢰</td>
+        <td class="a-msg">MZ패밀리 시스템, AI 디지털 지점, 본사 지원 → 신뢰 형성.<br><span class="bp">긍정형 전용</span></td>
+        <td class="a-tgt">본부장 지망, 시스템 중시형</td>
+      </tr>
+      <tr>
+        <td class="a-no">03</td><td class="a-nm">무료 혜택</td>
+        <td class="a-msg">무료 지점장 상담 = 제로 리스크 오퍼 → 진입 장벽 최소화.<br><span class="bp">긍정형 전용</span></td>
+        <td class="a-tgt">전체 타겟 (리타겟팅 포함)</td>
+      </tr>
+      <tr>
+        <td class="a-no">04</td><td class="a-nm">FOMO</td>
+        <td class="a-msg">지금 이 구조, 지금 이 기회 → 긴박감 유도.<br><span class="br">도발형 1종 포함</span></td>
+        <td class="a-tgt">30~45세, 성장 욕구 강한 층</td>
+      </tr>
+      <tr>
+        <td class="a-no">05</td><td class="a-nm">소셜 프루프</td>
+        <td class="a-msg">이미 선택한 사람들의 변화 → 군중 심리 신뢰 전환.<br><span class="bp">긍정형 전용</span></td>
+        <td class="a-tgt">리타겟팅, 결정 망설이는 층</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ──────────── 04 소재 12종 ──────────── -->
+<section class="sec" id="s04">
+  <div class="sec-eye">04</div>
+  <div class="sec-ttl">광고 소재 12종 베리에이션 <span class="sec-badge">12 Creatives</span></div>
+  <div class="legend">
+    <span><span class="ldot r"></span>도발형 3종 (#01 · #07 · #12)</span>
+    <span style="color:#ddd">|</span>
+    <span><span class="ldot g"></span>긍정형 9종 (#02~#06 · #08~#11)</span>
+  </div>
+  <div class="cards" id="cardsGrid">
+
+    <!-- 01 도발 -->
+    <div class="card" data-t="고통 atk">
+      <div class="cbar a"></div>
+      <div class="c-inner">
+        <div class="cmeta">
+          <span class="cno a">01</span>
+          <span class="cang a">고통 포인트</span>
+          <span class="cfmt">단일 이미지 · 1:1</span>
+          <span class="ctype a">도발형</span>
+        </div>
+        <div class="chl a">솔직히 물어볼게요.<br><em>지금 팀 없이 혼자</em> 뛰고 있어요?</div>
+        <div class="cpb"><div class="cplbl">Sub Copy</div>
+          <div class="cptxt">열심히 하는데 수입이 제자리라면, 문제는 노력이 아닙니다. 구조입니다.</div>
+        </div>
+        <div class="cpb"><div class="cplbl">Body Copy</div>
+          <div class="cptxt">혼자 영업할수록 수입의 천장은 낮아집니다. 팀을 키우고 오버라이딩으로 수입 구조를 바꾼 지점장들이 지금 MZ패밀리에 있습니다. 15분, 어떤 구조인지 들어보세요.</div>
+        </div>
+      </div>
+      <div class="ctip a">📌 질문형 헤드라인으로 자기 해당 여부 확인 유도. 이미지에 "혼자 vs 팀" 대비 시각화 삽입.</div>
+      <div class="cfoot">
+        <span class="cta a">구조 얘기 들어보기 →</span>
+        <span class="ctgt">혼자 영업 중인 설계사 · 30~45세</span>
+      </div>
+    </div>
+
+    <!-- 02 긍정 -->
+    <div class="card" data-t="고통 pos">
+      <div class="cbar p"></div>
+      <div class="c-inner">
+        <div class="cmeta">
+          <span class="cno">02</span>
+          <span class="cang p">고통 포인트</span>
+          <span class="cfmt">릴스 · 9:16 · 15~30초</span>
+          <span class="ctype p">긍정형</span>
+        </div>
+        <div class="chl">설계사 5년차,<br>이제는 <em>팀으로 가도 됩니다.</em></div>
+        <div class="cpb"><div class="cplbl">Sub Copy</div>
+          <div class="cptxt">혼자 하는 방식이 틀린 게 아닙니다. 그냥 다음 단계가 있는 거예요.</div>
+        </div>
+        <div class="cpb"><div class="cplbl">영상 구성</div>
+          <ul class="scl">
+            <li data-n="①">오프닝 3초: '이제 팀으로 갈 때입니다' 풀화면</li>
+            <li data-n="②">지점장 등장: '저도 5년 동안 혼자 했습니다'</li>
+            <li data-n="③">'팀 만들고 나서 첫 달 오버라이딩이 생겼어요'</li>
+            <li data-n="④">'어떤 구조인지 15분이면 설명드릴 수 있습니다' + CTA</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ctip">📌 '다음 단계' 성장 프레임. 지점장 직접 출연 시 신뢰도 최대. 카메라 직접 응시 권장.</div>
+      <div class="cfoot">
+        <span class="cta">팀 구조 15분 상담 →</span>
+        <span class="ctgt">설계사 3~7년차 · Instagram Reels</span>
+      </div>
+    </div>
+
+    <!-- 03 긍정 -->
+    <div class="card" data-t="권위 pos">
+      <div class="cbar p"></div>
+      <div class="c-inner">
+        <div class="cmeta">
+          <span class="cno">03</span>
+          <span class="cang p">권위 신뢰</span>
+          <span class="cfmt">카드뉴스 · 3~5장</span>
+          <span class="ctype p">긍정형</span>
+        </div>
+        <div class="chl">AI가 DB를 쌓고,<br>본사가 설계를 처리하는<br><em>지점이 있습니다.</em></div>
+        <div class="cpb"><div class="cplbl">Sub Copy</div>
+          <div class="cptxt">지점장이 직접 할 것은 하나입니다. 팀을 키우는 것.</div>
+        </div>
+        <div class="cpb"><div class="cplbl">슬라이드 구성</div>
+          <ul class="scl">
+            <li data-n="1장">'AI 디지털 지점 — 어떻게 다를까요?'</li>
+            <li data-n="2장">AI DB 배정 · 본사 설계 처리 · 오버라이딩 자동 집계</li>
+            <li data-n="3장">'지점장은 영업 대신 팀 성장에 집중합니다'</li>
+            <li data-n="4장">실제 지점장 오버라이딩 수익 사례 (익명)</li>
+            <li data-n="5장">CTA — 무료 상담 신청</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ctip">📌 시스템 신뢰 프레임. 슬라이드 2장에 인포그래픽 필수.</div>
+      <div class="cfoot">
+        <span class="cta">AI 지점 구조 알아보기 →</span>
+        <span class="ctgt">본부장 지망 · 시스템 중시형</span>
+      </div>
+    </div>
+
+    <!-- 04 긍정 -->
+    <div class="card" data-t="권위 pos">
+      <div class="cbar p"></div>
+      <div class="c-inner">
+        <div class="cmeta">
+          <span class="cno">04</span>
+          <span class="cang p">권위 신뢰</span>
+          <span class="cfmt">단일 이미지 · FB Feed 1.91:1</span>
+          <span class="ctype p">긍정형</span>
+        </div>
+        <div class="chl">팀원 10명이면<br><em>오버라이딩만으로 얼마</em>가 될까요?</div>
+        <div class="cpb"><div class="cplbl">Sub Copy</div>
+          <div class="cptxt">계산해본 적 없다면, 지금 한번 보여드릴게요. 숫자가 구조를 설명합니다.</div>
+        </div>
+        <div class="cpb"><div class="cplbl">Body Copy</div>
+          <div class="cptxt">팀원 1인당 월 200만원 계약 실적 기준, 오버라이딩 수익이 어떻게 쌓이는지 실제 시뮬레이션으로 보여드립니다. 숫자로 보면 왜 지점장이 되어야 하는지 바로 이해됩니다.</div>
+        </div>
+      </div>
+      <div class="ctip">📌 이미지에 수익 시뮬레이션 인포그래픽 삽입. '계산해봤더니'라는 호기심 트리거가 핵심.</div>
+      <div class="cfoot">
+        <span class="cta">수익 구조 계산해보기 →</span>
+        <span class="ctgt">팀빌더 지망 · 40~50세 남성</span>
+      </div>
+    </div>
+
+    <!-- 05 긍정 -->
+    <div class="card" data-t="무료 pos">
+      <div class="cbar p"></div>
+      <div class="c-inner">
+        <div class="cmeta">
+          <span class="cno">05</span>
+          <span class="cang p">무료 혜택</span>
+          <span class="cfmt">단일 이미지 · 1:1 강조형</span>
+          <span class="ctype p">긍정형</span>
+        </div>
+        <div class="chl">지점장이 될 수 있는지<br>없는지, <em>15분이면 알 수 있습니다.</em></div>
+        <div class="cpb"><div class="cplbl">Sub Copy</div>
+          <div class="cptxt">진짜 무료입니다. 조건 확인하고, 맞으면 시작하면 됩니다.</div>
+        </div>
+        <div class="cpb"><div class="cplbl">Body Copy</div>
+          <div class="cptxt">지점장 자격 조건, 오버라이딩 구조, 본사 지원 범위. 15분 상담으로 다 설명드릴 수 있습니다. 이후 결정은 당신이 하면 됩니다. 부담 없이 신청하세요.</div>
+        </div>
+      </div>
+      <div class="ctip">📌 '15분'이라는 시간 명시가 마찰 제거. 이미지에 '15분' 크게 표기. 결정을 강요하지 않는 프레임.</div>
+      <div class="cfoot">
+        <span class="cta">15분 무료 상담 신청 →</span>
+        <span class="ctgt">전체 타겟 · Cold + Retargeting</span>
+      </div>
+    </div>
+
+    <!-- 06 긍정 -->
+    <div class="card" data-t="무료 pos">
+      <div class="cbar p"></div>
+      <div class="c-inner">
+        <div class="cmeta">
+          <span class="cno">06</span>
+          <span class="cang p">무료 혜택</span>
+          <span class="cfmt">릴스 · 15초 훅 강화</span>
+          <span class="ctype p">긍정형</span>
+        </div>
+        <div class="chl">MZ패밀리 지점장 상담,<br><em>지금은 무료로</em> 받아볼 수 있습니다.</div>
+        <div class="cpb"><div class="cplbl">Sub Copy</div>
+          <div class="cptxt">비용 없음. 가입 의무 없음. 부담 없음. 신청만 하면 됩니다.</div>
+        </div>
+        <div class="cpb"><div class="cplbl">영상 구성</div>
+          <ul class="scl">
+            <li data-n="①">1초: '무료입니다' 흰 배경 풀텍스트 — 스크롤 스탑</li>
+            <li data-n="②">4초: 'MZ패밀리 지점장 구조가 궁금하다면'</li>
+            <li data-n="③">8초: '15분 상담으로 모든 걸 설명드릴 수 있습니다'</li>
+            <li data-n="④">13초: '신청 후 1~2 영업일 내 연락드립니다' + CTA</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ctip">📌 첫 1초 '무료' 풀텍스트 충격. 15초 내 정보 완결.</div>
+      <div class="cfoot">
+        <span class="cta">지금 바로 무료 신청 →</span>
+        <span class="ctgt">30~45세 설계사 · 스킵 패턴 강한 타겟</span>
+      </div>
+    </div>
+
+    <!-- 07 도발 -->
+    <div class="card" data-t="FOMO atk">
+      <div class="cbar a"></div>
+      <div class="c-inner">
+        <div class="cmeta">
+          <span class="cno a">07</span>
+          <span class="cang a">FOMO</span>
+          <span class="cfmt">단일 이미지 · 4:5 텍스트형</span>
+          <span class="ctype a">도발형</span>
+        </div>
+        <div class="chl a">지금 이 구조를 알면서도<br><em>안 하는 이유가</em> 뭔가요?</div>
+        <div class="cpb"><div class="cplbl">Sub Copy</div>
+          <div class="cptxt">기회는 준비된 사람한테만 보이고, 결정하는 사람만 가져갑니다.</div>
+        </div>
+        <div class="cpb"><div class="cplbl">Body Copy</div>
+          <div class="cptxt">혼자 영업을 아무리 잘해도 수입의 상한선이 있습니다. 팀 오버라이딩 구조는 그 상한선을 없앱니다. 지금 MZ패밀리 지점장이 되는 조건이 어느 때보다 낮습니다. 무료로 전략을 점검하세요.</div>
+        </div>
+      </div>
+      <div class="ctip a">📌 '알면서 안 한다'는 질책형 도발. 상한선 → 상한선 제거 구조가 핵심 반전.</div>
+      <div class="cfoot">
+        <span class="cta a">지금 결정하기 →</span>
+        <span class="ctgt">30~45세 남성 · 성장 욕구 강한 층</span>
+      </div>
+    </div>
+
+    <!-- 08 긍정 -->
+    <div class="card" data-t="FOMO pos">
+      <div class="cbar p"></div>
+      <div class="c-inner">
+        <div class="cmeta">
+          <span class="cno">08</span>
+          <span class="cang p">FOMO</span>
+          <span class="cfmt">카드뉴스 · 3장</span>
+          <span class="ctype p">긍정형</span>
+        </div>
+        <div class="chl">지점장 조건이<br><em>지금이 가장 좋습니다.</em></div>
+        <div class="cpb"><div class="cplbl">Sub Copy</div>
+          <div class="cptxt">지점장 자격 요건이 완화된 지금, 시작하기 가장 쉬운 시기입니다.</div>
+        </div>
+        <div class="cpb"><div class="cplbl">슬라이드 구성</div>
+          <ul class="scl">
+            <li data-n="1장">'지점장이 되기 가장 좋은 시기는 언제일까요?'</li>
+            <li data-n="2장">기존 조건 vs 완화된 현재 조건 직접 비교</li>
+            <li data-n="3장">'지금 신청하면 이 조건으로 시작할 수 있습니다' + CTA</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ctip">📌 '가장 좋은 지금'이라는 시의성 긍정 프레임. 조건 비교 인포그래픽 필수. 매 분기 업데이트.</div>
+      <div class="cfoot">
+        <span class="cta">조건 확인하기 →</span>
+        <span class="ctgt">조건 탐색 중인 설계사 · 35~50세</span>
+      </div>
+    </div>
+
+    <!-- 09 긍정 -->
+    <div class="card" data-t="소셜 pos">
+      <div class="cbar p"></div>
+      <div class="c-inner">
+        <div class="cmeta">
+          <span class="cno">09</span>
+          <span class="cang p">소셜 프루프</span>
+          <span class="cfmt">단일 이미지 · 1:1</span>
+          <span class="ctype p">긍정형</span>
+        </div>
+        <div class="chl">이미 시작한 지점장들이<br><em>한 가지를 공통으로 말합니다.</em></div>
+        <div class="cpb"><div class="cplbl">Sub Copy</div>
+          <div class="cptxt">"더 일찍 시작할걸." MZ패밀리 지점장들이 가장 많이 하는 말입니다.</div>
+        </div>
+        <div class="cpb"><div class="cplbl">Body Copy</div>
+          <div class="cptxt">혼자 영업할 때는 몰랐습니다. 팀이 생기고 나서야 수입 구조가 달라진다는 걸. 먼저 경험한 분들이 직접 얘기해드릴 수 있습니다. 무료 상담에서 만나보세요.</div>
+        </div>
+      </div>
+      <div class="ctip">📌 '더 일찍' 후회 프레임 = 지금 결정 유도. 실제 지점장 인용구 이미지에 크게 표기.</div>
+      <div class="cfoot">
+        <span class="cta">지점장 얘기 들어보기 →</span>
+        <span class="ctgt">리타겟팅 · 결정 망설이는 층</span>
+      </div>
+    </div>
+
+    <!-- 10 긍정 -->
+    <div class="card" data-t="소셜 pos">
+      <div class="cbar p"></div>
+      <div class="c-inner">
+        <div class="cmeta">
+          <span class="cno">10</span>
+          <span class="cang p">소셜 프루프</span>
+          <span class="cfmt">릴스 · 지점장 인터뷰형 30~60초</span>
+          <span class="ctype p">긍정형</span>
+        </div>
+        <div class="chl">상담 받고 달라진 건<br><em>딱 하나였습니다.</em><br>영업을 덜 하게 됐어요.</div>
+        <div class="cpb"><div class="cplbl">Sub Copy</div>
+          <div class="cptxt">처음엔 반신반의했어요. 근데 팀 만들고 나서 수입 구조가 진짜로 바뀌었습니다.</div>
+        </div>
+        <div class="cpb"><div class="cplbl">영상 구성</div>
+          <ul class="scl">
+            <li data-n="①">'혼자 5년 했는데, 팀 만든 지 3개월 만에 달라졌어요'</li>
+            <li data-n="②">'가장 달라진 건 영업을 덜 해도 수입이 늘었다는 거예요'</li>
+            <li data-n="③">'AI가 DB 쌓아주고, 본사에서 설계 처리해줬거든요'</li>
+            <li data-n="④">'저처럼 한 번만 들어보세요. 무료니까요' + CTA</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ctip">📌 '영업을 덜 한다'는 역설 + 실제 변화 스토리. 실제 지점장 출연 시 효과 최대.</div>
+      <div class="cfoot">
+        <span class="cta">나도 무료 상담 받기 →</span>
+        <span class="ctgt">혼자 영업 중 설계사 · 리타겟팅</span>
+      </div>
+    </div>
+
+    <!-- 11 긍정 -->
+    <div class="card" data-t="권위 pos">
+      <div class="cbar p"></div>
+      <div class="c-inner">
+        <div class="cmeta">
+          <span class="cno">11</span>
+          <span class="cang p">권위 신뢰</span>
+          <span class="cfmt">단일 이미지 + 텍스트 오버레이</span>
+          <span class="ctype p">긍정형</span>
+        </div>
+        <div class="chl">본사가 설계하고,<br>AI가 움직이고,<br><em>당신은 팀을 키웁니다.</em></div>
+        <div class="cpb"><div class="cplbl">Sub Copy</div>
+          <div class="cptxt">지점장이 혼자 다 하는 시대는 끝났습니다. 역할이 나뉘면 수입 구조도 달라집니다.</div>
+        </div>
+        <div class="cpb"><div class="cplbl">Body Copy</div>
+          <div class="cptxt">MZ패밀리는 본사가 설계를 처리하고, AI가 DB를 배정합니다. 지점장은 팀 성장에만 집중하면 됩니다. 이 구조에서 오버라이딩이 어떻게 쌓이는지, 15분에 다 설명드릴 수 있습니다.</div>
+        </div>
+      </div>
+      <div class="ctip">📌 역할 분담 3줄 헤드라인 시각화. '당신은 팀을 키웁니다'가 핵심 긍정 프레임.</div>
+      <div class="cfoot">
+        <span class="cta">구조 15분 설명 듣기 →</span>
+        <span class="ctgt">40~50세 남성 · 시스템 중시형</span>
+      </div>
+    </div>
+
+    <!-- 12 도발 -->
+    <div class="card" data-t="고통 atk">
+      <div class="cbar a"></div>
+      <div class="c-inner">
+        <div class="cmeta">
+          <span class="cno a">12</span>
+          <span class="cang a">고통 포인트</span>
+          <span class="cfmt">카드뉴스 · 4장 체크리스트형</span>
+          <span class="ctype a">도발형</span>
+        </div>
+        <div class="chl a">이 4가지 중 하나라도 해당되면,<br><em>지금 구조를 바꿔야 합니다.</em></div>
+        <div class="cpb"><div class="cplbl">Sub Copy</div>
+          <div class="cptxt">해당 안 되면 다행입니다. 해당된다면, 이제 방향을 바꿀 수 있습니다.</div>
+        </div>
+        <div class="cpb"><div class="cplbl">슬라이드 구성</div>
+          <ul class="scl">
+            <li data-n="1장">'올해 수입이 작년과 같거나 줄었다' ☑</li>
+            <li data-n="2장">'팀 없이 혼자 영업하고 있다' ☑</li>
+            <li data-n="3장">'수입 상한선이 느껴진다' ☑</li>
+            <li data-n="4장">'하나라도 해당됐다면? MZ패밀리 지점장 구조를 알아보세요. 무료입니다.' + CTA</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ctip a">📌 체크박스 자가 진단 비주얼 필수. 마지막 장은 '바꿀 수 있다'는 긍정으로 마무리.</div>
+      <div class="cfoot">
+        <span class="cta a">지금 구조 바꾸기 →</span>
+        <span class="ctgt">전체 타겟 · 자가 진단 유도형</span>
+      </div>
+    </div>
+
+  </div><!-- /cards -->
+</section>
+
+<!-- ──────────── 05 Phase 1 ──────────── -->
+<section class="sec" id="s05">
+  <div class="sec-eye">05</div>
+  <div class="sec-ttl">Phase 1 런칭 우선 소재 <span class="sec-badge">4 Creatives</span></div>
+  <p class="phnote">첫 2주 <strong>균등 집행</strong> → CTR/CVR 기반 예산 재분배. 도발형 1종 + 긍정형 3종 구성.</p>
+  <div class="phgrid">
+    <div class="phcard">
+      <div class="phnum a">#01</div>
+      <div>
+        <div class="phang">고통 포인트 · 도발형</div>
+        <div class="phhook">솔직히 물어볼게요. 지금 팀 없이 혼자 뛰고 있어요?</div>
+        <div class="phstr a">예상 강점 — 높은 공감 CTR</div>
+      </div>
+    </div>
+    <div class="phcard">
+      <div class="phnum">#05</div>
+      <div>
+        <div class="phang">무료 혜택 · 긍정형</div>
+        <div class="phhook">지점장이 될 수 있는지 없는지, 15분이면 알 수 있습니다.</div>
+        <div class="phstr">예상 강점 — 낮은 진입 장벽 CVR</div>
+      </div>
+    </div>
+    <div class="phcard">
+      <div class="phnum">#09</div>
+      <div>
+        <div class="phang">소셜 프루프 · 긍정형</div>
+        <div class="phhook">"더 일찍 시작할걸." MZ패밀리 지점장들이 가장 많이 하는 말.</div>
+        <div class="phstr">예상 강점 — 리타겟팅 전환율</div>
+      </div>
+    </div>
+    <div class="phcard">
+      <div class="phnum a">#12</div>
+      <div>
+        <div class="phang">고통 포인트 · 도발형</div>
+        <div class="phhook">이 4가지 중 하나라도 해당되면, 지금 구조를 바꿔야 합니다.</div>
+        <div class="phstr a">예상 강점 — 높은 참여·공유율</div>
+      </div>
     </div>
   </div>
+</section>
 
-  <div class="grid" id="grid-v2">
+<!-- ──────────── 06 교훈 ──────────── -->
+<section class="sec" id="s06" style="padding-bottom:60px">
+  <div class="sec-eye">06</div>
+  <div class="sec-ttl">작업 교훈 &amp; 다음 작업 제안 <span class="sec-badge">Lesson + Next</span></div>
 
-    <!-- J01 -->
-    <div class="card joo-style featured" data-tags="경력설계사 META 이미지">
-      <div class="card-strip s-joo"></div><div class="card-num">J01</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">이미지 피드</span><span class="tag tag-channel">META</span><span class="tag tag-joo">열일곱 공식</span></div>
-        <div class="card-title">수수료 착취 폭로 — "당신은 얼마 받았나요"</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">① 충격 후크</div>
-        <div class="hook-copy">"당신이 1,000만원 팔면<br>회사는 3,000만원 법니다."</div>
-        <div class="structure-box">
-          <div class="s-row"><span class="s-key">② 공감</span><span class="s-val">매달 실적 채워도 통장은 그대로. 내가 이상한 건지 이 업계가 이상한 건지.</span></div>
-          <div class="s-row"><span class="s-key">③ 반전</span><span class="s-val">그런데 수수료를 투명하게 다 공개하는 곳이 있습니다. MZ패밀리.</span></div>
-          <div class="s-row"><span class="s-key">④ 증거</span><span class="s-val">생명보험 지급률 80%. 손해보험 672%. 숫자 전부 공개.</span></div>
-          <div class="s-row"><span class="s-key">⑤ CTA</span><span class="s-val">"비교만 해보세요. 5분이면 충분합니다."</span></div>
-        </div>
-        <span class="cta-btn" style="background:#1A1A1A;">수수료 비교 5분 →</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 수수료 파이차트 — "내 몫 vs 회사 몫" 시각화. 충격적 비율.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-    <!-- J02 -->
-    <div class="card joo-style" data-tags="경력설계사 META 영상">
-      <div class="card-strip s-joo"></div><div class="card-num">J02</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">숏폼 영상</span><span class="tag tag-channel">META · 유튜브</span><span class="tag tag-joo">열일곱 공식</span></div>
-        <div class="card-title">이직 망설임 제거 — "3가지 걱정, 3가지 해법"</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">① 충격 후크</div>
-        <div class="hook-copy">"이직 못 하는 이유<br>딱 3가지뿐입니다."</div>
-        <div class="structure-box">
-          <div class="s-row"><span class="s-key">② 공감</span><span class="s-val">DB 없을 것 같다 / 초기 비용 부담 / 혼자 헤쳐나가야 한다는 두려움.</span></div>
-          <div class="s-row"><span class="s-key">③ 반전</span><span class="s-val">그 3가지를 MZ패밀리가 전부 해결합니다. 순서대로 보여드립니다.</span></div>
-          <div class="s-row"><span class="s-key">④ 증거</span><span class="s-val">후불제 DB / 올케어 7종 지원 / 24시간 단톡방 실제 화면 공개.</span></div>
-          <div class="s-row"><span class="s-key">⑤ CTA</span><span class="s-val">"15분만 들어보시면 됩니다."</span></div>
-        </div>
-        <span class="cta-btn" style="background:#1A1A1A;">15분 무료 상담</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 걱정 3개 텍스트 → 하나씩 취소선 처리. 영상 30초. 강한 자막.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-    <!-- J03 -->
-    <div class="card joo-style" data-tags="팀빌더 META 이미지">
-      <div class="card-strip s-joo"></div><div class="card-num">J03</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">이미지 피드</span><span class="tag tag-channel">META · IG</span><span class="tag tag-joo">열일곱 공식</span></div>
-        <div class="card-title">팀 수입 역산 충격형 — "혼자 버는 것보다 팀이 낫다"</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">① 충격 후크</div>
-        <div class="hook-copy">"지점장이 직접 영업을<br>열심히 할수록<br>손해인 이유가 있습니다."</div>
-        <div class="structure-box">
-          <div class="s-row"><span class="s-key">② 공감</span><span class="s-val">나 혼자 영업하면 한계가 있다. 팀 관리까지 하면 더 벅차다.</span></div>
-          <div class="s-row"><span class="s-key">③ 반전</span><span class="s-val">그런데 팀원 10명 실적에서 오버라이딩이 붙는 구조라면, 관리가 곧 수입입니다.</span></div>
-          <div class="s-row"><span class="s-key">④ 증거</span><span class="s-val">MZ패밀리 오버라이딩 구조 공개. 팀 월납 5,000만원 기준 지점장 수입 시뮬레이션.</span></div>
-          <div class="s-row"><span class="s-key">⑤ CTA</span><span class="s-val">"내 팀 수입 5분이면 계산됩니다."</span></div>
-        </div>
-        <span class="cta-btn" style="background:#1A1A1A;">팀 수입 계산하기</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 혼자 영업 수입 vs 팀 오버라이딩 수입 비교 차트. 팀 규모별 수입 시뮬레이션.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-    <!-- J04 -->
-    <div class="card joo-style featured" data-tags="팀빌더 META 카카오 영상">
-      <div class="card-strip s-joo"></div><div class="card-num">J04</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">릴스 영상</span><span class="tag tag-channel">IG · 카카오</span><span class="tag tag-joo">열일곱 공식</span></div>
-        <div class="card-title">설계사 이탈 원인 제거형 — "왜 팀원이 3개월 만에 나갈까"</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">① 충격 후크</div>
-        <div class="hook-copy">"힘들게 뽑은 설계사가<br>3개월 만에 나가는<br>이유가 있습니다."</div>
-        <div class="structure-box">
-          <div class="s-row"><span class="s-key">② 공감</span><span class="s-val">DB 없어서 / 설계가 어려워서 / 지점장이 너무 바빠서 케어 못 받아서.</span></div>
-          <div class="s-row"><span class="s-key">③ 반전</span><span class="s-val">MZ패밀리는 그 3가지를 본사가 대신합니다. 후불제 DB + 설계서 제작 + 올케어 7종.</span></div>
-          <div class="s-row"><span class="s-key">④ 증거</span><span class="s-val">본사 직접 지원 시스템 실제 화면 공개. 지점장 1명이 10명 이상 관리 가능한 이유.</span></div>
-          <div class="s-row"><span class="s-key">⑤ CTA</span><span class="s-val">"팀원 이탈 막는 방법, 15분에 다 설명됩니다."</span></div>
-        </div>
-        <span class="cta-btn" style="background:#1A1A1A;">15분 설명 듣기</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 팀원 이탈 → 본사 지원 시스템 화면 전환. 15~30초 릴스. 강한 자막.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-    <!-- J05 -->
-    <div class="card joo-style" data-tags="본부장 META 이미지">
-      <div class="card-strip s-joo"></div><div class="card-num">J05</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">본부장 지망</span><span class="tag tag-format">이미지 피드</span><span class="tag tag-channel">META · 네이버</span><span class="tag tag-joo">열일곱 공식</span></div>
-        <div class="card-title">기회 비용 각인 — "지금 안 하면 1년 후 후회"</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">① 충격 후크</div>
-        <div class="hook-copy">"2026년에 본부장 못 되면<br>다음 기회는 5년 뒤입니다."</div>
-        <div class="structure-box">
-          <div class="s-row"><span class="s-key">② 공감</span><span class="s-val">본부장 조건 30명, 월납 1,000만원. 현실적으로 불가능해 보인다.</span></div>
-          <div class="s-row"><span class="s-key">③ 반전</span><span class="s-val">그런데 2026년 단 한 해만, 10명에 500만원으로 완화됐습니다.</span></div>
-          <div class="s-row"><span class="s-key">④ 증거</span><span class="s-val">공식 발표 조건. '27년부터 원래대로 복귀 예정. 이 페이지가 사라지면 기회도 사라집니다.</span></div>
-          <div class="s-row"><span class="s-key">⑤ CTA</span><span class="s-val">"일단 조건만 확인해보세요."</span></div>
-        </div>
-        <span class="cta-btn" style="background:#1A1A1A;">조건 확인 (무료)</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 타임라인 — 2026 "기회의 창" vs 2027 "문 닫힘". 긴박감 강조.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-    <!-- J06 -->
-    <div class="card joo-style" data-tags="경력설계사 네이버 이미지">
-      <div class="card-strip s-joo"></div><div class="card-num">J06</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">블로그 SEO</span><span class="tag tag-channel">네이버</span><span class="tag tag-joo">열일곱 공식</span></div>
-        <div class="card-title">이직 후회 공감글 — "나는 왜 진작 안 옮겼을까"</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">① 충격 후크 (블로그 제목)</div>
-        <div class="hook-copy">"보험 설계사 이직,<br>2년 더 버텼다가 후회한 이유"</div>
-        <div class="structure-box">
-          <div class="s-row"><span class="s-key">② 공감</span><span class="s-val">인간관계 때문에, DB 문제 때문에, 그냥 익숙해서. 버텼다.</span></div>
-          <div class="s-row"><span class="s-key">③ 반전</span><span class="s-val">옮기고 나서야 알았다. 내가 버틴 게 아니라 착취당한 거였다.</span></div>
-          <div class="s-row"><span class="s-key">④ 증거</span><span class="s-val">수수료 80%, 후불제 DB, 올케어 7종 — 이전 회사와 나란히 비교.</span></div>
-          <div class="s-row"><span class="s-key">⑤ CTA</span><span class="s-val">"글 끝에 상담 신청 링크. 강요 없음."</span></div>
-        </div>
-        <span class="cta-btn" style="background:#1A1A1A;">상담 신청 (부담 없음)</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 실제 후기 형식 블로그. 1인칭 서술. 공감 유도 → SEO 유입.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-    <!-- J07 -->
-    <div class="card joo-style" data-tags="팀빌더 카카오 이미지">
-      <div class="card-strip s-joo"></div><div class="card-num">J07</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">카카오 비즈보드</span><span class="tag tag-channel">카카오</span><span class="tag tag-joo">열일곱 공식</span></div>
-        <div class="card-title">지점 확장 로드맵 — "지점장 1년 차, 본부장 2년 차"</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">① 충격 후크</div>
-        <div class="hook-copy">"지점장 시작하고<br>1년 만에 본부장 된<br>사람이 있습니다."</div>
-        <div class="structure-box">
-          <div class="s-row"><span class="s-key">② 공감</span><span class="s-val">본부장은 막연히 먼 이야기 같다. 30명 채우는 게 가능한 일인가.</span></div>
-          <div class="s-row"><span class="s-key">③ 반전</span><span class="s-val">2026년은 10명만 채우면 됩니다. MZ패밀리 디지털 리크루팅 시스템과 함께라면 가능한 수치입니다.</span></div>
-          <div class="s-row"><span class="s-key">④ 증거</span><span class="s-val">실제 1년 만에 본부장 승급한 지점장 인터뷰. 팀 빌딩 단계별 로드맵 공개.</span></div>
-          <div class="s-row"><span class="s-key">⑤ CTA</span><span class="s-val">"로드맵 한 번 보고 결정해도 늦지 않습니다."</span></div>
-        </div>
-        <span class="cta-btn" style="background:#1A1A1A;">로드맵 구경하기</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 1년 타임라인 — 입사 → 팀 5명 → 10명 → 본부장. 카카오 비즈보드 최적화.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-    <!-- J08 -->
-    <div class="card joo-style" data-tags="경력설계사 META 영상">
-      <div class="card-strip s-joo"></div><div class="card-num">J08</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">숏폼 영상</span><span class="tag tag-channel">META · 유튜브</span><span class="tag tag-joo">열일곱 공식</span></div>
-        <div class="card-title">숨겨진 비용 폭로 — "이행보증, 당신 돈으로 냈나요"</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">① 충격 후크</div>
-        <div class="hook-copy">"이행보증 비용,<br>혹시 본인이 내고 있나요?"</div>
-        <div class="structure-box">
-          <div class="s-row"><span class="s-key">② 공감</span><span class="s-val">계약서 잘 읽지 않으면 모른다. 나도 한동안 몰랐다.</span></div>
-          <div class="s-row"><span class="s-key">③ 반전</span><span class="s-val">MZ패밀리는 이행보증 비용을 본부장·지점장이 부담합니다. 설계사 전가 없음.</span></div>
-          <div class="s-row"><span class="s-key">④ 증거</span><span class="s-val">계약서에 명시. 공식 정책. 실제 지점장 확인 가능.</span></div>
-          <div class="s-row"><span class="s-key">⑤ CTA</span><span class="s-val">"계약 조건 전문 무료로 보내드립니다."</span></div>
-        </div>
-        <span class="cta-btn" style="background:#1A1A1A;">계약 조건 받기</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 계약서 빨간 동그라미 강조. "이 항목 확인하셨나요?" 자막.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-    <!-- J09 -->
-    <div class="card joo-style" data-tags="본부장 네이버 이미지">
-      <div class="card-strip s-joo"></div><div class="card-num">J09</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">본부장 지망</span><span class="tag tag-format">이미지 광고</span><span class="tag tag-channel">네이버</span><span class="tag tag-joo">열일곱 공식</span></div>
-        <div class="card-title">수입 시뮬레이션 — "팀 10명이면 월 수입이"</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">① 충격 후크</div>
-        <div class="hook-copy">"팀원 10명 월납 500만원,<br>본부장 수입 계산해봤습니다."</div>
-        <div class="structure-box">
-          <div class="s-row"><span class="s-key">② 공감</span><span class="s-val">본부장이 되고 싶지만 숫자가 막막하다. 30명? 1,000만원? 현실적으로 안 보인다.</span></div>
-          <div class="s-row"><span class="s-key">③ 반전</span><span class="s-val">2026년만 10명·500만원. 지금 시작하면 12개월 안에 도달 가능한 수치입니다.</span></div>
-          <div class="s-row"><span class="s-key">④ 증거</span><span class="s-val">오버라이딩 수수료 85% × 팀 실적 = 월 수입 시뮬레이션 공개.</span></div>
-          <div class="s-row"><span class="s-key">⑤ CTA</span><span class="s-val">"내 수입 직접 계산해보세요. (계산기 무료)"</span></div>
-        </div>
-        <span class="cta-btn" style="background:#1A1A1A;">수입 계산기 →</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 구체적 수입 표. "월 ###만원 가능" 빨간 강조. 계산기 랜딩 연결.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-    <!-- J10 -->
-    <div class="card joo-style featured" data-tags="팀빌더 META 영상">
-      <div class="card-strip s-joo"></div><div class="card-num">J10</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">릴스 영상</span><span class="tag tag-channel">IG · META</span><span class="tag tag-joo">열일곱 공식</span></div>
-        <div class="card-title">AI 디지털 지점 역설 — "관리할수록 수입이 느는 구조"</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">① 충격 후크</div>
-        <div class="hook-copy">"AI 시대 지점장은<br>영업을 줄일수록<br>수입이 늘어납니다."</div>
-        <div class="structure-box">
-          <div class="s-row"><span class="s-key">② 공감</span><span class="s-val">지점장이 직접 영업까지 해야 한다면, 팀 관리는 언제 하나. 뭔가 잘못된 구조다.</span></div>
-          <div class="s-row"><span class="s-key">③ 반전</span><span class="s-val">AI가 DB를 쌓고, 본사가 설계를 처리하면, 지점장은 팀 성장에만 집중할 수 있습니다.</span></div>
-          <div class="s-row"><span class="s-key">④ 증거</span><span class="s-val">MZ패밀리 디지털 비서 시스템 — 지점장 개입 없이 팀원 DB 자동 배정, 본사 올케어 7종 처리.</span></div>
-          <div class="s-row"><span class="s-key">⑤ CTA</span><span class="s-val">"어떤 구조인지 15분만 들어보세요."</span></div>
-        </div>
-        <span class="cta-btn" style="background:#1A1A1A;">구조 설명 듣기</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> "지점장 영업 OUT → 팀 관리 IN" 대비. AI 시스템 화면 공개. 15~30초 릴스.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-    <!-- J11 -->
-    <div class="card joo-style" data-tags="경력설계사 카카오 이미지">
-      <div class="card-strip s-joo"></div><div class="card-num">J11</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">카카오 채널</span><span class="tag tag-channel">카카오</span><span class="tag tag-joo">열일곱 공식</span></div>
-        <div class="card-title">고객 없는 이직 공포 제거 — "DB 없이 시작해도 됩니다"</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">① 충격 후크</div>
-        <div class="hook-copy">"이직하고 싶은데<br>DB가 없어서 망설이고 있나요?"</div>
-        <div class="structure-box">
-          <div class="s-row"><span class="s-key">② 공감</span><span class="s-val">기존 고객 리스트 없이 새로 시작하면 3개월이 공백이다. 그게 두렵다.</span></div>
-          <div class="s-row"><span class="s-key">③ 반전</span><span class="s-val">후불제 DB를 제공합니다. 계약 성사 후 정산. 초기 비용 0원.</span></div>
-          <div class="s-row"><span class="s-key">④ 증거</span><span class="s-val">네이버·구글·카카오 잠재고객 자동 유입 시스템 + 후불제 DB 병행 제공.</span></div>
-          <div class="s-row"><span class="s-key">⑤ CTA</span><span class="s-val">"DB 없어도 되는지 먼저 여쭤보세요."</span></div>
-        </div>
-        <span class="cta-btn" style="background:#1A1A1A;">DB 없이 가능한지 확인</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> "공백 기간 0일" 강조. 카카오 채널 1:1 문의 유도.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-    <!-- J12 -->
-    <div class="card joo-style" data-tags="본부장 META 이미지">
-      <div class="card-strip s-joo"></div><div class="card-num">J12</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">본부장 지망</span><span class="tag tag-format">이미지 피드</span><span class="tag tag-channel">META · FB</span><span class="tag tag-joo">열일곱 공식</span></div>
-        <div class="card-title">관리자 한계 돌파 — "지점장으로 멈추지 마세요"</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">① 충격 후크</div>
-        <div class="hook-copy">"지점장에서 멈추는 사람과<br>본부장 가는 사람의 차이"</div>
-        <div class="structure-box">
-          <div class="s-row"><span class="s-key">② 공감</span><span class="s-val">지점장도 좋은데, 팀이 커지면 수입이 얼마나 달라지는지 계산해본 적 있나요?</span></div>
-          <div class="s-row"><span class="s-key">③ 반전</span><span class="s-val">본부장은 직접 영업 + 팀 오버라이딩 수수료 85%가 동시에 들어옵니다.</span></div>
-          <div class="s-row"><span class="s-key">④ 증거</span><span class="s-val">'26년 한정 승급 완화 조건 — 지점장 10명, 월납 500만원이면 됩니다.</span></div>
-          <div class="s-row"><span class="s-key">⑤ CTA</span><span class="s-val">"본부장 로드맵 한 번 들어보세요."</span></div>
-        </div>
-        <span class="cta-btn" style="background:#1A1A1A;">본부장 로드맵 확인</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 지점장 vs 본부장 수입 비교표. 직관적 숫자 차이.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-    <!-- J13 -->
-    <div class="card joo-style" data-tags="팀빌더 네이버 이미지">
-      <div class="card-strip s-joo"></div><div class="card-num">J13</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">블로그 SEO</span><span class="tag tag-channel">네이버</span><span class="tag tag-joo">열일곱 공식</span></div>
-        <div class="card-title">GA 지점장 이직 후회 공감글 — "팀원 다 데리고 나올걸"</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">① 충격 후크 (블로그 제목)</div>
-        <div class="hook-copy">"GA 지점장 3년,<br>진작 이직 안 한 게<br>가장 후회됩니다."</div>
-        <div class="structure-box">
-          <div class="s-row"><span class="s-key">② 공감</span><span class="s-val">팀원 있고, 관계 있고, 익숙해서. 이직 못 하는 이유는 다 변명이었다.</span></div>
-          <div class="s-row"><span class="s-key">③ 반전</span><span class="s-val">MZ패밀리로 옮기고 알았다. 팀원 DB까지 지원받는 구조가 있다는 걸.</span></div>
-          <div class="s-row"><span class="s-key">④ 증거</span><span class="s-val">수수료 80% + 후불제 DB + 본사 올케어 7종 — 이전 회사와 조건 나란히 비교.</span></div>
-          <div class="s-row"><span class="s-key">⑤ CTA</span><span class="s-val">"글 끝에 상담 링크. 강요 없습니다."</span></div>
-        </div>
-        <span class="cta-btn" style="background:#1A1A1A;">조건 비교해보기</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 1인칭 후기 블로그. 키워드: GA지점장이직, 보험지점장이직. SEO 최적화.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-    <!-- J14 -->
-    <div class="card joo-style" data-tags="경력설계사 META 영상">
-      <div class="card-strip s-joo"></div><div class="card-num">J14</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">증언형 영상</span><span class="tag tag-channel">META · 유튜브</span><span class="tag tag-joo">열일곱 공식</span></div>
-        <div class="card-title">사회적 증거 폭발 — "저도 반신반의했습니다"</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">① 충격 후크</div>
-        <div class="hook-copy">"저도 처음엔<br>거짓말인 줄 알았습니다."</div>
-        <div class="structure-box">
-          <div class="s-row"><span class="s-key">② 공감</span><span class="s-val">수수료 80%? DB 후불제? 올케어 지원? 이게 말이 되냐고 생각했습니다.</span></div>
-          <div class="s-row"><span class="s-key">③ 반전</span><span class="s-val">그래서 직접 들어갔습니다. 3개월 뒤 이 영상을 찍고 있습니다.</span></div>
-          <div class="s-row"><span class="s-key">④ 증거</span><span class="s-val">실제 지점장 출연. 이전 수입 vs 현재 수입 통장 화면 (부분 공개). 30~60초.</span></div>
-          <div class="s-row"><span class="s-key">⑤ CTA</span><span class="s-val">"거짓말인지 직접 확인해보세요."</span></div>
-        </div>
-        <span class="cta-btn" style="background:#1A1A1A;">직접 확인하기</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 반신반의 표정 → 통장 화면 → 미소. 가장 강력한 전환 소재.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-    <!-- J15 -->
-    <div class="card joo-style featured" data-tags="경력설계사 본부장 팀빌더 META 카카오 이미지 영상">
-      <div class="card-strip s-joo"></div><div class="card-num">J15</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">전 타겟</span><span class="tag tag-format">리타겟팅</span><span class="tag tag-channel">META · 카카오</span><span class="tag tag-joo">열일곱 공식</span></div>
-        <div class="card-title">결정 장벽 제거 — "딱 하나만 물어봐도 됩니다"</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">① 충격 후크</div>
-        <div class="hook-copy">"결정 안 해도 됩니다.<br>질문 하나만 해보세요."</div>
-        <div class="structure-box">
-          <div class="s-row"><span class="s-key">② 공감</span><span class="s-val">페이지 봤는데 아직 결정이 안 선다. 맞습니다. 중요한 결정이니까요.</span></div>
-          <div class="s-row"><span class="s-key">③ 반전</span><span class="s-val">그래서 결정 먼저 하지 않아도 됩니다. 궁금한 것 하나만 물어보세요.</span></div>
-          <div class="s-row"><span class="s-key">④ 증거</span><span class="s-val">24시간 단톡방 운영. 답변 평균 15분 이내. 강요 없는 정보 제공.</span></div>
-          <div class="s-row"><span class="s-key">⑤ CTA</span><span class="s-val">"질문 하나 → 카카오 채널 오픈채팅"</span></div>
-        </div>
-        <span class="cta-btn" style="background:#1A1A1A;">질문 하러 가기 →</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 카카오 채팅창 UI. "질문만 해도 됩니다" 강조. 진입 장벽 최저점 CTA.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-  </div><!-- /grid-v2 -->
-
-  <div class="summary-wrap" style="margin-bottom:60px;">
-    <div class="summary-head">📊 v2 열일곱 스타일 구성 요약</div>
-    <div class="summary-grid">
-      <div class="si"><h4>후킹 단계 준수</h4><ul><li>① 충격 후크 — 스크롤 멈춤</li><li>② 공감 — "맞아" 유발</li><li>③ 반전 — "그런데" 전환</li><li>④ 증거 — 숫자·사례</li><li>⑤ 낮은 CTA — 장벽 최소화</li></ul></div>
-      <div class="si"><h4>페르소나 배분</h4><ul><li>경력 설계사 — 5종 (J01,J02,J06,J08,J14)</li><li>팀빌더 지점장 — 6종 (J03,J04,J07,J10,J11,J13)</li><li>본부장 지망 — 3종 (J05,J09,J12)</li><li>전 타겟 리타겟 — 1종 (J15)</li></ul></div>
-      <div class="si"><h4>채널 배분</h4><ul><li>META (FB/IG) — 10종</li><li>네이버 SEO — 2종</li><li>카카오 — 3종</li><li>유튜브 영상 — 5종</li></ul></div>
-      <div class="si"><h4>집행 우선순위</h4><ul><li>1순위 — J01 수수료 착취 폭로</li><li>1순위 — J04 팀원 이탈 원인 제거</li><li>1순위 — J10 AI 디지털 지점 역설</li><li>2순위 — J14 반신반의 후기</li><li>리타겟 — J15 질문 하나</li></ul></div>
+  <div class="lesson">
+    <div class="lesson-lbl">// Lesson Learned</div>
+    <div class="lesson-txt">
+      광고 카피에서 <strong>도발형과 긍정형은 타겟 세그먼트에 따라 효율이 갈립니다.</strong>
+      도발형(#01, #07, #12)은 <em>불만이 쌓인 Cold 타겟</em>에 유효하고,
+      긍정형(나머지 9종)은 <em>정보 탐색 중인 Warm/Retargeting 타겟</em>에 더 높은 CVR을 냅니다.
+      <strong>초기에는 둘 다 집행 후 세그먼트별 성과를 비교하는 것이 정석.</strong>
     </div>
   </div>
 
-</div><!-- /panel-v2 -->
-
-<div class="version-panel active" id="panel-v3">
-
-  <div class="ver2-heading">
-    <div class="ver2-heading-inner">
-      <h2>열일곱 스타일 <em>후킹 구조</em> 15종</h2>
-      <p>v3 타겟 수정 · N잡러 삭제 → 팀빌더 지점장 6종 신규 교체</p>
-    </div>
-    <div class="joo-badge">TEAM BUILDER · v3</div>
-  </div>
-
-  <!-- 구조 설명 박스 -->
-  <div style="margin:16px 52px 0;padding:16px 20px;background:var(--white);border:1px solid var(--rule);border-left:4px solid #1A1A1A;">
-    <div style="font-family:'Space Mono',monospace;font-size:9px;color:#888;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;">열일곱 후킹 5단계 공식</div>
-    <div style="display:flex;gap:0;flex-wrap:wrap;">
-      <div style="flex:1;min-width:130px;padding:8px 14px;background:#1A1A1A;color:#fff;font-size:11px;font-family:'Noto Sans KR',sans-serif;text-align:center;margin:2px;">①&nbsp;<strong>충격 후크</strong><br><span style="font-size:10px;color:#aaa;">스크롤 멈춤</span></div>
-      <div style="flex:1;min-width:130px;padding:8px 14px;background:#2d2d2d;color:#fff;font-size:11px;font-family:'Noto Sans KR',sans-serif;text-align:center;margin:2px;">②&nbsp;<strong>공감 & 문제</strong><br><span style="font-size:10px;color:#aaa;">"맞아" 유발</span></div>
-      <div style="flex:1;min-width:130px;padding:8px 14px;background:var(--red);color:#fff;font-size:11px;font-family:'Noto Sans KR',sans-serif;text-align:center;margin:2px;">③&nbsp;<strong>반전 & 해법</strong><br><span style="font-size:10px;color:#ffcdd2;">"그런데" 전환</span></div>
-      <div style="flex:1;min-width:130px;padding:8px 14px;background:#b01c24;color:#fff;font-size:11px;font-family:'Noto Sans KR',sans-serif;text-align:center;margin:2px;">④&nbsp;<strong>증거 & 신뢰</strong><br><span style="font-size:10px;color:#ffcdd2;">숫자·사례</span></div>
-      <div style="flex:1;min-width:130px;padding:8px 14px;background:#8a141b;color:#fff;font-size:11px;font-family:'Noto Sans KR',sans-serif;text-align:center;margin:2px;">⑤&nbsp;<strong>낮은 CTA</strong><br><span style="font-size:10px;color:#ffcdd2;">장벽 최소화</span></div>
-    </div>
-  </div>
-
-  <div class="grid" id="grid-v2">
-
-    <!-- J01 -->
-    <div class="card joo-style featured" data-tags="경력설계사 META 이미지">
-      <div class="card-strip s-joo"></div><div class="card-num">J01</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">이미지 피드</span><span class="tag tag-channel">META</span><span class="tag tag-joo">열일곱 공식</span></div>
-        <div class="card-title">수수료 착취 폭로 — "당신은 얼마 받았나요"</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">① 충격 후크</div>
-        <div class="hook-copy">"당신이 1,000만원 팔면<br>회사는 3,000만원 법니다."</div>
-        <div class="structure-box">
-          <div class="s-row"><span class="s-key">② 공감</span><span class="s-val">매달 실적 채워도 통장은 그대로. 내가 이상한 건지 이 업계가 이상한 건지.</span></div>
-          <div class="s-row"><span class="s-key">③ 반전</span><span class="s-val">그런데 수수료를 투명하게 다 공개하는 곳이 있습니다. MZ패밀리.</span></div>
-          <div class="s-row"><span class="s-key">④ 증거</span><span class="s-val">생명보험 지급률 80%. 손해보험 672%. 숫자 전부 공개.</span></div>
-          <div class="s-row"><span class="s-key">⑤ CTA</span><span class="s-val">"비교만 해보세요. 5분이면 충분합니다."</span></div>
-        </div>
-        <span class="cta-btn" style="background:#1A1A1A;">수수료 비교 5분 →</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 수수료 파이차트 — "내 몫 vs 회사 몫" 시각화. 충격적 비율.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
+  <div class="nxgrid">
+    <div class="nxcard"><span class="nxidx">①</span>
+      <div><div class="nxttl">디자인 시안 제작</div>
+        <div class="nxdesc">우선순위 4종 (#01, #05, #09, #12) Canva 시안. 열일곱 브랜드 컬러(흰·검·초록) 기반 템플릿 적용.</div>
       </div>
     </div>
-
-    <!-- J02 -->
-    <div class="card joo-style" data-tags="경력설계사 META 영상">
-      <div class="card-strip s-joo"></div><div class="card-num">J02</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">숏폼 영상</span><span class="tag tag-channel">META · 유튜브</span><span class="tag tag-joo">열일곱 공식</span></div>
-        <div class="card-title">이직 망설임 제거 — "3가지 걱정, 3가지 해법"</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">① 충격 후크</div>
-        <div class="hook-copy">"이직 못 하는 이유<br>딱 3가지뿐입니다."</div>
-        <div class="structure-box">
-          <div class="s-row"><span class="s-key">② 공감</span><span class="s-val">DB 없을 것 같다 / 초기 비용 부담 / 혼자 헤쳐나가야 한다는 두려움.</span></div>
-          <div class="s-row"><span class="s-key">③ 반전</span><span class="s-val">그 3가지를 MZ패밀리가 전부 해결합니다. 순서대로 보여드립니다.</span></div>
-          <div class="s-row"><span class="s-key">④ 증거</span><span class="s-val">후불제 DB / 올케어 7종 지원 / 24시간 단톡방 실제 화면 공개.</span></div>
-          <div class="s-row"><span class="s-key">⑤ CTA</span><span class="s-val">"15분만 들어보시면 됩니다."</span></div>
-        </div>
-        <span class="cta-btn" style="background:#1A1A1A;">15분 무료 상담</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 걱정 3개 텍스트 → 하나씩 취소선 처리. 영상 30초. 강한 자막.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
+    <div class="nxcard"><span class="nxidx">②</span>
+      <div><div class="nxttl">도발형 vs 긍정형 A/B 테스트</div>
+        <div class="nxdesc">동일 앵글 내 2개 버전 동시 집행. Cold → 도발, Retargeting → 긍정 가설 검증.</div>
       </div>
     </div>
-
-    <!-- J03 -->
-    <div class="card joo-style" data-tags="팀빌더 META 이미지">
-      <div class="card-strip s-joo"></div><div class="card-num">J03</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">이미지 피드</span><span class="tag tag-channel">META · IG</span><span class="tag tag-joo">열일곱 공식</span></div>
-        <div class="card-title">팀 수입 역산 충격형 — "혼자 버는 것보다 팀이 낫다"</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">① 충격 후크</div>
-        <div class="hook-copy">"지점장이 직접 영업을<br>열심히 할수록<br>손해인 이유가 있습니다."</div>
-        <div class="structure-box">
-          <div class="s-row"><span class="s-key">② 공감</span><span class="s-val">나 혼자 영업하면 한계가 있다. 팀 관리까지 하면 더 벅차다.</span></div>
-          <div class="s-row"><span class="s-key">③ 반전</span><span class="s-val">그런데 팀원 10명 실적에서 오버라이딩이 붙는 구조라면, 관리가 곧 수입입니다.</span></div>
-          <div class="s-row"><span class="s-key">④ 증거</span><span class="s-val">MZ패밀리 오버라이딩 구조 공개. 팀 월납 5,000만원 기준 지점장 수입 시뮬레이션.</span></div>
-          <div class="s-row"><span class="s-key">⑤ CTA</span><span class="s-val">"내 팀 수입 5분이면 계산됩니다."</span></div>
-        </div>
-        <span class="cta-btn" style="background:#1A1A1A;">팀 수입 계산하기</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 혼자 영업 수입 vs 팀 오버라이딩 수입 비교 차트. 팀 규모별 수입 시뮬레이션.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
+    <div class="nxcard"><span class="nxidx">③</span>
+      <div><div class="nxttl">META Lead Form 설계</div>
+        <div class="nxdesc">2필드 vs 3필드 CVR 비교. 질문 최소화가 신청률 핵심. 사전 자동완성 활성화.</div>
       </div>
     </div>
-
-    <!-- J04 -->
-    <div class="card joo-style featured" data-tags="팀빌더 META 카카오 영상">
-      <div class="card-strip s-joo"></div><div class="card-num">J04</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">릴스 영상</span><span class="tag tag-channel">IG · 카카오</span><span class="tag tag-joo">열일곱 공식</span></div>
-        <div class="card-title">설계사 이탈 원인 제거형 — "왜 팀원이 3개월 만에 나갈까"</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">① 충격 후크</div>
-        <div class="hook-copy">"힘들게 뽑은 설계사가<br>3개월 만에 나가는<br>이유가 있습니다."</div>
-        <div class="structure-box">
-          <div class="s-row"><span class="s-key">② 공감</span><span class="s-val">DB 없어서 / 설계가 어려워서 / 지점장이 너무 바빠서 케어 못 받아서.</span></div>
-          <div class="s-row"><span class="s-key">③ 반전</span><span class="s-val">MZ패밀리는 그 3가지를 본사가 대신합니다. 후불제 DB + 설계서 제작 + 올케어 7종.</span></div>
-          <div class="s-row"><span class="s-key">④ 증거</span><span class="s-val">본사 직접 지원 시스템 실제 화면 공개. 지점장 1명이 10명 이상 관리 가능한 이유.</span></div>
-          <div class="s-row"><span class="s-key">⑤ CTA</span><span class="s-val">"팀원 이탈 막는 방법, 15분에 다 설명됩니다."</span></div>
-        </div>
-        <span class="cta-btn" style="background:#1A1A1A;">15분 설명 듣기</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 팀원 이탈 → 본사 지원 시스템 화면 전환. 15~30초 릴스. 강한 자막.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
+    <div class="nxcard"><span class="nxidx">④</span>
+      <div><div class="nxttl">영상 소재 촬영 콘티</div>
+        <div class="nxdesc">#02, #06, #10 촬영 콘티 + 자막 시안 패키지. J10 Remotion 프로젝트 연계.</div>
       </div>
     </div>
-
-    <!-- J05 -->
-    <div class="card joo-style" data-tags="본부장 META 이미지">
-      <div class="card-strip s-joo"></div><div class="card-num">J05</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">본부장 지망</span><span class="tag tag-format">이미지 피드</span><span class="tag tag-channel">META · 네이버</span><span class="tag tag-joo">열일곱 공식</span></div>
-        <div class="card-title">기회 비용 각인 — "지금 안 하면 1년 후 후회"</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">① 충격 후크</div>
-        <div class="hook-copy">"2026년에 본부장 못 되면<br>다음 기회는 5년 뒤입니다."</div>
-        <div class="structure-box">
-          <div class="s-row"><span class="s-key">② 공감</span><span class="s-val">본부장 조건 30명, 월납 1,000만원. 현실적으로 불가능해 보인다.</span></div>
-          <div class="s-row"><span class="s-key">③ 반전</span><span class="s-val">그런데 2026년 단 한 해만, 10명에 500만원으로 완화됐습니다.</span></div>
-          <div class="s-row"><span class="s-key">④ 증거</span><span class="s-val">공식 발표 조건. '27년부터 원래대로 복귀 예정. 이 페이지가 사라지면 기회도 사라집니다.</span></div>
-          <div class="s-row"><span class="s-key">⑤ CTA</span><span class="s-val">"일단 조건만 확인해보세요."</span></div>
-        </div>
-        <span class="cta-btn" style="background:#1A1A1A;">조건 확인 (무료)</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 타임라인 — 2026 "기회의 창" vs 2027 "문 닫힘". 긴박감 강조.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
+    <div class="nxcard"><span class="nxidx">⑤</span>
+      <div><div class="nxttl">랜딩페이지 메시지 매칭</div>
+        <div class="nxdesc">광고 헤드라인 ↔ mzf.1x3.kr 히어로 카피 일치. 메시지 단절은 이탈률 급등 원인 1위.</div>
       </div>
     </div>
-
-    <!-- J06 -->
-    <div class="card joo-style" data-tags="경력설계사 네이버 이미지">
-      <div class="card-strip s-joo"></div><div class="card-num">J06</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">블로그 SEO</span><span class="tag tag-channel">네이버</span><span class="tag tag-joo">열일곱 공식</span></div>
-        <div class="card-title">이직 후회 공감글 — "나는 왜 진작 안 옮겼을까"</div>
+    <div class="nxcard"><span class="nxidx">⑥</span>
+      <div><div class="nxttl">Kakao CAPI 전환 추적</div>
+        <div class="nxdesc">Make 자동화 기반 연동. 리드폼 제출 이벤트 → Kakao 전환 리포팅. META 교차 검증.</div>
       </div>
-      <div class="card-body">
-        <div class="slabel red">① 충격 후크 (블로그 제목)</div>
-        <div class="hook-copy">"보험 설계사 이직,<br>2년 더 버텼다가 후회한 이유"</div>
-        <div class="structure-box">
-          <div class="s-row"><span class="s-key">② 공감</span><span class="s-val">인간관계 때문에, DB 문제 때문에, 그냥 익숙해서. 버텼다.</span></div>
-          <div class="s-row"><span class="s-key">③ 반전</span><span class="s-val">옮기고 나서야 알았다. 내가 버틴 게 아니라 착취당한 거였다.</span></div>
-          <div class="s-row"><span class="s-key">④ 증거</span><span class="s-val">수수료 80%, 후불제 DB, 올케어 7종 — 이전 회사와 나란히 비교.</span></div>
-          <div class="s-row"><span class="s-key">⑤ CTA</span><span class="s-val">"글 끝에 상담 신청 링크. 강요 없음."</span></div>
-        </div>
-        <span class="cta-btn" style="background:#1A1A1A;">상담 신청 (부담 없음)</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 실제 후기 형식 블로그. 1인칭 서술. 공감 유도 → SEO 유입.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-    <!-- J07 -->
-    <div class="card joo-style" data-tags="팀빌더 카카오 이미지">
-      <div class="card-strip s-joo"></div><div class="card-num">J07</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">카카오 비즈보드</span><span class="tag tag-channel">카카오</span><span class="tag tag-joo">열일곱 공식</span></div>
-        <div class="card-title">지점 확장 로드맵 — "지점장 1년 차, 본부장 2년 차"</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">① 충격 후크</div>
-        <div class="hook-copy">"지점장 시작하고<br>1년 만에 본부장 된<br>사람이 있습니다."</div>
-        <div class="structure-box">
-          <div class="s-row"><span class="s-key">② 공감</span><span class="s-val">본부장은 막연히 먼 이야기 같다. 30명 채우는 게 가능한 일인가.</span></div>
-          <div class="s-row"><span class="s-key">③ 반전</span><span class="s-val">2026년은 10명만 채우면 됩니다. MZ패밀리 디지털 리크루팅 시스템과 함께라면 가능한 수치입니다.</span></div>
-          <div class="s-row"><span class="s-key">④ 증거</span><span class="s-val">실제 1년 만에 본부장 승급한 지점장 인터뷰. 팀 빌딩 단계별 로드맵 공개.</span></div>
-          <div class="s-row"><span class="s-key">⑤ CTA</span><span class="s-val">"로드맵 한 번 보고 결정해도 늦지 않습니다."</span></div>
-        </div>
-        <span class="cta-btn" style="background:#1A1A1A;">로드맵 구경하기</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 1년 타임라인 — 입사 → 팀 5명 → 10명 → 본부장. 카카오 비즈보드 최적화.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-    <!-- J08 -->
-    <div class="card joo-style" data-tags="경력설계사 META 영상">
-      <div class="card-strip s-joo"></div><div class="card-num">J08</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">숏폼 영상</span><span class="tag tag-channel">META · 유튜브</span><span class="tag tag-joo">열일곱 공식</span></div>
-        <div class="card-title">숨겨진 비용 폭로 — "이행보증, 당신 돈으로 냈나요"</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">① 충격 후크</div>
-        <div class="hook-copy">"이행보증 비용,<br>혹시 본인이 내고 있나요?"</div>
-        <div class="structure-box">
-          <div class="s-row"><span class="s-key">② 공감</span><span class="s-val">계약서 잘 읽지 않으면 모른다. 나도 한동안 몰랐다.</span></div>
-          <div class="s-row"><span class="s-key">③ 반전</span><span class="s-val">MZ패밀리는 이행보증 비용을 본부장·지점장이 부담합니다. 설계사 전가 없음.</span></div>
-          <div class="s-row"><span class="s-key">④ 증거</span><span class="s-val">계약서에 명시. 공식 정책. 실제 지점장 확인 가능.</span></div>
-          <div class="s-row"><span class="s-key">⑤ CTA</span><span class="s-val">"계약 조건 전문 무료로 보내드립니다."</span></div>
-        </div>
-        <span class="cta-btn" style="background:#1A1A1A;">계약 조건 받기</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 계약서 빨간 동그라미 강조. "이 항목 확인하셨나요?" 자막.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-    <!-- J09 -->
-    <div class="card joo-style" data-tags="본부장 네이버 이미지">
-      <div class="card-strip s-joo"></div><div class="card-num">J09</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">본부장 지망</span><span class="tag tag-format">이미지 광고</span><span class="tag tag-channel">네이버</span><span class="tag tag-joo">열일곱 공식</span></div>
-        <div class="card-title">수입 시뮬레이션 — "팀 10명이면 월 수입이"</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">① 충격 후크</div>
-        <div class="hook-copy">"팀원 10명 월납 500만원,<br>본부장 수입 계산해봤습니다."</div>
-        <div class="structure-box">
-          <div class="s-row"><span class="s-key">② 공감</span><span class="s-val">본부장이 되고 싶지만 숫자가 막막하다. 30명? 1,000만원? 현실적으로 안 보인다.</span></div>
-          <div class="s-row"><span class="s-key">③ 반전</span><span class="s-val">2026년만 10명·500만원. 지금 시작하면 12개월 안에 도달 가능한 수치입니다.</span></div>
-          <div class="s-row"><span class="s-key">④ 증거</span><span class="s-val">오버라이딩 수수료 85% × 팀 실적 = 월 수입 시뮬레이션 공개.</span></div>
-          <div class="s-row"><span class="s-key">⑤ CTA</span><span class="s-val">"내 수입 직접 계산해보세요. (계산기 무료)"</span></div>
-        </div>
-        <span class="cta-btn" style="background:#1A1A1A;">수입 계산기 →</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 구체적 수입 표. "월 ###만원 가능" 빨간 강조. 계산기 랜딩 연결.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-    <!-- J10 -->
-    <div class="card joo-style featured" data-tags="팀빌더 META 영상">
-      <div class="card-strip s-joo"></div><div class="card-num">J10</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">릴스 영상</span><span class="tag tag-channel">IG · META</span><span class="tag tag-joo">열일곱 공식</span></div>
-        <div class="card-title">AI 디지털 지점 역설 — "관리할수록 수입이 느는 구조"</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">① 충격 후크</div>
-        <div class="hook-copy">"AI 시대 지점장은<br>영업을 줄일수록<br>수입이 늘어납니다."</div>
-        <div class="structure-box">
-          <div class="s-row"><span class="s-key">② 공감</span><span class="s-val">지점장이 직접 영업까지 해야 한다면, 팀 관리는 언제 하나. 뭔가 잘못된 구조다.</span></div>
-          <div class="s-row"><span class="s-key">③ 반전</span><span class="s-val">AI가 DB를 쌓고, 본사가 설계를 처리하면, 지점장은 팀 성장에만 집중할 수 있습니다.</span></div>
-          <div class="s-row"><span class="s-key">④ 증거</span><span class="s-val">MZ패밀리 디지털 비서 시스템 — 지점장 개입 없이 팀원 DB 자동 배정, 본사 올케어 7종 처리.</span></div>
-          <div class="s-row"><span class="s-key">⑤ CTA</span><span class="s-val">"어떤 구조인지 15분만 들어보세요."</span></div>
-        </div>
-        <span class="cta-btn" style="background:#1A1A1A;">구조 설명 듣기</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> "지점장 영업 OUT → 팀 관리 IN" 대비. AI 시스템 화면 공개. 15~30초 릴스.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-    <!-- J11 -->
-    <div class="card joo-style" data-tags="경력설계사 카카오 이미지">
-      <div class="card-strip s-joo"></div><div class="card-num">J11</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">카카오 채널</span><span class="tag tag-channel">카카오</span><span class="tag tag-joo">열일곱 공식</span></div>
-        <div class="card-title">고객 없는 이직 공포 제거 — "DB 없이 시작해도 됩니다"</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">① 충격 후크</div>
-        <div class="hook-copy">"이직하고 싶은데<br>DB가 없어서 망설이고 있나요?"</div>
-        <div class="structure-box">
-          <div class="s-row"><span class="s-key">② 공감</span><span class="s-val">기존 고객 리스트 없이 새로 시작하면 3개월이 공백이다. 그게 두렵다.</span></div>
-          <div class="s-row"><span class="s-key">③ 반전</span><span class="s-val">후불제 DB를 제공합니다. 계약 성사 후 정산. 초기 비용 0원.</span></div>
-          <div class="s-row"><span class="s-key">④ 증거</span><span class="s-val">네이버·구글·카카오 잠재고객 자동 유입 시스템 + 후불제 DB 병행 제공.</span></div>
-          <div class="s-row"><span class="s-key">⑤ CTA</span><span class="s-val">"DB 없어도 되는지 먼저 여쭤보세요."</span></div>
-        </div>
-        <span class="cta-btn" style="background:#1A1A1A;">DB 없이 가능한지 확인</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> "공백 기간 0일" 강조. 카카오 채널 1:1 문의 유도.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-    <!-- J12 -->
-    <div class="card joo-style" data-tags="본부장 META 이미지">
-      <div class="card-strip s-joo"></div><div class="card-num">J12</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">본부장 지망</span><span class="tag tag-format">이미지 피드</span><span class="tag tag-channel">META · FB</span><span class="tag tag-joo">열일곱 공식</span></div>
-        <div class="card-title">관리자 한계 돌파 — "지점장으로 멈추지 마세요"</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">① 충격 후크</div>
-        <div class="hook-copy">"지점장에서 멈추는 사람과<br>본부장 가는 사람의 차이"</div>
-        <div class="structure-box">
-          <div class="s-row"><span class="s-key">② 공감</span><span class="s-val">지점장도 좋은데, 팀이 커지면 수입이 얼마나 달라지는지 계산해본 적 있나요?</span></div>
-          <div class="s-row"><span class="s-key">③ 반전</span><span class="s-val">본부장은 직접 영업 + 팀 오버라이딩 수수료 85%가 동시에 들어옵니다.</span></div>
-          <div class="s-row"><span class="s-key">④ 증거</span><span class="s-val">'26년 한정 승급 완화 조건 — 지점장 10명, 월납 500만원이면 됩니다.</span></div>
-          <div class="s-row"><span class="s-key">⑤ CTA</span><span class="s-val">"본부장 로드맵 한 번 들어보세요."</span></div>
-        </div>
-        <span class="cta-btn" style="background:#1A1A1A;">본부장 로드맵 확인</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 지점장 vs 본부장 수입 비교표. 직관적 숫자 차이.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-    <!-- J13 -->
-    <div class="card joo-style" data-tags="팀빌더 네이버 이미지">
-      <div class="card-strip s-joo"></div><div class="card-num">J13</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">팀빌더 지점장</span><span class="tag tag-format">블로그 SEO</span><span class="tag tag-channel">네이버</span><span class="tag tag-joo">열일곱 공식</span></div>
-        <div class="card-title">GA 지점장 이직 후회 공감글 — "팀원 다 데리고 나올걸"</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">① 충격 후크 (블로그 제목)</div>
-        <div class="hook-copy">"GA 지점장 3년,<br>진작 이직 안 한 게<br>가장 후회됩니다."</div>
-        <div class="structure-box">
-          <div class="s-row"><span class="s-key">② 공감</span><span class="s-val">팀원 있고, 관계 있고, 익숙해서. 이직 못 하는 이유는 다 변명이었다.</span></div>
-          <div class="s-row"><span class="s-key">③ 반전</span><span class="s-val">MZ패밀리로 옮기고 알았다. 팀원 DB까지 지원받는 구조가 있다는 걸.</span></div>
-          <div class="s-row"><span class="s-key">④ 증거</span><span class="s-val">수수료 80% + 후불제 DB + 본사 올케어 7종 — 이전 회사와 조건 나란히 비교.</span></div>
-          <div class="s-row"><span class="s-key">⑤ CTA</span><span class="s-val">"글 끝에 상담 링크. 강요 없습니다."</span></div>
-        </div>
-        <span class="cta-btn" style="background:#1A1A1A;">조건 비교해보기</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 1인칭 후기 블로그. 키워드: GA지점장이직, 보험지점장이직. SEO 최적화.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-    <!-- J14 -->
-    <div class="card joo-style" data-tags="경력설계사 META 영상">
-      <div class="card-strip s-joo"></div><div class="card-num">J14</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">경력 설계사</span><span class="tag tag-format">증언형 영상</span><span class="tag tag-channel">META · 유튜브</span><span class="tag tag-joo">열일곱 공식</span></div>
-        <div class="card-title">사회적 증거 폭발 — "저도 반신반의했습니다"</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">① 충격 후크</div>
-        <div class="hook-copy">"저도 처음엔<br>거짓말인 줄 알았습니다."</div>
-        <div class="structure-box">
-          <div class="s-row"><span class="s-key">② 공감</span><span class="s-val">수수료 80%? DB 후불제? 올케어 지원? 이게 말이 되냐고 생각했습니다.</span></div>
-          <div class="s-row"><span class="s-key">③ 반전</span><span class="s-val">그래서 직접 들어갔습니다. 3개월 뒤 이 영상을 찍고 있습니다.</span></div>
-          <div class="s-row"><span class="s-key">④ 증거</span><span class="s-val">실제 지점장 출연. 이전 수입 vs 현재 수입 통장 화면 (부분 공개). 30~60초.</span></div>
-          <div class="s-row"><span class="s-key">⑤ CTA</span><span class="s-val">"거짓말인지 직접 확인해보세요."</span></div>
-        </div>
-        <span class="cta-btn" style="background:#1A1A1A;">직접 확인하기</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 반신반의 표정 → 통장 화면 → 미소. 가장 강력한 전환 소재.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-    <!-- J15 -->
-    <div class="card joo-style featured" data-tags="경력설계사 본부장 팀빌더 META 카카오 이미지 영상">
-      <div class="card-strip s-joo"></div><div class="card-num">J15</div>
-      <div class="card-header">
-        <div class="tags"><span class="tag tag-persona">전 타겟</span><span class="tag tag-format">리타겟팅</span><span class="tag tag-channel">META · 카카오</span><span class="tag tag-joo">열일곱 공식</span></div>
-        <div class="card-title">결정 장벽 제거 — "딱 하나만 물어봐도 됩니다"</div>
-      </div>
-      <div class="card-body">
-        <div class="slabel red">① 충격 후크</div>
-        <div class="hook-copy">"결정 안 해도 됩니다.<br>질문 하나만 해보세요."</div>
-        <div class="structure-box">
-          <div class="s-row"><span class="s-key">② 공감</span><span class="s-val">페이지 봤는데 아직 결정이 안 선다. 맞습니다. 중요한 결정이니까요.</span></div>
-          <div class="s-row"><span class="s-key">③ 반전</span><span class="s-val">그래서 결정 먼저 하지 않아도 됩니다. 궁금한 것 하나만 물어보세요.</span></div>
-          <div class="s-row"><span class="s-key">④ 증거</span><span class="s-val">24시간 단톡방 운영. 답변 평균 15분 이내. 강요 없는 정보 제공.</span></div>
-          <div class="s-row"><span class="s-key">⑤ CTA</span><span class="s-val">"질문 하나 → 카카오 채널 오픈채팅"</span></div>
-        </div>
-        <span class="cta-btn" style="background:#1A1A1A;">질문 하러 가기 →</span>
-        <div class="vnote"><strong>📐 비주얼:</strong> 카카오 채팅창 UI. "질문만 해도 됩니다" 강조. 진입 장벽 최저점 CTA.</div>
-        <button class="dl-btn" onclick="downloadCard(this)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          PNG 다운로드
-        </button>
-      </div>
-    </div>
-
-  </div><!-- /grid-v2 -->
-
-  <div class="summary-wrap" style="margin-bottom:60px;">
-    <div class="summary-head">📊 v2 열일곱 스타일 구성 요약</div>
-    <div class="summary-grid">
-      <div class="si"><h4>후킹 단계 준수</h4><ul><li>① 충격 후크 — 스크롤 멈춤</li><li>② 공감 — "맞아" 유발</li><li>③ 반전 — "그런데" 전환</li><li>④ 증거 — 숫자·사례</li><li>⑤ 낮은 CTA — 장벽 최소화</li></ul></div>
-      <div class="si"><h4>페르소나 배분</h4><ul><li>경력 설계사 — 5종 (J01,J02,J06,J08,J14)</li><li>팀빌더 지점장 — 6종 (J03,J04,J07,J10,J11,J13)</li><li>본부장 지망 — 3종 (J05,J09,J12)</li><li>전 타겟 리타겟 — 1종 (J15)</li></ul></div>
-      <div class="si"><h4>채널 배분</h4><ul><li>META (FB/IG) — 10종</li><li>네이버 SEO — 2종</li><li>카카오 — 3종</li><li>유튜브 영상 — 5종</li></ul></div>
-      <div class="si"><h4>집행 우선순위</h4><ul><li>1순위 — J01 수수료 착취 폭로</li><li>1순위 — J04 팀원 이탈 원인 제거</li><li>1순위 — J10 AI 디지털 지점 역설</li><li>2순위 — J14 반신반의 후기</li><li>리타겟 — J15 질문 하나</li></ul></div>
     </div>
   </div>
+</section>
 
-</div><!-- /panel-v3 -->
-
+<!-- ──────────── FOOTER ──────────── -->
+<footer>
+  <span class="ft-brand">열일곱하기</span>
+  <span class="ft-meta">101OUTPOST · BUSINESS × MARKETING &nbsp;·&nbsp; MZ패밀리 지점장 채용 캠페인 광고 소재 기획안 &nbsp;·&nbsp; v1.1 · 2026.03</span>
+</footer>
 
 <script>
-/* ── 버전 전환 ── */
-function switchVer(vid, btn) {
-  // 패널 전환
-  document.querySelectorAll('.version-panel').forEach(p => p.classList.remove('active'));
-  document.getElementById('panel-' + vid).classList.add('active');
-  // 버튼 활성
-  document.querySelectorAll('.vbtn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  // 헤더 업데이트
-  const labels = {
-    v1: { ver:'MZF-ver-2026-03-04-09:00:00', title:'15종', sub:'v1 라이트 리디자인 (15종) + v2 열일곱식 후킹 구조 (15종)' },
-    v2: { ver:'MZF-ver-2026-03-04-10:30:00', title:'15종', sub:'v1 라이트 리디자인 (15종) + v2 열일곱식 후킹 구조 (15종)' },
-    v3: { ver:'MZF-ver-2026-03-04-14:00:00', title:'15종', sub:'v3 타겟 수정 — N잡러 삭제, 팀빌더 지점장으로 전면 교체' }
-  };
-  const l = labels[vid];
-  document.getElementById('ver-label').textContent = l.ver + ' 활성';
-  document.getElementById('vhist-now').textContent = '현재 활성 → ' + l.ver;
-  // 필터 리셋
-  resetFilter();
-}
-
-/* ── 필터 ── */
-function fc(tag, e) {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  e.target.classList.add('active');
-  // 현재 활성 패널의 카드만 필터
-  const activePanel = document.querySelector('.version-panel.active');
-  const cards = activePanel.querySelectorAll('.card');
-  let v = 0;
+function filt(type, btn) {
+  document.querySelectorAll('.fb').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  const cards = document.querySelectorAll('#cardsGrid .card');
+  let n = 0;
   cards.forEach(c => {
-    const t = c.getAttribute('data-tags') || '';
-    if (tag === 'all' || t.includes(tag)) { c.classList.remove('hidden'); v++; }
-    else c.classList.add('hidden');
+    const t = c.dataset.t || '';
+    const show = type==='all'
+      || (type==='pos' && t.includes('pos'))
+      || (type==='atk' && t.includes('atk'))
+      || (type!=='all' && type!=='pos' && type!=='atk' && t.includes(type));
+    c.classList.toggle('hidden', !show);
+    if(show) n++;
   });
-  document.getElementById('badge').textContent = v + ' / ' + cards.length;
+  document.getElementById('fcnt').textContent = n + ' / 12';
 }
 
-function resetFilter() {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  document.querySelector('.filter-btn').classList.add('active');
-  const activePanel = document.querySelector('.version-panel.active');
-  const cards = activePanel.querySelectorAll('.card');
-  cards.forEach(c => c.classList.remove('hidden'));
-  document.getElementById('badge').textContent = cards.length + ' / ' + cards.length;
-}
-
-// 초기 배지 세팅
-window.onload = () => resetFilter();
-
-/* ── GitHub Push용 코드 복사 ── */
-async function copyForDeploy() {
+function copyHTML() {
   const btn = document.getElementById('copyBtn');
-  const icon = document.getElementById('copyBtnIcon');
-  
-  try {
-    // 현재 페이지 전체 HTML 가져오기
-    const fullHtml = document.documentElement.outerHTML;
-    
-    await navigator.clipboard.writeText(fullHtml);
-    
-    btn.classList.add('success');
-    icon.textContent = '✓';
-    btn.childNodes[1].textContent = ' 복사 완료! Claude Code에 붙여넣기 하세요';
-    
-    // 3초 후 원상복구
-    setTimeout(() => {
-      btn.classList.remove('success');
-      icon.textContent = '⬆';
-      btn.childNodes[1].textContent = ' GitHub Push용 코드 복사';
-    }, 3000);
-    
-  } catch(e) {
-    // clipboard API 실패 시 textarea 방식으로 폴백
-    const ta = document.createElement('textarea');
-    ta.value = document.documentElement.outerHTML;
-    ta.style.position = 'fixed';
-    ta.style.opacity = '0';
-    document.body.appendChild(ta);
-    ta.select();
-    document.execCommand('copy');
-    document.body.removeChild(ta);
-    
-    btn.classList.add('success');
-    icon.textContent = '✓';
-    btn.childNodes[1].textContent = ' 복사 완료!';
-    setTimeout(() => {
-      btn.classList.remove('success');
-      icon.textContent = '⬆';
-      btn.childNodes[1].textContent = ' GitHub Push용 코드 복사';
-    }, 3000);
-  }
-}
-
-/* ── 카드 PNG 다운로드 ── */
-async function downloadCard(btn) {
-  const card = btn.closest('.card');
-  btn.classList.add('loading');
-  btn.textContent = '생성 중...';
-  
-  // 다운로드 버튼 임시 숨김
-  btn.style.display = 'none';
-  
-  try {
-    const canvas = await html2canvas(card, {
-      scale: 2,
-      useCORS: true,
-      backgroundColor: '#ffffff',
-      logging: false
-    });
-    
-    // 카드 제목 추출
-    const titleEl = card.querySelector('.card-title');
-    const numEl = card.querySelector('.card-num');
-    const title = titleEl ? titleEl.textContent.trim().replace(/[^가-힣a-zA-Z0-9]/g, '_').slice(0, 30) : 'card';
-    const num = numEl ? numEl.textContent.trim() : '';
-    const filename = `MZF_${num}_${title}.png`;
-    
-    const link = document.createElement('a');
-    link.download = filename;
-    link.href = canvas.toDataURL('image/png');
-    link.click();
-  } catch(e) {
-    alert('다운로드 실패: ' + e.message);
-  } finally {
-    btn.style.display = '';
-    btn.classList.remove('loading');
-    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> PNG 다운로드';
-  }
+  navigator.clipboard.writeText(document.documentElement.outerHTML).then(() => {
+    btn.textContent = '✓ 복사 완료 — Claude Code에 붙여넣기';
+    btn.classList.add('done');
+    setTimeout(() => { btn.textContent='⬆ GitHub Push용 복사'; btn.classList.remove('done'); }, 3000);
+  }).catch(() => { btn.textContent='수동 복사 필요 (Ctrl+A)'; });
 }
 </script>
 </body>
