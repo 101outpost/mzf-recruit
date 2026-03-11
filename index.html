@@ -530,7 +530,6 @@ function buildRef(){document.getElementById('refPanel').innerHTML = `
 </div>
 `;
 }
-/* ── DRAFT PANEL ── */}
 function toggleDraft(){const p=document.getElementById('draftPanel');if(!p.innerHTML.trim())buildDraft();p.style.display=p.style.display==='none'?'block':'none';document.body.style.overflow=p.style.display==='none'?'':'hidden';}
 function closeDraft(){document.getElementById('draftPanel').style.display='none';document.body.style.overflow='';}
 function dTab(id,el){document.querySelectorAll('.draft-tab').forEach(t=>t.classList.remove('on'));document.querySelectorAll('.ds').forEach(s=>s.classList.remove('on'));el.classList.add('on');document.getElementById(id).classList.add('on');}
@@ -808,7 +807,7 @@ function buildDraft(){document.getElementById('draftPanel').innerHTML = `
 
 </div>
 `;
-}}
+}
 </script>
 </body>
 </html>
