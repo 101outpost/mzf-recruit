@@ -59,7 +59,7 @@ body::before{content:'';position:fixed;top:-30vh;right:-20vw;width:70vw;height:7
 .kpi-val span{color:var(--g)}
 .kpi-lbl{font-family:var(--m);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--t4);margin-top:4px}
 
-.fbar{position:sticky;top:0;z-index:500;background:rgba(250,250,250,.85);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--gb);padding:12px 48px;display:flex;align-items:center;gap:8px;overflow-x:auto;scrollbar-width:none}
+.fbar{display:flex;align-items:center;gap:8px;overflow-x:auto;scrollbar-width:none;padding:16px 0;margin-bottom:24px;border-bottom:1px solid var(--gb)}
 .fbar::-webkit-scrollbar{display:none}
 .fbar-lbl{font-family:var(--m);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--t4);margin-right:8px;flex-shrink:0}
 .fb{font-family:var(--f);font-size:14px;font-weight:500;color:var(--t3);padding:8px 18px;background:transparent;border:1px solid transparent;border-radius:100px;cursor:pointer;transition:all .2s;white-space:nowrap;-webkit-tap-highlight-color:transparent}
@@ -185,7 +185,7 @@ footer{background:#111;border-top:2px solid var(--g);padding:28px 48px;padding-b
 .nav{padding:10px 20px;flex-wrap:wrap;gap:8px}.nav-title,.nav-sep{display:none}.nav-actions{width:100%;gap:6px}.nav-btn{flex:1;text-align:center;font-size:12px;padding:10px 12px}
 .hero{padding:48px 24px 40px}.hero h1{font-size:clamp(32px,8vw,48px);letter-spacing:-1.5px}.hero-desc{font-size:16px}
 .kpi-strip{display:grid;grid-template-columns:1fr 1fr;width:100%;border-radius:var(--rm)}.kpi-item{padding:16px 20px;border-right:none}.kpi-item:nth-child(odd){border-right:1px solid var(--gb)}.kpi-item:nth-child(1),.kpi-item:nth-child(2){border-bottom:1px solid var(--gb)}
-.fbar{padding:10px 20px;top:auto;position:relative}.sec{padding:40px 24px 0}
+.fbar{padding:12px 0;gap:6px}.sec{padding:40px 24px 0}
 .gg.c3,.gg.c2{grid-template-columns:1fr}.tg-grid,.cg,.nx-grid{grid-template-columns:1fr}
 .at,.at thead,.at tbody,.at th,.at td,.at tr{display:block}.at thead{display:none}.at tbody tr{border:1px solid var(--gb);border-radius:var(--rm);margin-bottom:12px;background:var(--bg1)}.at td{padding:10px 16px;border:none}.at td::before{content:attr(data-label);display:block;font-family:var(--m);font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--t4);margin-bottom:4px}
 .ptb{padding:14px 20px;flex-wrap:wrap}.ptb h2{font-size:15px}.ref-meta{display:none}.pts{padding:0 16px;gap:0}.pt{padding:12px 16px;font-size:13px}.pbd{padding:24px 20px}
@@ -194,7 +194,7 @@ footer{padding:24px}
 @media(max-width:480px){
 .nav{padding:8px 16px;gap:6px}.nav-brand{font-size:15px}.nav-btn{font-size:12px;padding:9px 8px}
 .hero{padding:32px 16px 28px}.hero h1{font-size:clamp(28px,8vw,36px);letter-spacing:-1px}.hero-desc{font-size:14px;margin-bottom:32px}.kpi-val{font-size:22px}.kpi-item{padding:12px 16px}
-.fbar{padding:8px 16px}.fb{font-size:13px;padding:6px 14px}
+.fbar{padding:10px 0;gap:4px}.fb{font-size:13px;padding:6px 14px}
 .sec{padding:32px 16px 0}.sec-ttl{font-size:20px}
 .gc{padding:20px}.pr-t{font-size:17px}.pr-d{font-size:14px}
 .cc-bd{padding:20px}.cc-hl{font-size:16px}.cc-tx{font-size:14px}.cc-ft{padding:12px 20px}
@@ -366,19 +366,6 @@ footer{padding:20px 16px}
 </div>
 </section>
 
-<div class="fbar">
-<span class="fbar-lbl">Filter</span>
-<button class="fb on" onclick="filt('all',this)" role="tab" aria-label="필터: 전체 12종">전체 12종</button>
-<button class="fb" onclick="filt('pos',this)" role="tab" aria-label="필터: ✅ 긍정형 9종">✅ 긍정형 9종</button>
-<button class="fb" onclick="filt('atk',this)" role="tab" aria-label="필터: 🔴 도발형 3종">🔴 도발형 3종</button>
-<button class="fb" onclick="filt('고통',this)" role="tab" aria-label="필터: 고통 포인트">고통 포인트</button>
-<button class="fb" onclick="filt('권위',this)" role="tab" aria-label="필터: 권위 신뢰">권위 신뢰</button>
-<button class="fb" onclick="filt('무료',this)" role="tab" aria-label="필터: 무료 혜택">무료 혜택</button>
-<button class="fb" onclick="filt('FOMO',this)" role="tab" aria-label="필터: FOMO">FOMO</button>
-<button class="fb" onclick="filt('소셜',this)" role="tab" aria-label="필터: 소셜 프루프">소셜 프루프</button>
-<span class="fbar-cnt" id="fcnt">12 / 12</span>
-</div>
-
 <section class="sec" id="s01">
 <div class="sec-num">01</div>
 <div class="sec-ttl">카피 원칙 — 열일곱 스타일 <span class="sec-badge">6 Principles</span></div>
@@ -421,6 +408,20 @@ footer{padding:20px 16px}
 <div class="sec-num">04</div>
 <div class="sec-ttl">광고 소재 12종 베리에이션 <span class="sec-badge">12 Creatives</span></div>
 <div class="sec-div"></div>
+
+<div class="fbar">
+<span class="fbar-lbl">Filter</span>
+<button class="fb on" onclick="filt('all',this)" role="tab" aria-label="필터: 전체 12종">전체 12종</button>
+<button class="fb" onclick="filt('pos',this)" role="tab" aria-label="필터: ✅ 긍정형 9종">✅ 긍정형 9종</button>
+<button class="fb" onclick="filt('atk',this)" role="tab" aria-label="필터: 🔴 도발형 3종">🔴 도발형 3종</button>
+<button class="fb" onclick="filt('고통',this)" role="tab" aria-label="필터: 고통 포인트">고통 포인트</button>
+<button class="fb" onclick="filt('권위',this)" role="tab" aria-label="필터: 권위 신뢰">권위 신뢰</button>
+<button class="fb" onclick="filt('무료',this)" role="tab" aria-label="필터: 무료 혜택">무료 혜택</button>
+<button class="fb" onclick="filt('FOMO',this)" role="tab" aria-label="필터: FOMO">FOMO</button>
+<button class="fb" onclick="filt('소셜',this)" role="tab" aria-label="필터: 소셜 프루프">소셜 프루프</button>
+<span class="fbar-cnt" id="fcnt">12 / 12</span>
+</div>
+
 <div class="lgd"><span><span class="ld r"></span>도발형 3종 (#01·#07·#12)</span><span class="c-muted">|</span><span><span class="ld g"></span>긍정형 9종 (#02~#06·#08~#11)</span></div>
 <div class="cg" id="cardsGrid">
 
