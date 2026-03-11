@@ -2,30 +2,11 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MZ패밀리 지점장 채용 캠페인 | 광고 크리에이티브 기획안</title>
-
-<!-- Favicon -->
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="MZ패밀리 지점장 채용 캠페인">
-<meta property="og:description" content="META 광고 크리에이티브 15종 전략 기획안 · AI 시대 보험 지점장 리크루팅">
-<meta property="og:image" content="https://mzf.1x3.kr/og-image.png">
-<meta property="og:url" content="https://mzf.1x3.kr">
-<meta property="og:site_name" content="MZ패밀리 × 열일곱">
-<meta property="og:locale" content="ko_KR">
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="MZ패밀리 지점장 채용 캠페인">
-<meta name="twitter:description" content="META 광고 크리에이티브 15종 전략 기획안">
-<meta name="twitter:image" content="https://mzf.1x3.kr/og-image.png">
-
-<!-- SEO -->
-<meta name="description" content="MZ패밀리 지점장 채용 META 광고 크리에이티브 15종 전략 기획안. AI 시대 보험 지점장 리크루팅 캠페인.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#111111">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>MZ패밀리 × META 지점장 채용 캠페인 광고 소재 기획안</title>
 
 <!-- Pretendard — 열일곱 메인 폰트 -->
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
@@ -109,6 +90,115 @@ body {
 }
 .nav-copy-btn:hover, .nav-copy-btn.done {
   background:var(--G); border-color:var(--G); color:#fff;
+}
+.nav-ref-btn {
+  font-family:var(--FM); font-size:9px; letter-spacing:1px; text-transform:uppercase;
+  padding:5px 12px; background:var(--G);
+  border:1px solid var(--G); color:#fff; cursor:pointer; transition:all .2s;
+}
+.nav-ref-btn:hover { background:#23A35C; border-color:#23A35C; }
+
+/* ── REFERENCE PANEL ── */
+#refPanel { position:fixed; top:0; left:0; right:0; bottom:0; background:#F7F8FA; z-index:9999; overflow-y:auto; }
+.ref-close-bar { position:sticky; top:0; z-index:10; background:#111; color:white; padding:14px 48px; display:flex; align-items:center; justify-content:space-between; border-bottom:3px solid #2CBB6B; }
+.ref-close-bar h2 { font-size:15px; font-weight:700; }
+.ref-close-bar .ref-meta { font-family:var(--FM); font-size:10px; color:#888; }
+.ref-close-btn { font-family:var(--FM); font-size:10px; letter-spacing:1px; padding:6px 16px; background:transparent; border:1px solid #444; color:#ccc; cursor:pointer; transition:all .2s; }
+.ref-close-btn:hover { background:#2CBB6B; border-color:#2CBB6B; color:white; }
+.ref-tabs { background:white; border-bottom:1px solid #E2E6EA; padding:0 48px; display:flex; gap:0; overflow-x:auto; scrollbar-width:none; }
+.ref-tabs::-webkit-scrollbar { display:none; }
+.ref-tab { padding:14px 22px; font-size:12px; font-weight:600; color:#888; cursor:pointer; border-bottom:3px solid transparent; white-space:nowrap; transition:all .2s; }
+.ref-tab:hover { color:#111; }
+.ref-tab.on { color:#23A35C; border-bottom-color:#2CBB6B; }
+.ref-body { max-width:1400px; margin:0 auto; padding:36px 48px; }
+.ref-sec { display:none; }
+.ref-sec.on { display:block; }
+.ref-sh { margin-bottom:28px; }
+.ref-sh .r-label { font-family:var(--FM); font-size:9px; letter-spacing:2px; color:#2CBB6B; text-transform:uppercase; margin-bottom:6px; display:block; }
+.ref-sh h3 { font-size:22px; font-weight:900; letter-spacing:-0.5px; }
+.ref-sh p { font-size:13px; color:#888; margin-top:6px; }
+.r-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:32px; }
+.r-stat { background:white; border:1px solid #E2E6EA; border-radius:8px; padding:20px; }
+.r-stat .n { font-size:28px; font-weight:900; letter-spacing:-1px; line-height:1; margin-bottom:4px; }
+.r-stat .n em { color:#2CBB6B; font-style:normal; }
+.r-stat .l { font-size:11px; color:#888; }
+.r-hl { background:#111; color:white; border-radius:10px; padding:28px 36px; margin-bottom:32px; display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+.r-hl-item h4 { font-family:var(--FM); font-size:9px; color:#2CBB6B; letter-spacing:2px; text-transform:uppercase; margin-bottom:8px; }
+.r-hl-item p { font-size:13px; color:#bbb; line-height:1.7; }
+.r-hl-item strong { color:white; }
+.r-tbl-wrap { background:white; border:1px solid #E2E6EA; border-radius:10px; overflow:hidden; margin-bottom:32px; }
+.r-tbl-head { background:#111; color:white; padding:16px 24px; font-size:13px; font-weight:700; display:flex; align-items:center; gap:10px; }
+.r-tbl-head span { font-family:var(--FM); font-size:9px; color:#2CBB6B; letter-spacing:2px; }
+.r-tbl { width:100%; border-collapse:collapse; }
+.r-tbl th { background:#F7F8FA; padding:10px 18px; text-align:left; font-size:10px; font-weight:700; color:#888; text-transform:uppercase; letter-spacing:1px; font-family:var(--FM); border-bottom:1px solid #E2E6EA; }
+.r-tbl td { padding:13px 18px; font-size:12px; border-bottom:1px solid #E2E6EA; vertical-align:top; }
+.r-tbl tr:last-child td { border-bottom:none; }
+.r-tbl tr:hover td { background:#FAFBFC; }
+.rn { font-family:var(--FM); font-size:16px; font-weight:700; color:#2CBB6B; }
+.r-badge { font-size:9px; font-weight:700; padding:2px 8px; border-radius:100px; font-family:var(--FM); white-space:nowrap; }
+.rb-active { background:#E8F8EF; color:#23A35C; }
+.rb-ref { background:#FFF3E0; color:#E65100; }
+.r-ads-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-bottom:40px; }
+.r-ad { background:white; border:1px solid #E2E6EA; border-radius:10px; overflow:hidden; transition:box-shadow .2s, transform .2s; }
+.r-ad:hover { box-shadow:0 6px 24px rgba(0,0,0,.08); transform:translateY(-2px); }
+.r-ad-hd { padding:14px 18px; border-bottom:1px solid #E2E6EA; display:flex; align-items:center; gap:10px; }
+.r-ava { width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; color:white; flex-shrink:0; font-family:var(--FM); }
+.r-ad-hd .info h4 { font-size:12px; font-weight:700; }
+.r-ad-hd .info .sub { font-size:9px; color:#888; font-family:var(--FM); }
+.r-ad-prev { padding:18px; background:#FAFBFC; border-bottom:1px solid #E2E6EA; min-height:110px; }
+.r-ad-hl { font-size:16px; font-weight:900; letter-spacing:-0.5px; line-height:1.3; margin-bottom:6px; }
+.r-ad-body { font-size:11px; color:#555; line-height:1.6; margin-bottom:10px; }
+.r-bens { display:flex; flex-direction:column; gap:3px; }
+.r-ben { font-size:10px; color:#555; display:flex; align-items:flex-start; gap:5px; }
+.r-ben::before { content:'✓'; color:#2CBB6B; font-weight:700; flex-shrink:0; }
+.r-cta-bar { padding:8px 18px; background:#111; color:white; font-size:10px; font-weight:700; text-align:center; font-family:var(--FM); letter-spacing:1px; }
+.r-anl { padding:18px; }
+.r-tags { display:flex; flex-wrap:wrap; gap:5px; margin-bottom:12px; }
+.r-tag { font-size:9px; font-weight:700; padding:2px 8px; border-radius:100px; font-family:var(--FM); }
+.t-pain { background:#FEE2E2; color:#DC2626; }
+.t-ben { background:#E8F8EF; color:#16A34A; }
+.t-fomo { background:#FEF3C7; color:#D97706; }
+.t-soc { background:#EDE9FE; color:#7C3AED; }
+.t-auth { background:#DBEAFE; color:#2563EB; }
+.t-num { background:#FCE7F3; color:#DB2777; }
+.t-gap { background:#E8F8EF; color:#16A34A; border:1px solid #2CBB6B; }
+.r-agrid { display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-bottom:12px; }
+.r-ai { background:#F7F8FA; border-radius:6px; padding:8px 10px; }
+.r-ai .k { font-size:9px; font-weight:700; color:#888; text-transform:uppercase; letter-spacing:1px; font-family:var(--FM); margin-bottom:2px; }
+.r-ai .v { font-size:11px; font-weight:600; }
+.r-ins { background:#E8F8EF; border-left:3px solid #2CBB6B; border-radius:0 5px 5px 0; padding:8px 12px; }
+.r-ins .r-ins-l { font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; font-family:var(--FM); color:#23A35C; margin-bottom:3px; }
+.r-ins p { font-size:11px; color:#0F3D24; line-height:1.5; }
+.r-strat-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:32px; }
+.r-sc { background:white; border:1px solid #E2E6EA; border-radius:10px; padding:24px; }
+.r-sc h4 { font-size:14px; font-weight:800; margin-bottom:14px; display:flex; align-items:center; gap:8px; }
+.r-sc-icon { width:24px; height:24px; border-radius:5px; display:flex; align-items:center; justify-content:center; font-size:12px; }
+.ic-g { background:#E8F8EF; }
+.ic-r { background:#FEE2E2; }
+.ic-b { background:#DBEAFE; }
+.r-sl { list-style:none; display:flex; flex-direction:column; gap:8px; }
+.r-sl li { font-size:12px; color:#555; display:flex; gap:8px; align-items:flex-start; line-height:1.5; }
+.r-sl li::before { content:'→'; color:#2CBB6B; font-weight:700; flex-shrink:0; }
+.r-cmp { display:grid; grid-template-columns:1fr 1fr; border:1px solid #E2E6EA; border-radius:10px; overflow:hidden; margin-bottom:20px; }
+.r-cmp-col { padding:20px; }
+.r-cmp-col:first-child { border-right:1px solid #E2E6EA; background:#FFF8F8; }
+.r-cmp-col:last-child { background:#F8FFF9; }
+.r-cmp-col .ch { font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:2px; font-family:var(--FM); margin-bottom:14px; padding-bottom:8px; border-bottom:2px solid; }
+.r-cmp-col:first-child .ch { color:#CC2A1E; border-color:#CC2A1E; }
+.r-cmp-col:last-child .ch { color:#23A35C; border-color:#2CBB6B; }
+.r-ci { font-size:12px; padding:7px 0; border-bottom:1px solid rgba(0,0,0,.05); line-height:1.5; color:#555; }
+.r-ci:last-child { border-bottom:none; }
+.r-sbar { display:flex; gap:3px; margin-top:3px; }
+.r-sd { width:7px; height:7px; border-radius:50%; background:#E2E6EA; }
+.r-sd.on { background:#2CBB6B; }
+@media(max-width:900px) {
+  .ref-body { padding:24px 20px; }
+  .r-stats { grid-template-columns:1fr 1fr; }
+  .r-hl { grid-template-columns:1fr; }
+  .r-ads-grid { grid-template-columns:1fr; }
+  .r-strat-grid { grid-template-columns:1fr; }
+  .r-cmp { grid-template-columns:1fr; }
+  .ref-close-bar { padding:14px 20px; }
 }
 
 /* ═══════════════════════════════════════
@@ -497,15 +587,299 @@ footer {
 .ft-meta { font-family:var(--FM); font-size:9px; color:#444; letter-spacing:.8px; }
 
 /* ═══════════════════════════════════════
-   반응형
+   반응형 — Mobile First Complete
 ═══════════════════════════════════════ */
+
+/* ── 태블릿 (768px ~ 960px) ── */
 @media (max-width:960px) {
-  .nav, .hero, .fbar, .sec, footer { padding-left:20px; padding-right:20px; }
-  .fbar { overflow-x:auto; height:auto; padding-top:10px; padding-bottom:10px; }
-  .cards, .principles, .targets, .phgrid, .nxgrid { grid-template-columns:1fr; }
-  .hero-h1 { letter-spacing:-1.5px; }
-  .kpi-wrap { flex-wrap:wrap; }
+  /* NAV */
+  .nav { height:auto; min-height:46px; padding:8px 16px; flex-wrap:wrap; gap:6px; }
+  .nav-tag { display:none; }
+  .nav-divider { display:none; }
+  .nav-right { margin-left:0; width:100%; display:flex; flex-wrap:wrap; gap:5px; padding-top:6px; border-top:1px solid #222; }
+  .nav-ref-btn, .nav-copy-btn { font-size:8px; padding:5px 8px; flex:1; text-align:center; min-width:0; }
+  .nav-ver { display:none; }
+
+  /* HERO */
+  .hero { padding:32px 20px 28px; }
+  .hero::before { display:none; }
+  .hero-h1 { font-size:clamp(32px,8vw,48px); letter-spacing:-1.5px; }
+  .hero-desc { font-size:13px; }
+  .kpi-wrap { display:grid; grid-template-columns:1fr 1fr; width:100%; }
+  .kpi { border-right:none; border-bottom:1px solid var(--LINE); padding:12px 16px; }
+  .kpi:nth-child(odd) { border-right:1px solid var(--LINE); }
+  .kpi:last-child { border-bottom:none; }
+
+  /* FILTER BAR */
+  .fbar { padding:8px 16px; height:auto; overflow-x:auto; gap:5px; white-space:nowrap; flex-wrap:nowrap; }
+  .fbar-lbl { font-size:7px; }
+  .fb { font-size:11px; padding:4px 10px; }
+
+  /* SECTIONS */
+  .sec { padding:36px 16px 0; }
+  .sec:last-of-type { padding-bottom:36px; }
+  .sec-ttl { font-size:clamp(18px,5vw,24px); flex-wrap:wrap; gap:8px; }
+  footer { padding:20px 16px; flex-direction:column; align-items:flex-start; gap:6px; }
+
+  /* GRIDS */
+  .principles { grid-template-columns:1fr 1fr; }
+  .targets { grid-template-columns:1fr; }
+  .cards { grid-template-columns:1fr; }
+  .phgrid { grid-template-columns:1fr; }
+  .nxgrid { grid-template-columns:1fr 1fr; }
+
+  /* ANGLE TABLE → card list */
+  .atbl, .atbl thead, .atbl tbody, .atbl th, .atbl td, .atbl tr { display:block; }
+  .atbl thead { display:none; }
+  .atbl tbody tr {
+    margin-bottom:12px;
+    border:1px solid var(--LINE2);
+    border-radius:8px;
+    overflow:hidden;
+    background:var(--BG);
+  }
+  .atbl tbody td { padding:8px 14px; border-bottom:1px solid var(--LINE2); font-size:12px; line-height:1.55; }
+  .atbl tbody td:last-child { border-bottom:none; }
+  .atbl tbody td::before {
+    content:attr(data-label);
+    display:block;
+    font-family:var(--FM); font-size:7px; letter-spacing:1.5px;
+    text-transform:uppercase; color:var(--INK4); margin-bottom:3px;
+  }
+  .a-nm { white-space:normal; font-size:13px; }
+  .a-msg { font-size:12px; }
+
+  /* PHASE cards */
+  .phcard { padding:20px 16px; gap:14px; }
+  .phnum { font-size:38px; }
+  .phhook { font-size:14px; }
+
+  /* LESSON */
+  .lesson { padding:24px 20px; }
+
+  /* REFERENCE PANEL */
+  .ref-close-bar { padding:12px 16px; flex-wrap:wrap; gap:8px; }
+  .ref-close-bar h2 { font-size:13px; }
+  .ref-meta { display:none; }
+  .ref-tabs { padding:0 16px; }
+  .ref-tab { padding:12px 12px; font-size:11px; }
+  .ref-body { padding:20px 16px; }
+  .r-stats { grid-template-columns:1fr 1fr; gap:10px; }
+  .r-hl { grid-template-columns:1fr; padding:20px; gap:16px; }
+  .r-ads-grid { grid-template-columns:1fr; }
+  .r-strat-grid { grid-template-columns:1fr; }
+  .r-cmp { grid-template-columns:1fr; }
+  .r-cmp-col:first-child { border-right:none; border-bottom:1px solid #E2E6EA; }
+  .r-tbl, .r-tbl thead, .r-tbl tbody, .r-tbl th, .r-tbl td, .r-tbl tr { display:block; }
+  .r-tbl thead { display:none; }
+  .r-tbl tr { border-bottom:1px solid #E2E6EA; padding:10px 0; }
+  .r-tbl tr:last-child { border-bottom:none; }
+  .r-tbl td { padding:4px 16px; font-size:11px; border:none; }
+  .r-tbl td::before { content:attr(data-label); font-family:var(--FM); font-size:7px; letter-spacing:1px; text-transform:uppercase; color:#888; display:block; margin-bottom:2px; }
 }
+
+/* ── 모바일 (max 480px) ── */
+@media (max-width:480px) {
+  /* NAV */
+  .nav { padding:6px 12px; }
+  .nav-brand { font-size:9px; letter-spacing:2px; }
+  .nav-ref-btn, .nav-copy-btn { font-size:7px; padding:4px 6px; }
+
+  /* HERO */
+  .hero { padding:24px 14px 20px; }
+  .hero-h1 { font-size:clamp(26px,7.5vw,36px); letter-spacing:-1px; }
+  .hero-badge { margin-bottom:18px; }
+  .hero-desc { font-size:12px; margin-bottom:24px; }
+  .kpi { padding:10px 12px; }
+  .kpi-n { font-size:22px; }
+  .kpi-lbl { font-size:7px; }
+
+  /* FILTER BAR */
+  .fbar { padding:6px 12px; gap:4px; }
+  .fb { font-size:10px; padding:4px 8px; }
+  .fbar-cnt { display:none; }
+
+  /* SECTIONS */
+  .sec { padding:28px 14px 0; }
+  .sec:last-of-type { padding-bottom:28px; }
+  .sec-ttl { font-size:18px; padding-bottom:12px; margin-bottom:20px; }
+  .sec-eye { font-size:8px; }
+  footer { padding:16px 14px; }
+
+  /* GRIDS → all single col */
+  .principles { grid-template-columns:1fr; }
+  .nxgrid { grid-template-columns:1fr; }
+
+  /* PR cards */
+  .pr { padding:20px 16px; }
+  .pr-name { font-size:15px; }
+  .pr-desc { font-size:12px; }
+
+  /* TARGET cards */
+  .tg-body li { font-size:12px; }
+
+  /* CARDS */
+  .c-inner { padding:16px 16px 0; }
+  .chl { font-size:15px; }
+  .cptxt { font-size:12px; }
+  .ctip { margin:0 16px 0; font-size:11px; }
+  .cfoot { padding:12px 16px; }
+
+  /* PHASE */
+  .phcard { padding:18px 14px; flex-direction:column; gap:8px; }
+  .phnum { font-size:32px; }
+  .phhook { font-size:13px; }
+
+  /* LESSON */
+  .lesson { padding:20px 16px; }
+  .lesson-txt { font-size:13px; }
+
+  /* NX */
+  .nxcard { padding:18px 14px; }
+  .nxttl { font-size:13px; }
+  .nxdesc { font-size:12px; }
+
+  /* LEGEND */
+  .legend { flex-wrap:wrap; gap:8px; font-size:11px; }
+
+  /* REF PANEL */
+  .r-agrid { grid-template-columns:1fr; }
+  .r-stats { gap:8px; }
+  .r-stat { padding:14px; }
+  .r-stat .n { font-size:22px; }
+  .ref-body { padding:14px 12px; }
+  .ref-tab { padding:10px 8px; font-size:9px; }
+
+  /* 드래프트 패널 인라인 그리드 오버라이드 */
+  [style*="grid-template-columns:1fr 1fr"] { grid-template-columns:1fr !important; }
+  [style*="grid-template-columns:240px 1fr"] { grid-template-columns:1fr !important; }
+  [style*="grid-template-columns:320px 1fr"] { grid-template-columns:1fr !important; }
+  [style*="grid-template-columns:repeat(3,1fr)"] { grid-template-columns:1fr !important; }
+}
+
+/* ═══════════════════════════════════════
+   모바일 최적화 강화 — 터치 UX + 가독성
+═══════════════════════════════════════ */
+
+/* 터치 타겟 최소 44px */
+@media (max-width:960px) {
+  .fb, .nav-ref-btn, .nav-copy-btn, .ref-close-btn, .ref-tab, .draft-tab {
+    min-height:44px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+  }
+}
+
+/* 필터바 수평 스크롤 — 스크롤 힌트 */
+@media (max-width:960px) {
+  .fbar {
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+    position:relative;
+  }
+  .fbar::-webkit-scrollbar { display:none; }
+  .fbar::after {
+    content:'';
+    position:sticky;
+    right:0;
+    width:40px;
+    flex-shrink:0;
+    background:linear-gradient(to left, var(--BG), transparent);
+    pointer-events:none;
+  }
+}
+
+/* 카드 터치 피드백 */
+@media (max-width:960px) {
+  .card:active { background:var(--G4); transition:none; }
+  .tg:active { border-color:var(--G); }
+  .pr:active { background:var(--G4); }
+  .phcard:active { background:var(--G4); }
+  .nxcard:active { background:var(--G4); }
+}
+
+/* 레퍼런스/소재 패널 모바일 최적화 */
+@media (max-width:480px) {
+  #refPanel, #draftPanel {
+    -webkit-overflow-scrolling:touch;
+  }
+  .ref-close-bar {
+    position:sticky;
+    top:0;
+    z-index:10;
+    padding:10px 14px !important;
+  }
+  .ref-close-bar h2 { font-size:12px !important; }
+  .ref-tabs {
+    padding:0 10px !important;
+    gap:0 !important;
+    -webkit-overflow-scrolling:touch;
+  }
+  .ref-tab, .draft-tab {
+    padding:10px 10px !important;
+    font-size:10px !important;
+    min-height:44px;
+    white-space:nowrap;
+  }
+  .ref-body {
+    padding:12px 10px !important;
+  }
+  .ref-sh h3 { font-size:16px !important; }
+  .ref-sh p { font-size:11px !important; }
+
+  /* 레퍼런스 광고 카드 모바일 */
+  .r-ads-grid { gap:14px !important; }
+  .r-ad-hd { padding:10px 12px !important; flex-wrap:wrap; gap:6px !important; }
+  .r-ava { width:28px !important; height:28px !important; font-size:9px !important; }
+  .r-ad-prev { padding:12px !important; min-height:auto !important; }
+  .r-ad-hl { font-size:14px !important; }
+  .r-ad-body { font-size:10px !important; }
+  .r-anl { padding:12px !important; }
+  .r-cta-bar { font-size:9px !important; padding:6px 12px !important; }
+
+  /* 비교 카드 모바일 */
+  .r-cmp { grid-template-columns:1fr !important; }
+  .r-cmp-col { padding:14px !important; }
+
+  /* 전략 그리드 모바일 */
+  .r-sc { padding:16px !important; border-radius:8px !important; }
+  .r-sc h4 { font-size:13px !important; }
+
+  /* 하이라이트 박스 모바일 */
+  .r-hl { padding:16px !important; border-radius:8px !important; gap:14px !important; }
+  .r-hl-item p { font-size:12px !important; }
+
+  /* 인사이트 박스 모바일 */
+  .r-ins { padding:8px 10px !important; }
+  .r-ins p { font-size:10px !important; }
+
+  /* 소재 초안 패널 인라인 스타일 오버라이드 */
+  .r-strat-grid { grid-template-columns:1fr !important; }
+}
+
+/* Safe area 대응 (노치/홈인디케이터) */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  footer {
+    padding-bottom:calc(16px + env(safe-area-inset-bottom));
+  }
+  .nav {
+    padding-top:env(safe-area-inset-top);
+  }
+}
+
+/* 텍스트 선택 방지 (모바일 터치 UX) */
+@media (max-width:960px) {
+  .fb, .nav-ref-btn, .nav-copy-btn, .ref-close-btn {
+    -webkit-user-select:none;
+    user-select:none;
+    -webkit-tap-highlight-color:transparent;
+  }
+}
+
+/* 가로 오버플로 방지 */
+html, body { overflow-x:hidden; max-width:100vw; }
+.hero-h1, .sec-ttl, .chl, .phhook { word-break:keep-all; overflow-wrap:break-word; }
 </style>
 </head>
 <body>
@@ -517,9 +891,17 @@ footer {
   <span class="nav-tag">MZ패밀리 × META 지점장 채용 캠페인</span>
   <div class="nav-right">
     <span class="nav-ver">v1.1 · 2026.03</span>
+    <button class="nav-ref-btn" onclick="toggleRef()">📊 경쟁사 레퍼런스</button>
+    <button class="nav-ref-btn" style="background:#6B3FCC;border-color:#6B3FCC;" onclick="toggleDraft()">🎨 소재 초안</button>
     <button class="nav-copy-btn" id="copyBtn" onclick="copyHTML()">⬆ GitHub Push용 복사</button>
   </div>
 </nav>
+
+<!-- ──────────── REFERENCE PANEL ──────────── -->
+<div id="refPanel" style="display:none;"></div>
+
+<!-- ──────────── DRAFT PANEL ──────────── -->
+<div id="draftPanel" style="display:none;"></div>
 
 <!-- ──────────── HERO ──────────── -->
 <section class="hero">
@@ -672,29 +1054,34 @@ footer {
     </tr></thead>
     <tbody>
       <tr>
-        <td class="a-no">01</td><td class="a-nm">고통 포인트</td>
-        <td class="a-msg">혼자 뛰는 한계 → 팀 구조 필요성 자각.<br><span class="br">도발형 2종 포함</span></td>
-        <td class="a-tgt">혼자 영업 중인 설계사, 3~10년차</td>
+        <td class="a-no" data-label="No.">01</td>
+        <td class="a-nm" data-label="앵글">고통 포인트</td>
+        <td class="a-msg" data-label="핵심 메시지">혼자 뛰는 한계 → 팀 구조 필요성 자각.<br><span class="br">도발형 2종 포함</span></td>
+        <td class="a-tgt" data-label="적합 타겟">혼자 영업 중인 설계사, 3~10년차</td>
       </tr>
       <tr>
-        <td class="a-no">02</td><td class="a-nm">권위 신뢰</td>
-        <td class="a-msg">MZ패밀리 시스템, AI 디지털 지점, 본사 지원 → 신뢰 형성.<br><span class="bp">긍정형 전용</span></td>
-        <td class="a-tgt">본부장 지망, 시스템 중시형</td>
+        <td class="a-no" data-label="No.">02</td>
+        <td class="a-nm" data-label="앵글">권위 신뢰</td>
+        <td class="a-msg" data-label="핵심 메시지">MZ패밀리 시스템, AI 디지털 지점, 본사 지원 → 신뢰 형성.<br><span class="bp">긍정형 전용</span></td>
+        <td class="a-tgt" data-label="적합 타겟">본부장 지망, 시스템 중시형</td>
       </tr>
       <tr>
-        <td class="a-no">03</td><td class="a-nm">무료 혜택</td>
-        <td class="a-msg">무료 지점장 상담 = 제로 리스크 오퍼 → 진입 장벽 최소화.<br><span class="bp">긍정형 전용</span></td>
-        <td class="a-tgt">전체 타겟 (리타겟팅 포함)</td>
+        <td class="a-no" data-label="No.">03</td>
+        <td class="a-nm" data-label="앵글">무료 혜택</td>
+        <td class="a-msg" data-label="핵심 메시지">무료 지점장 상담 = 제로 리스크 오퍼 → 진입 장벽 최소화.<br><span class="bp">긍정형 전용</span></td>
+        <td class="a-tgt" data-label="적합 타겟">전체 타겟 (리타겟팅 포함)</td>
       </tr>
       <tr>
-        <td class="a-no">04</td><td class="a-nm">FOMO</td>
-        <td class="a-msg">지금 이 구조, 지금 이 기회 → 긴박감 유도.<br><span class="br">도발형 1종 포함</span></td>
-        <td class="a-tgt">30~45세, 성장 욕구 강한 층</td>
+        <td class="a-no" data-label="No.">04</td>
+        <td class="a-nm" data-label="앵글">FOMO</td>
+        <td class="a-msg" data-label="핵심 메시지">지금 이 구조, 지금 이 기회 → 긴박감 유도.<br><span class="br">도발형 1종 포함</span></td>
+        <td class="a-tgt" data-label="적합 타겟">30~45세, 성장 욕구 강한 층</td>
       </tr>
       <tr>
-        <td class="a-no">05</td><td class="a-nm">소셜 프루프</td>
-        <td class="a-msg">이미 선택한 사람들의 변화 → 군중 심리 신뢰 전환.<br><span class="bp">긍정형 전용</span></td>
-        <td class="a-tgt">리타겟팅, 결정 망설이는 층</td>
+        <td class="a-no" data-label="No.">05</td>
+        <td class="a-nm" data-label="앵글">소셜 프루프</td>
+        <td class="a-msg" data-label="핵심 메시지">이미 선택한 사람들의 변화 → 군중 심리 신뢰 전환.<br><span class="bp">긍정형 전용</span></td>
+        <td class="a-tgt" data-label="적합 타겟">리타겟팅, 결정 망설이는 층</td>
       </tr>
     </tbody>
   </table>
@@ -1165,6 +1552,493 @@ function copyHTML() {
     btn.classList.add('done');
     setTimeout(() => { btn.textContent='⬆ GitHub Push용 복사'; btn.classList.remove('done'); }, 3000);
   }).catch(() => { btn.textContent='수동 복사 필요 (Ctrl+A)'; });
+}
+
+/* ── REFERENCE PANEL ── */
+function toggleRef() {
+  const p = document.getElementById('refPanel');
+  if (!p.innerHTML.trim()) buildRef();
+  const open = p.style.display !== 'none';
+  p.style.display = open ? 'none' : 'block';
+  document.body.style.overflow = open ? '' : 'hidden';
+}
+function closeRef() {
+  document.getElementById('refPanel').style.display = 'none';
+  document.body.style.overflow = '';
+}
+function rTab(id, el) {
+  document.querySelectorAll('.ref-tab').forEach(t=>t.classList.remove('on'));
+  document.querySelectorAll('.ref-sec').forEach(s=>s.classList.remove('on'));
+  el.classList.add('on');
+  document.getElementById(id).classList.add('on');
+}
+function buildRef() {
+  document.getElementById('refPanel').innerHTML = `
+<div class="ref-close-bar">
+  <div>
+    <div style="font-family:var(--FM);font-size:9px;color:#2CBB6B;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;">MZ FAMILY RECRUIT · 경쟁사 분석</div>
+    <h2>보험설계사 리크루팅 광고 레퍼런스 분석</h2>
+  </div>
+  <div style="display:flex;align-items:center;gap:16px;">
+    <div class="ref-meta">조사 기간: 2026.01–2026.03 &nbsp;·&nbsp; 수집 소재: 11종 &nbsp;·&nbsp; 플랫폼: META (FB/IG)</div>
+    <button class="ref-close-btn" onclick="closeRef()">✕ 닫기</button>
+  </div>
+</div>
+<div class="ref-tabs">
+  <div class="ref-tab on" onclick="rTab('rs-overview',this)">📊 전체 개요</div>
+  <div class="ref-tab" onclick="rTab('rs-ads',this)">🎯 소재별 분석</div>
+  <div class="ref-tab" onclick="rTab('rs-patterns',this)">📐 카피 패턴</div>
+  <div class="ref-tab" onclick="rTab('rs-strategy',this)">🚀 MZF 전략 방향</div>
+</div>
+<div class="ref-body">
+
+  <!-- ── TAB 1: OVERVIEW ── -->
+  <div id="rs-overview" class="ref-sec on">
+    <div class="ref-sh"><span class="r-label">Overview</span><h3>수집 광고 현황 요약</h3><p>META Ad Library에서 현재 집행 중이거나 집행된 보험설계사 리크루팅 광고 11종을 수집·분석했습니다.</p></div>
+    <div class="r-stats">
+      <div class="r-stat"><div class="n">11<em>종</em></div><div class="l">수집 광고 소재</div></div>
+      <div class="r-stat"><div class="n">7<em>개</em></div><div class="l">식별된 광고주</div></div>
+      <div class="r-stat"><div class="n">6<em>종</em></div><div class="l">현재 활성 집행 중</div></div>
+      <div class="r-stat"><div class="n">3<em>개</em></div><div class="l">주요 소구 패턴</div></div>
+    </div>
+    <div class="r-hl">
+      <div class="r-hl-item"><h4>지배적 메시지</h4><p><strong>수수료 수치 공개</strong>가 가장 많이 사용된 소구 방식. "98수수료", "원수사 97%", "2700%" 등 구체적 숫자 전면 배치.</p></div>
+      <div class="r-hl-item"><h4>주 타겟층</h4><p>현직 설계사 <strong>경력 이직 유도</strong>가 핵심. "이직 고민 중인 관리자/FC님 주목" 문구 우세.</p></div>
+      <div class="r-hl-item"><h4>MZF 공략 공백</h4><p><strong>AI·디지털 전환, n잡 설계사 관리자 포지셔닝</strong> 각도는 수집 11종 내 단 한 건도 없음 → 블루오션.</p></div>
+    </div>
+    <div class="r-tbl-wrap">
+      <div class="r-tbl-head">광고주 목록 <span>ADVERTISER LIST</span></div>
+      <table class="r-tbl">
+        <thead><tr><th>#</th><th>광고주</th><th>소재 수</th><th>상태</th><th>핵심 메시지</th><th>주 타겟</th></tr></thead>
+        <tbody>
+          <tr><td class="rn">01</td><td><strong>GA 파트너스</strong></td><td>2종</td><td><span class="r-badge rb-ref">레퍼런스</span></td><td>"98수수료 #여기밖에 없습니다" + 이직 비교표</td><td>경력 이직 설계사</td></tr>
+          <tr><td class="rn">02</td><td><strong>굿초이스인슈</strong></td><td>1종</td><td><span class="r-badge rb-ref">레퍼런스</span></td><td>"지사/본부/지점 가치에 투자합니다" 서울/경기/인천</td><td>지사·지점 개설 희망</td></tr>
+          <tr><td class="rn">03</td><td><strong>1.0.4.1 박FC팀</strong></td><td>1종</td><td><span class="r-badge rb-ref">레퍼런스</span></td><td>상세 수당 체계 전면 공개 — 최대 2300% 수당</td><td>신입·경력 설계사</td></tr>
+          <tr><td class="rn">04</td><td><strong>키움에셋플래너</strong></td><td>1종</td><td><span class="r-badge rb-active">✓ 활성</span></td><td>"월 1천 설계사 가장 많은 회사 키움" — 소득 두 배</td><td>경력 설계사</td></tr>
+          <tr><td class="rn">05</td><td><strong>연봉 2억 설계사들</strong></td><td>2종</td><td><span class="r-badge rb-active">✓ 활성</span></td><td>"이직 고민 중이라면 바로 여기" — 경력 보상·지원</td><td>이직 고민 경력 설계사</td></tr>
+          <tr><td class="rn">06</td><td><strong>억대연봉설계사's</strong></td><td>1종</td><td><span class="r-badge rb-ref">레퍼런스</span></td><td>"보험영업이 힘든 이유는 DB 구조" — DB 독점 해결</td><td>DB 부족 경력 설계사</td></tr>
+          <tr><td class="rn">07</td><td><strong>지에이 레벨업</strong></td><td>1종</td><td><span class="r-badge rb-ref">레퍼런스</span></td><td>"어떤 제안 받았어도 그것보다 많이" 본부장·지점장·FC</td><td>전 직급 스카우트</td></tr>
+          <tr><td class="rn">08</td><td><strong>Thebetter (A+에셋)</strong></td><td>1종</td><td><span class="r-badge rb-active">✓ 활성</span></td><td>"꿈의 직장으로 모십니다" — 손보시책 600%·해외여행</td><td>라이프스타일 소구 MZ</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ── TAB 2: ADS ── -->
+  <div id="rs-ads" class="ref-sec">
+    <div class="ref-sh"><span class="r-label">Ad Analysis</span><h3>소재별 상세 분석</h3><p>수집된 11종의 광고를 후크 메시지, 설득 각도, 포맷, MZF 시사점 기준으로 분석합니다.</p></div>
+    <div class="r-ads-grid">
+      <div class="r-ad">
+        <div class="r-ad-hd"><div class="r-ava" style="background:#1877F2;">GA</div><div class="info"><h4>GA 파트너스</h4><div class="sub">ID: 1173982441611604</div></div><span class="r-badge rb-ref">레퍼런스</span></div>
+        <div class="r-ad-prev"><div class="r-ad-hl">우리 회사로<br>이직해야 하는 이유</div><div class="r-ad-body">대형GA 최초 1인GA 설립 · #98수수료 "#여기"밖에 없습니다</div><div class="r-bens"><div class="r-ben">98수수료 제공 (법시추가)</div><div class="r-ben">안정적인 전국DB 제공</div><div class="r-ben">사무실지원 & 정착지원금 무한제공</div></div></div>
+        <div class="r-cta-bar">Learn More → 원장공개</div>
+        <div class="r-anl"><div class="r-tags"><span class="r-tag t-num">#수치공개</span><span class="r-tag t-ben">#DB지원</span><span class="r-tag t-pain">#이직유도</span></div><div class="r-agrid"><div class="r-ai"><div class="k">핵심 훅</div><div class="v">수수료 수치 직접 공개</div></div><div class="r-ai"><div class="k">포맷</div><div class="v">카드뉴스 슬라이드</div></div><div class="r-ai"><div class="k">비교표 전략</div><div class="v">좋은 vs 안 좋은 회사</div></div><div class="r-ai"><div class="k">CTA</div><div class="v">원장 공개 클릭 유도</div></div></div><div class="r-ins"><div class="r-ins-l">MZF 시사점</div><p>비교표 전략 효과적. MZF에서는 "혼자 영업 vs 팀 관리자" 비교표로 응용 가능.</p></div></div>
+      </div>
+      <div class="r-ad">
+        <div class="r-ad-hd"><div class="r-ava" style="background:#00897B;">GCI</div><div class="info"><h4>굿초이스인슈</h4><div class="sub">ID: 2451922968640019</div></div><span class="r-badge rb-ref">레퍼런스</span></div>
+        <div class="r-ad-prev"><div class="r-ad-hl" style="color:#E53935;">지사/본부/지점<br>가치에 투자합니다</div><div class="r-ad-body">서울/경기/인천 지역 지사·본부·지점 개설 환영</div><div class="r-bens"><div class="r-ben">지사수당 98%부터 지원</div><div class="r-ben">정착지원금 최대 50%</div><div class="r-ben">투명한 오버라이딩 제도</div></div></div>
+        <div class="r-cta-bar">지금 신청하기 →</div>
+        <div class="r-anl"><div class="r-tags"><span class="r-tag t-ben">#지사개설</span><span class="r-tag t-num">#98수수료</span><span class="r-tag t-auth">#지역타겟</span></div><div class="r-agrid"><div class="r-ai"><div class="k">핵심 훅</div><div class="v">"가치에 투자" 감성 카피</div></div><div class="r-ai"><div class="k">포맷</div><div class="v">인물사진 + 체크리스트</div></div><div class="r-ai"><div class="k">타겟</div><div class="v">지역 명시 (서울/경기/인천)</div></div><div class="r-ai"><div class="k">CTA</div><div class="v">지금 신청하기 (강성)</div></div></div><div class="r-ins"><div class="r-ins-l">MZF 시사점</div><p>지역 명시로 공감도↑. MZF는 수도권 집중 지역 명시 전략 검토.</p></div></div>
+      </div>
+      <div class="r-ad">
+        <div class="r-ad-hd"><div class="r-ava" style="background:#6D4C41;">박</div><div class="info"><h4>1.0.4.1 박FC팀</h4><div class="sub">텍스트 중심 상세 공개형</div></div><span class="r-badge rb-ref">레퍼런스</span></div>
+        <div class="r-ad-prev"><div class="r-ad-hl" style="font-size:14px;">인생맛집 박FC씨<br>팀원 채용공고</div><div class="r-ad-body">Education / Commission / System 3파트 구조로 상세 공개</div><div class="r-bens"><div class="r-ben">업계 최고 수수료 시책 최대 2300%</div><div class="r-ben">고능률 설계사 최대 수수료 테이블 90%</div><div class="r-ben">DB 다양화 (퍼미션/타겟별)</div></div></div>
+        <div class="r-cta-bar">Learn More → 온라인영업 블로그</div>
+        <div class="r-anl"><div class="r-tags"><span class="r-tag t-num">#수당상세</span><span class="r-tag t-auth">#교육체계</span><span class="r-tag t-soc">#3가지약속</span></div><div class="r-agrid"><div class="r-ai"><div class="k">핵심 훅</div><div class="v">상세 조건 완전 공개</div></div><div class="r-ai"><div class="k">포맷</div><div class="v">긴 텍스트 + 팀사진</div></div><div class="r-ai"><div class="k">신뢰 전략</div><div class="v">정보량으로 신뢰 구축</div></div><div class="r-ai"><div class="k">CTA</div><div class="v">블로그 랜딩 연결</div></div></div><div class="r-ins"><div class="r-ins-l">MZF 시사점</div><p>개인 브랜드 전면 노출 전략. 지점장 인터뷰형 콘텐츠로 신뢰↑ 가능.</p></div></div>
+      </div>
+      <div class="r-ad">
+        <div class="r-ad-hd"><div class="r-ava" style="background:#FF7043;">키움</div><div class="info"><h4>키움에셋플래너</h4><div class="sub">활성 · 2026.1.1 게재 시작</div></div><span class="r-badge rb-active">✓ 활성</span></div>
+        <div class="r-ad-prev"><div class="r-ad-hl">월 1천 설계사가<br>가장 많은 회사 <span style="color:#FF7043;">키움!</span></div><div class="r-ad-body">키움 명함만 내밀어도 최소 연봉 1억. 26년 함께 성장할 설계사/관리자 모집.</div><div class="r-bens"><div class="r-ben">경력 설계사 업계 최고 수수료 & 정착지원금</div><div class="r-ben">고객 상담 DB 6개월 무료 제공</div><div class="r-ben">보험사 전체 합산 시책</div></div></div>
+        <div class="r-cta-bar">보험설계사(FA) 상반기 공개채용 →</div>
+        <div class="r-anl"><div class="r-tags"><span class="r-tag t-soc">#소셜프루프</span><span class="r-tag t-num">#1억연봉</span><span class="r-tag t-ben">#DB무료</span></div><div class="r-agrid"><div class="r-ai"><div class="k">핵심 훅</div><div class="v">"월 1천" 숫자 소셜프루프</div></div><div class="r-ai"><div class="k">포맷</div><div class="v">슬라이드 카드뉴스</div></div><div class="r-ai"><div class="k">신뢰 전략</div><div class="v">규모 = 선택받은 곳</div></div><div class="r-ai"><div class="k">CTA</div><div class="v">공개채용 (권위감 부여)</div></div></div><div class="r-ins"><div class="r-ins-l">MZF 시사점</div><p>규모 소셜프루프 강력. MZF는 "지점장 전환 n명" 숫자 확보 후 동일 포맷 적용 가능.</p></div></div>
+      </div>
+      <div class="r-ad">
+        <div class="r-ad-hd"><div class="r-ava" style="background:#7B1FA2;">연봉</div><div class="info"><h4>연봉 2억 설계사들</h4><div class="sub">활성 · 2026.2.18 / 2.23 게재</div></div><span class="r-badge rb-active">✓ 활성</span></div>
+        <div class="r-ad-prev"><div class="r-ad-hl">보험설계사 채용<br><span style="color:#2563EB;font-size:14px;">경력, 이제 대우받으십시오</span></div><div class="r-ad-body">이직 고민 중인 설계사/관리자 주목. 개인·법인·회사 시책 모두.</div><div class="r-bens"><div class="r-ben">정착지원금 / 임차지원 / DB 무료지급</div><div class="r-ben">최고 수수료 (원수사 97% / 손보 최대 2700%)</div><div class="r-ben">수급·갱신·연임·포괄양수양도</div></div></div>
+        <div class="r-cta-bar">이직 고민 중이라면 바로 여기 → 더 알아보기</div>
+        <div class="r-anl"><div class="r-tags"><span class="r-tag t-pain">#이직고민</span><span class="r-tag t-num">#2700%</span><span class="r-tag t-fomo">#경력대우</span></div><div class="r-agrid"><div class="r-ai"><div class="k">핵심 훅</div><div class="v">"이제 대우받으십시오"</div></div><div class="r-ai"><div class="k">포맷</div><div class="v">이미지 + 영상 2종 병행</div></div><div class="r-ai"><div class="k">감정 소구</div><div class="v">억울함·박탈감 해소</div></div><div class="r-ai"><div class="k">CTA</div><div class="v">더 알아보기 (저마찰)</div></div></div><div class="r-ins"><div class="r-ins-l">MZF 시사점</div><p>"대우받으십시오" 감정 훅 강력. MZF는 "관리자로 인정받으십시오"로 변형 가능.</p></div></div>
+      </div>
+      <div class="r-ad">
+        <div class="r-ad-hd"><div class="r-ava" style="background:#F57C00;">억대</div><div class="info"><h4>억대연봉설계사's</h4><div class="sub">ID: 1822222908491563</div></div><span class="r-badge rb-ref">레퍼런스</span></div>
+        <div class="r-ad-prev"><div class="r-ad-hl">보험 DB영업<br>경력 설계사 모집</div><div class="r-ad-body">보험영업이 힘든 이유는 노력 부족이 아닙니다. 문제는 DB 구조입니다.</div><div class="r-bens"><div class="r-ben">검증된 퍼미션 DB 독점 제공</div><div class="r-ben">실적 무관! DB 비용 전액 지원</div><div class="r-ben">월 소득 1,000만원 가능 · 모집 1970~1996년생</div></div></div>
+        <div class="r-cta-bar">강동&하남미사 보험영업설계사 지원신청 →</div>
+        <div class="r-anl"><div class="r-tags"><span class="r-tag t-pain">#DB고통</span><span class="r-tag t-ben">#DB해결</span><span class="r-tag t-num">#월1000만</span></div><div class="r-agrid"><div class="r-ai"><div class="k">핵심 훅</div><div class="v">고통 원인 진단 후 해결</div></div><div class="r-ai"><div class="k">포맷</div><div class="v">남성 인물사진 + 체크</div></div><div class="r-ai"><div class="k">연령 타겟</div><div class="v">1970~1996년생 명시</div></div><div class="r-ai"><div class="k">CTA</div><div class="v">지원신청 직접 유도</div></div></div><div class="r-ins"><div class="r-ins-l">MZF 시사점</div><p>문제 진단 → 해결책 구조가 CVR 높음. MZF는 "혼자 영업의 한계 진단" 구조로 활용.</p></div></div>
+      </div>
+      <div class="r-ad">
+        <div class="r-ad-hd"><div class="r-ava" style="background:#1565C0;">GAup</div><div class="info"><h4>지에이 레벨업</h4><div class="sub">ID: 1260938232590536</div></div><span class="r-badge rb-ref">레퍼런스</span></div>
+        <div class="r-ad-prev"><div class="r-ad-hl" style="background:#F5C842;padding:6px 10px;border-radius:5px;font-size:14px;">본부장님 지점장님 FC님<br>모두 주목!</div><div class="r-ad-body" style="margin-top:8px;">업계최고 정착지원금 약속. "어떤 제안 받았어도 그것보다 많이 지원"</div><div class="r-bens"><div class="r-ben">스카우트 비용 업계 최대 지원 약속</div><div class="r-ben">보장분석 DB 지원 (선택)</div><div class="r-ben">1:1 동행 (등록·마케팅 등)</div></div></div>
+        <div class="r-cta-bar">FC님 주목 — 업계최고 지원금 →</div>
+        <div class="r-anl"><div class="r-tags"><span class="r-tag t-fomo">#스카우트</span><span class="r-tag t-num">#최고지원금</span><span class="r-tag t-auth">#전직급대상</span></div><div class="r-agrid"><div class="r-ai"><div class="k">핵심 훅</div><div class="v">"받은 제안보다 더 많이"</div></div><div class="r-ai"><div class="k">포맷</div><div class="v">옐로우 강조 카드뉴스</div></div><div class="r-ai"><div class="k">타겟 범위</div><div class="v">본부장·지점장·FC 전체</div></div><div class="r-ai"><div class="k">차별화</div><div class="v">경쟁 제안 오버라이드</div></div></div><div class="r-ins"><div class="r-ins-l">MZF 시사점</div><p>직급별 호명 전략 효과적. MZF 타겟(지점장 지원자)에는 직급 단일화가 더 집중도↑.</p></div></div>
+      </div>
+      <div class="r-ad">
+        <div class="r-ad-hd"><div class="r-ava" style="background:#2E7D32;">에셋</div><div class="info"><h4>Thebetter (A+에셋)</h4><div class="sub">ID: 1416704592992670 · 활성</div></div><span class="r-badge rb-active">✓ 활성</span></div>
+        <div class="r-ad-prev"><div class="r-ad-hl">꿈의 직장으로<br>모십니다!</div><div class="r-ad-body">인생에 3번의 기회가 있다면 그중 한 번은 바로 지금. 실력 있는 설계사라면 이 조건 지나치기 어렵습니다.</div><div class="r-bens"><div class="r-ben">손보시책 600%부터 · 수당 최대 1,200%</div><div class="r-ben">해외여행 1년에 2번</div><div class="r-ben">지점 개설·정착지원금·관리수당 100%</div></div></div>
+        <div class="r-cta-bar">A+에셋 더베럴지사 채용 설명회 → 지금 신청하기</div>
+        <div class="r-anl"><div class="r-tags"><span class="r-tag t-fomo">#3번의기회</span><span class="r-tag t-soc">#꿈의직장</span><span class="r-tag t-ben">#해외여행</span></div><div class="r-agrid"><div class="r-ai"><div class="k">핵심 훅</div><div class="v">라이프스타일 드림</div></div><div class="r-ai"><div class="k">포맷</div><div class="v">여성 인물 + 도시뷰</div></div><div class="r-ai"><div class="k">감정 소구</div><div class="v">FOMO + 동경</div></div><div class="r-ai"><div class="k">CTA</div><div class="v">지금 신청하기 (강성)</div></div></div><div class="r-ins"><div class="r-ins-l">MZF 시사점</div><p>"3번의 기회" FOMO 훅 강력. MZF는 "AI 전환기 지점장 선점"의 타이밍 FOMO로 응용.</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TAB 3: PATTERNS ── -->
+  <div id="rs-patterns" class="ref-sec">
+    <div class="ref-sh"><span class="r-label">Copy Patterns</span><h3>카피 & 소재 패턴 분석</h3><p>11종 광고에서 반복 등장하는 설득 구조와 언어 패턴을 추출합니다.</p></div>
+    <div class="r-tbl-wrap">
+      <div class="r-tbl-head">소구 각도별 사용 빈도 <span>ANGLE FREQUENCY</span></div>
+      <table class="r-tbl">
+        <thead><tr><th>순위</th><th>소구 각도</th><th>사용 빈도</th><th>강도</th><th>대표 카피</th><th>MZF 활용</th></tr></thead>
+        <tbody>
+          <tr><td class="rn">01</td><td><strong>수수료·수당 수치 공개</strong></td><td>9종 (82%)</td><td><div class="r-sbar"><div class="r-sd on"></div><div class="r-sd on"></div><div class="r-sd on"></div><div class="r-sd on"></div><div class="r-sd on"></div></div></td><td>"98수수료", "2700%", "원수사 97%"</td><td><span class="r-tag t-ben">활용 가능</span></td></tr>
+          <tr><td class="rn">02</td><td><strong>DB 고통 → DB 해결</strong></td><td>7종 (64%)</td><td><div class="r-sbar"><div class="r-sd on"></div><div class="r-sd on"></div><div class="r-sd on"></div><div class="r-sd on"></div><div class="r-sd"></div></div></td><td>"DB 구조가 문제", "DB 무료 제공"</td><td><span class="r-tag t-ben">활용 가능</span></td></tr>
+          <tr><td class="rn">03</td><td><strong>이직 고민 타겟 직접 호명</strong></td><td>6종 (55%)</td><td><div class="r-sbar"><div class="r-sd on"></div><div class="r-sd on"></div><div class="r-sd on"></div><div class="r-sd on"></div><div class="r-sd"></div></div></td><td>"이직 고민 중인 설계사/관리자 주목"</td><td><span class="r-tag t-ben">활용 가능</span></td></tr>
+          <tr><td class="rn">04</td><td><strong>비교표 (좋은 vs 나쁜 회사)</strong></td><td>2종 (18%)</td><td><div class="r-sbar"><div class="r-sd on"></div><div class="r-sd on"></div><div class="r-sd on"></div><div class="r-sd"></div><div class="r-sd"></div></div></td><td>"이직하기 좋은 회사 vs 안 좋은 회사"</td><td><span class="r-tag t-ben">활용 가능</span></td></tr>
+          <tr><td class="rn">05</td><td><strong>라이프스타일 드림 (해외여행 등)</strong></td><td>2종 (18%)</td><td><div class="r-sbar"><div class="r-sd on"></div><div class="r-sd on"></div><div class="r-sd on"></div><div class="r-sd"></div><div class="r-sd"></div></div></td><td>"꿈의 직장", "해외여행 1년 2번"</td><td><span class="r-tag t-ben">활용 가능</span></td></tr>
+          <tr><td class="rn">06</td><td><strong>AI·디지털 전환 포지셔닝</strong></td><td>0종 (0%)</td><td><div class="r-sbar"><div class="r-sd"></div><div class="r-sd"></div><div class="r-sd"></div><div class="r-sd"></div><div class="r-sd"></div></div></td><td>—</td><td><span class="r-tag t-gap">🌟 MZF 독점 공백</span></td></tr>
+          <tr><td class="rn">07</td><td><strong>n잡 설계사 관리자 포지셔닝</strong></td><td>0종 (0%)</td><td><div class="r-sbar"><div class="r-sd"></div><div class="r-sd"></div><div class="r-sd"></div><div class="r-sd"></div><div class="r-sd"></div></div></td><td>—</td><td><span class="r-tag t-gap">🌟 MZF 독점 공백</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="ref-sh" style="margin-top:32px;"><span class="r-label">Copy Comparison</span><h3>시장 포화 카피 vs MZF 차별 카피</h3></div>
+    <div class="r-cmp">
+      <div class="r-cmp-col"><div class="ch">🔴 시장 포화 — 경쟁 과밀 카피</div><div class="r-ci">98수수료 / 원수사 97% / 최대 2700%</div><div class="r-ci">정착지원금 최대 1억 / 업계 최고</div><div class="r-ci">어디서 받은 제안보다 더 많이 드립니다</div><div class="r-ci">DB 걱정 없습니다 / DB 무상 제공</div><div class="r-ci">이직 고민 중인 설계사 주목!</div><div class="r-ci">꿈의 직장 / 해외여행 / 연봉 2억</div></div>
+      <div class="r-cmp-col"><div class="ch">🟢 MZF 차별 — 블루오션 카피 방향</div><div class="r-ci">원수사가 왜 n잡 설계사를 채용하기 시작했을까?</div><div class="r-ci">AI 시대, 혼자 영업하는 설계사 vs 팀을 키우는 관리자</div><div class="r-ci">다이렉트 보험처럼 — 셀프 보험도 막을 수 없는 시대</div><div class="r-ci">AI가 DB를 쌓고, 본사가 설계하고, 당신은 팀을 키운다</div><div class="r-ci">n잡 설계사들과 경쟁할 것인가, 관리할 것인가</div><div class="r-ci">지점장 포지션 — 먼저 선점한 사람이 먼저 올라선다</div></div>
+    </div>
+    <div class="r-tbl-wrap" style="margin-top:24px;">
+      <div class="r-tbl-head">광고 포맷 분석 <span>FORMAT BREAKDOWN</span></div>
+      <table class="r-tbl">
+        <thead><tr><th>포맷</th><th>사용 비율</th><th>특징</th><th>MZF 권장</th></tr></thead>
+        <tbody>
+          <tr><td><strong>단일 이미지 (인물 + 체크리스트)</strong></td><td>45%</td><td>빠른 스캔 가능, 모바일 최적화</td><td>✓ Phase 1 우선 적용</td></tr>
+          <tr><td><strong>카드뉴스 슬라이드 (3~5장)</strong></td><td>27%</td><td>스와이프 유도로 체류시간↑, 비교표 효과적</td><td>✓ 비교 메시지에 활용</td></tr>
+          <tr><td><strong>영상 (릴스 8~30초)</strong></td><td>18%</td><td>CPM 높지만 임팩트 최강, 알고리즘 우대</td><td>✓ J10 기반 소재 우선</td></tr>
+          <tr><td><strong>텍스트 중심 (상세 공개형)</strong></td><td>10%</td><td>정보량으로 신뢰, 전문직/경력직 타겟 유효</td><td>△ 보조 소재로 활용</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ── TAB 4: STRATEGY ── -->
+  <div id="rs-strategy" class="ref-sec">
+    <div class="ref-sh"><span class="r-label">MZF Strategy</span><h3>MZ패밀리 캠페인 전략 방향</h3><p>경쟁사 분석을 기반으로 MZF 광고가 취해야 할 포지셔닝 전략을 정리합니다.</p></div>
+    <div class="r-hl">
+      <div class="r-hl-item"><h4>핵심 포지셔닝</h4><p>시장 내 <strong>유일한 "관리자 선점" 프레임.</strong> 설계사 유치 경쟁이 아닌, AI·n잡 시대를 앞서 읽은 <strong>지점장 포지셔닝.</strong></p></div>
+      <div class="r-hl-item"><h4>타겟 정의</h4><p>경쟁사 광고를 이미 보고 <strong>"더 좋은 조건"을 비교 중인 3~7년차 설계사.</strong> 수수료보다 커리어 방향성에 고민하는 층.</p></div>
+      <div class="r-hl-item"><h4>블루오션 각도</h4><p>11종 수집 광고 어디에도 없는 <strong>"AI 전환 + n잡 관리자" 프레임.</strong> 선점 기회 현존.</p></div>
+    </div>
+    <div class="r-strat-grid">
+      <div class="r-sc"><h4><div class="r-sc-icon ic-g">🎯</div>MZF만의 차별 메시지</h4><ul class="r-sl"><li>원수사 n잡 채용 = 시장 구조 변화의 신호탄으로 프레이밍</li><li>다이렉트 보험 성공 사례를 아날로지로 활용 — "셀프 보험도 막을 수 없다"</li><li>AI가 DB·설계 처리 → 지점장은 팀 빌딩에만 집중하는 새로운 구조 소개</li><li>"경쟁 vs 선점" 이분법으로 타겟의 선택을 단순화</li><li>타이밍 FOMO — "AI 전환기 초기 진입자만이 포지션 확보 가능"</li></ul></div>
+      <div class="r-sc"><h4><div class="r-sc-icon ic-r">⚠️</div>경쟁사 카피에서 벗어날 것</h4><ul class="r-sl"><li>"업계 최고 수수료" — 모든 경쟁사 동일 주장, 신뢰도 0</li><li>"정착지원금 최대 n억" — 조건 경쟁 돌입 시 MZF 불리</li><li>"DB 걱정 없습니다" — 이미 포화된 메시지</li><li>"이직 고민 중인 분 주목" — 너무 직접적, 거부감 발생</li><li>해외여행·꿈의 직장 — MZF 브랜드와 미스매치</li></ul></div>
+      <div class="r-sc"><h4><div class="r-sc-icon ic-b">📐</div>Phase 1 런칭 소재 구성</h4><ul class="r-sl"><li><strong>J10 릴스 20초</strong> — "n잡 설계사 관리 지점장" 도발 후크형</li><li><strong>도발 단일 이미지</strong> — "경쟁 vs 선점" 이분법 카드</li><li><strong>비교 카드뉴스 4장</strong> — 시장 흐름 설명 + MZF 구조 소개</li><li><strong>인터뷰 릴스</strong> — 현직 지점장 "AI로 팀 관리 달라진 점" 증언</li></ul></div>
+      <div class="r-sc"><h4><div class="r-sc-icon ic-g">📊</div>KPI 목표</h4><ul class="r-sl"><li>CPL 목표: 3만원 이하 (업계 평균 5~8만원)</li><li>CTR 목표: 도발형 2.5%↑ / 긍정형 1.8%↑</li><li>영상 완시청률 (20초): 35%↑</li><li>Phase 1: 2주 4종 동시 집행 → 1위 소재 예산 집중</li><li>카카오+META 병행: 카카오는 40~50대 경력 설계사 타겟</li></ul></div>
+    </div>
+    <div class="r-tbl-wrap">
+      <div class="r-tbl-head" style="background:#C62828;">⚠️ 금감원 규제 주의 <span style="color:#FFCDD2;">COMPLIANCE ALERT</span></div>
+      <table class="r-tbl">
+        <thead><tr><th>항목</th><th>규제 내용</th><th>MZF 대응 방향</th></tr></thead>
+        <tbody>
+          <tr><td><strong>보험 광고 심의</strong></td><td>2025년 9월부터 SNS 보험 광고 사전심의 강화. 미이행 시 1억원 이하 과태료.</td><td>리크루팅 광고는 "채용 공고"로 분류. 상품 판매 유인 문구 배제.</td></tr>
+          <tr><td><strong>수수료 수치 공개</strong></td><td>"98%", "2700%" 등 수치 광고는 상품 광고로 간주 가능성.</td><td>수치보다 "투명한 수수료 구조" 등 간접 표현 우선 검토.</td></tr>
+          <tr><td><strong>허위·과장 금지</strong></td><td>"업계 최고", "최대 n억" 등 과장 표현 금소법 위반 소지.</td><td>구체적 수치는 내부 자료 근거 확보 후 사용.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+`;
+}
+/* ── DRAFT PANEL ── */
+function toggleDraft() {
+  const p = document.getElementById('draftPanel');
+  if (!p.innerHTML.trim()) buildDraft();
+  const open = p.style.display !== 'none';
+  p.style.display = open ? 'none' : 'block';
+  document.body.style.overflow = open ? '' : 'hidden';
+}
+function closeDraft() {
+  document.getElementById('draftPanel').style.display = 'none';
+  document.body.style.overflow = '';
+}
+function dTab(id, el) {
+  document.querySelectorAll('.draft-tab').forEach(t=>t.classList.remove('on'));
+  document.querySelectorAll('.draft-sec').forEach(s=>s.classList.remove('on'));
+  el.classList.add('on');
+  document.getElementById(id).classList.add('on');
+}
+function buildDraft() {
+  document.getElementById('draftPanel').innerHTML = `
+<div class="ref-close-bar" style="border-bottom-color:#9B6BFF;">
+  <div>
+    <div style="font-family:var(--FM);font-size:9px;color:#9B6BFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;">MZ FAMILY RECRUIT · 소재 초안</div>
+    <h2>광고 소재 초안 모음 — 9종</h2>
+  </div>
+  <div style="display:flex;align-items:center;gap:16px;">
+    <div class="ref-meta">초안 버전 · 2026.03 &nbsp;·&nbsp; n잡 설계사 포지셔닝 / 타겟 세분화 시리즈</div>
+    <button class="ref-close-btn" onclick="closeDraft()">✕ 닫기</button>
+  </div>
+</div>
+<div class="ref-tabs">
+  <div class="draft-tab ref-tab on" onclick="dTab('ds-all',this)">🗂 전체 9종</div>
+  <div class="draft-tab ref-tab" onclick="dTab('ds-hook',this)">🔴 후크형 (도발)</div>
+  <div class="draft-tab ref-tab" onclick="dTab('ds-secret',this)">🔑 비밀 공개형</div>
+  <div class="draft-tab ref-tab" onclick="dTab('ds-note',this)">📝 포스트잇 시리즈</div>
+  <div class="draft-tab ref-tab" onclick="dTab('ds-checklist',this)">✅ 체크리스트형</div>
+</div>
+<div class="ref-body">
+
+  <!-- STATS -->
+  <div class="r-stats" style="margin-bottom:24px;">
+    <div class="r-stat"><div class="n">9<em>종</em></div><div class="l">초안 소재 총계</div></div>
+    <div class="r-stat"><div class="n">4<em>개</em></div><div class="l">소재 유형</div></div>
+    <div class="r-stat"><div class="n">3<em>개</em></div><div class="l">핵심 메시지 각도</div></div>
+    <div class="r-stat"><div class="n" style="color:#9B6BFF;">0<em>종</em></div><div class="l">확정 (미팅 후 선택)</div></div>
+  </div>
+
+  <!-- ALL TAB -->
+  <div id="ds-all" class="draft-sec on">
+    <div class="ref-sh"><span class="r-label" style="color:#9B6BFF;">All Creatives</span><h3>전체 소재 초안 9종</h3><p>3가지 각도(도발 후크 / 비밀 공개 / 포스트잇) × 타겟 세분화 조합으로 구성된 초안입니다.</p></div>
+
+    <!-- GROUP 1: 도미노 도발형 -->
+    <div style="margin-bottom:32px;">
+      <div class="r-tbl-head" style="background:#CC2A1E;border-radius:8px 8px 0 0;">🔴 후크형 — 타겟 직접 호명 도발 <span>HOOK / DIRECT CALL</span></div>
+      <div style="background:white;border:1px solid #E2E6EA;border-top:none;border-radius:0 0 8px 8px;padding:20px;">
+        <div style="display:grid;grid-template-columns:240px 1fr;gap:24px;align-items:start;">
+          <div style="background:#f5f7fa;border-radius:10px;padding:16px;text-align:center;">
+            <div style="background:#0057B7;color:white;border-radius:8px;padding:12px;font-weight:900;font-size:15px;letter-spacing:-0.3px;line-height:1.4;margin-bottom:8px;">월납 100만 이하<br>설계사 주목!</div>
+            <div style="background:#0A0A0A;color:#ccc;border-radius:6px;padding:8px;font-size:11px;line-height:1.6;">내 조건에 수수료 & 지원<br>가장 많이 주는 GA 바로 확인</div>
+            <div style="margin-top:8px;font-family:var(--FM);font-size:9px;color:#888;">도미노 이미지 · 1:1</div>
+          </div>
+          <div>
+            <div class="r-tags" style="margin-bottom:10px;"><span class="r-tag t-pain">#월납100만이하</span><span class="r-tag t-num">#타겟직접호명</span><span class="r-tag t-fomo">#도발형</span></div>
+            <div class="r-agrid" style="margin-bottom:12px;">
+              <div class="r-ai"><div class="k">핵심 훅</div><div class="v">소득 기준 직접 호명 → 저수익 설계사 타겟</div></div>
+              <div class="r-ai"><div class="k">비주얼 콘셉트</div><div class="v">도미노 첫 장 = 전환의 시작점 은유</div></div>
+              <div class="r-ai"><div class="k">포맷</div><div class="v">단일 이미지 1:1 · FB/IG Feed</div></div>
+              <div class="r-ai"><div class="k">CTA 방향</div><div class="v">GA 조건 확인 → 상담 신청 랜딩</div></div>
+            </div>
+            <div class="r-ins" style="margin-bottom:10px;"><div class="r-ins-l" style="color:#9B6BFF;">제작 피드백 포인트</div><p>✓ "이하"로 저성과 구간 타겟 명확. "100만"이 구체적 수치 역할 수행. <br>△ CTA 문구 "바로 확인"이 너무 모호 → "15분 무료 비교 상담"으로 교체 검토.</p></div>
+            <div style="background:#FEF3C7;border-radius:6px;padding:8px 12px;font-size:11px;color:#92400E;"><strong>A/B 테스트 제안:</strong> "월납 100만 이하" vs "월납 300만 이하" — 타겟 폭 비교</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GROUP 2: 체크리스트 -->
+    <div style="margin-bottom:32px;">
+      <div class="r-tbl-head" style="background:#D97706;border-radius:8px 8px 0 0;">✅ 체크리스트형 — 자가진단 유도 <span>SELF-DIAGNOSIS</span></div>
+      <div style="background:white;border:1px solid #E2E6EA;border-top:none;border-radius:0 0 8px 8px;padding:20px;">
+        <div style="display:grid;grid-template-columns:240px 1fr;gap:24px;align-items:start;">
+          <div style="background:#FFFDE7;border-radius:10px;padding:16px;">
+            <div style="font-weight:900;font-size:14px;margin-bottom:10px;color:#111;">이 중 하나라도 해당된다면?</div>
+            <div style="font-size:11px;line-height:2;color:#333;">☑ 보험 경력 2년 이상<br>☑ 더 높은 수수료를 원한다<br>☑ 관리자로 성장하고 싶다<br>☑ 지금 회사에 한계를 느낀다<br>☑ 온라인 영업에 관심이 있다</div>
+            <div style="margin-top:10px;background:#E65100;color:white;border-radius:5px;padding:7px;font-size:10px;font-weight:700;text-align:center;">본사 지원 받고 소득 2배 높일 기회!</div>
+            <div style="margin-top:6px;font-family:var(--FM);font-size:9px;color:#888;text-align:center;">체크리스트 노트 이미지 · 1:1</div>
+          </div>
+          <div>
+            <div class="r-tags" style="margin-bottom:10px;"><span class="r-tag t-soc">#자가진단</span><span class="r-tag t-ben">#경력2년이상</span><span class="r-tag t-fomo">#소득2배</span></div>
+            <div class="r-agrid" style="margin-bottom:12px;">
+              <div class="r-ai"><div class="k">핵심 훅</div><div class="v">체크리스트로 타겟 자기 분류 유도</div></div>
+              <div class="r-ai"><div class="k">비주얼 콘셉트</div><div class="v">친근한 메모장 — 부담 없는 진입</div></div>
+              <div class="r-ai"><div class="k">포맷</div><div class="v">단일 이미지 1:1 · Feed 최적</div></div>
+              <div class="r-ai"><div class="k">강점</div><div class="v">5가지 중 1개만 해당해도 클릭 유도</div></div>
+            </div>
+            <div class="r-ins" style="margin-bottom:10px;"><div class="r-ins-l" style="color:#9B6BFF;">제작 피드백 포인트</div><p>✓ "하나라도 해당된다면" 포용적 타겟 설정 → 광범위 CVR 기대. <br>△ 체크리스트 항목 중 "온라인 영업 관심" = MZF 핵심 차별점, 더 크게 강조 검토.</p></div>
+            <div style="background:#E8F8EF;border-radius:6px;padding:8px 12px;font-size:11px;color:#16A34A;"><strong>MZF 핵심 소재 적합도:</strong> ★★★★☆ — 체크리스트는 참여율 높고 공유 유도에 유리</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GROUP 3: 비밀 공개형 -->
+    <div style="margin-bottom:32px;">
+      <div class="r-tbl-head" style="background:#1565C0;border-radius:8px 8px 0 0;">🔑 비밀 공개형 — 호기심 후크 시리즈 <span>CURIOSITY / SECRET REVEAL</span></div>
+      <div style="background:white;border:1px solid #E2E6EA;border-top:none;border-radius:0 0 8px 8px;padding:20px;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:16px;">
+          <div style="background:#f5f7fa;border-radius:10px;padding:14px;">
+            <div style="display:grid;grid-template-columns:100px 1fr;gap:12px;align-items:start;">
+              <div style="background:linear-gradient(135deg,#e0eef8,#c0d8f0);border-radius:7px;padding:10px;text-align:center;font-size:11px;color:#111;font-weight:700;line-height:1.5;">원수사들이 왜<br>n잡 설계사를<br>채용할까?<br><span style="font-size:9px;font-weight:400;color:#555;">그 이유는 바로...</span></div>
+              <div>
+                <div class="r-tags"><span class="r-tag t-fomo">#호기심후크</span><span class="r-tag t-pain">#n잡시장</span></div>
+                <div style="font-size:11px;color:#555;margin-top:6px;line-height:1.5;">여성 인물 (입술에 손가락) + 청록 배경<br>카드뉴스 연결용 표지 슬라이드</div>
+                <div class="r-ins" style="margin-top:8px;"><div class="r-ins-l" style="color:#9B6BFF;">포인트</div><p>"그 이유는 바로..." 클리프행어 → 스와이프 강요 구조.</p></div>
+              </div>
+            </div>
+          </div>
+          <div style="background:#1a1a1a;border-radius:10px;padding:14px;">
+            <div style="display:grid;grid-template-columns:100px 1fr;gap:12px;align-items:start;">
+              <div style="background:linear-gradient(135deg,#3d2a00,#7a5200);border-radius:7px;padding:10px;text-align:center;font-size:11px;color:#FFD700;font-weight:700;line-height:1.5;">원수사들이<br>숨기고 있는<br>n잡 설계사<br>채용의 진짜 이유</div>
+              <div>
+                <div class="r-tags"><span class="r-tag t-pain">#음모론프레임</span><span class="r-tag t-fomo">#진짜이유</span></div>
+                <div style="font-size:11px;color:#aaa;margin-top:6px;line-height:1.5;">문 열리는 어두운 방 비주얼<br>2종 버전 (빛 방향 상이)</div>
+                <div style="background:#2a2a2a;border-radius:5px;padding:7px;margin-top:6px;font-size:10px;color:#ccc;">"숨기고 있는" → 폭로 프레임. 높은 CTR 예상.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="r-ins"><div class="r-ins-l" style="color:#9B6BFF;">시리즈 운영 제안</div><p>이미지 3 → 이미지 4/5 순서로 카드뉴스 구성 시 스와이프율↑. "왜?" → "숨기고 있는 진짜 이유" 클리프행어 2단계 구조로 카드뉴스 5~7장 연결 가능.</p></div>
+      </div>
+    </div>
+
+    <!-- GROUP 4: 포스트잇 시리즈 -->
+    <div style="margin-bottom:32px;">
+      <div class="r-tbl-head" style="background:#F57C00;border-radius:8px 8px 0 0;">📝 포스트잇 시리즈 — 역발상 CTA <span>REVERSE PSYCHOLOGY / STICKY NOTE</span></div>
+      <div style="background:white;border:1px solid #E2E6EA;border-top:none;border-radius:0 0 8px 8px;padding:20px;">
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:16px;">
+          <div style="text-align:center;">
+            <div style="background:#FFF176;border-radius:8px;padding:12px;font-size:11px;font-weight:700;line-height:1.6;color:#111;min-height:80px;display:flex;align-items:center;justify-content:center;">n잡 보험설계사<br>광고 한번도<br>안보신 분은<br>클릭하지 마세요.</div>
+            <div style="margin-top:6px;font-family:var(--FM);font-size:9px;color:#888;">Ver A · 핑크펜 · 품목多</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="background:#FFF176;border-radius:8px;padding:12px;font-size:11px;font-weight:700;line-height:1.6;color:#111;min-height:80px;display:flex;align-items:center;justify-content:center;">n잡 보험설계사 광고<br>한번도 안보신 분은<br>클릭하지 마세요.</div>
+            <div style="margin-top:6px;font-family:var(--FM);font-size:9px;color:#888;">Ver B · 깔끔 버전</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="background:#FFF176;border-radius:8px;padding:12px;font-size:11px;font-weight:700;line-height:1.6;color:#111;min-height:80px;display:flex;align-items:center;justify-content:center;">월납 100만원 이상<br>하시는 보험설계사<br>분은 절대<br>클릭하지 마세요</div>
+            <div style="margin-top:6px;font-family:var(--FM);font-size:9px;color:#888;">Ver C · 고수입 타겟</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="background:#FFF176;border-radius:8px;padding:12px;font-size:11px;font-weight:700;line-height:1.6;color:#111;min-height:80px;display:flex;align-items:center;justify-content:center;">월납 100만원 이상<br>하시는 보험설계사 분<br>절대 클릭하지 마세요.</div>
+            <div style="margin-top:6px;font-family:var(--FM);font-size:9px;color:#888;">Ver D · 밑줄 강조</div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div class="r-ins"><div class="r-ins-l" style="color:#9B6BFF;">역발상 심리학</div><p>"클릭하지 마세요" = 금지 효과(Forbidden Fruit). 클릭 충동 2.3배↑ (업계 데이터 기준). 특히 Cold 타겟 CTR에 효과적.</p></div>
+          <div class="r-ins" style="background:#FFF3E0;border-color:#F57C00;"><div class="r-ins-l" style="color:#E65100;">A/B 테스트 구성 제안</div><p>Ver A/B ("n잡 광고 못 본 분") vs Ver C/D ("100만 이상 설계사") — 타겟층 다름. 동시 집행 후 CPL 비교 2주.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 종합 판단 -->
+    <div class="r-hl" style="background:#1a0a2e;">
+      <div class="r-hl-item"><h4 style="color:#9B6BFF;">Phase 1 런칭 추천 소재</h4><p>포스트잇 <strong>Ver C</strong> ("100만 이상 절대 클릭 마세요") — 역발상 + 고수입 타겟 세분화 조합. Cold 타겟 CTR 최강 예상.</p></div>
+      <div class="r-hl-item"><h4 style="color:#9B6BFF;">카드뉴스 연결 시나리오</h4><p>이미지3(인물후크) → 이미지4/5(비밀 공개) → 체크리스트(자가진단) → CTA 순서로 5~7장 카드뉴스 구성 가능.</p></div>
+      <div class="r-hl-item"><h4 style="color:#9B6BFF;">다음 제작 액션</h4><p>1) 포스트잇 Ver A vs C A/B 테스트 세팅<br>2) 비밀 공개형 카드뉴스 본문 5장 카피 작성<br>3) 도미노 이미지 Canva 디자인 완성본 제작</p></div>
+    </div>
+  </div>
+
+  <!-- HOOK TAB -->
+  <div id="ds-hook" class="draft-sec">
+    <div class="ref-sh"><span class="r-label" style="color:#CC2A1E;">Hook Type</span><h3>후크형 — 타겟 직접 호명 도발 소재</h3><p>스크롤을 멈추는 첫 0~2초 임팩트에 집중한 소재 유형.</p></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+      <div class="r-sc">
+        <h4 style="font-size:18px;border-bottom:2px solid #CC2A1E;padding-bottom:10px;margin-bottom:16px;">월납 100만 이하 설계사 주목!</h4>
+        <div style="background:#0057B7;color:white;border-radius:8px;padding:16px;margin-bottom:14px;"><div style="font-weight:900;font-size:20px;line-height:1.3;">월납 100만 이하<br>설계사 주목!</div><div style="margin-top:8px;font-size:12px;color:#cce0ff;">내 조건에 수수료 & 지원<br>가장 많이 주는 GA 바로 확인</div></div>
+        <ul class="r-sl"><li>저성과 구간 타겟 명확히 분리 — 공감도↑</li><li>도미노 비주얼 = "변화의 첫 단추" 메타포</li><li>CTA: "내 조건에 가장 많이 주는" — 비교 심리 자극</li><li>개선안: CTA → "15분 무료 조건 비교 상담"</li></ul>
+      </div>
+      <div class="r-sc">
+        <h4 style="font-size:16px;margin-bottom:14px;">소재 스펙 & 운영 가이드</h4>
+        <div class="r-agrid">
+          <div class="r-ai"><div class="k">광고 포맷</div><div class="v">단일 이미지 1:1 (1080×1080)</div></div>
+          <div class="r-ai"><div class="k">플랫폼</div><div class="v">FB Feed / IG Feed</div></div>
+          <div class="r-ai"><div class="k">타겟 세그먼트</div><div class="v">SEG01 (3~10년차 저성과)</div></div>
+          <div class="r-ai"><div class="k">예상 KPI</div><div class="v">CTR 1.8~2.5%</div></div>
+        </div>
+        <div style="background:#FEE2E2;border-radius:6px;padding:10px;margin-top:12px;font-size:11px;color:#7F1D1D;"><strong>주의:</strong> "100만 이하"가 금감원 기준 허위과장으로 간주될 수 있음. 내부 법무 검토 후 게재 권장.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECRET TAB -->
+  <div id="ds-secret" class="draft-sec">
+    <div class="ref-sh"><span class="r-label" style="color:#1565C0;">Secret Reveal</span><h3>비밀 공개형 — 호기심 후크 카드뉴스 시리즈</h3><p>경쟁사 미활용 "n잡 시장 구조 폭로" 각도. MZF 독점 포지셔닝.</p></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:24px;">
+      <div class="r-sc">
+        <div style="background:linear-gradient(135deg,#e8f4ff,#c5dff7);border-radius:8px;padding:16px;margin-bottom:14px;text-align:center;">
+          <div style="font-weight:900;font-size:22px;color:#111;line-height:1.4;">원수사들이 왜<br>n잡 설계사를<br>채용할까?</div>
+          <div style="margin-top:10px;font-size:14px;color:#555;">그 이유는 바로...</div>
+        </div>
+        <div class="r-tags"><span class="r-tag t-fomo">#호기심후크</span><span class="r-tag t-pain">#n잡시장</span><span class="r-tag t-auth">#카드뉴스표지</span></div>
+        <ul class="r-sl" style="margin-top:10px;"><li>여성 인물 + "쉿" 제스처 — 비밀 분위기 연출</li><li>청록 그라디언트 배경 — MZF 에메랄드 그린 연계</li><li>카드뉴스 1장(표지) → 2~5장(본문)으로 연결</li><li>댓글 유도: "이유가 뭔지 아는 분?" 후기 코멘트</li></ul>
+      </div>
+      <div class="r-sc" style="background:#111;color:white;">
+        <div style="background:linear-gradient(135deg,#2d1a00,#5a3600);border-radius:8px;padding:16px;margin-bottom:14px;text-align:center;border:1px solid #8B6914;">
+          <div style="font-weight:900;font-size:18px;color:#FFD700;line-height:1.4;">원수사들이 숨기고 있는<br>n잡 설계사 채용의<br>진짜 이유</div>
+        </div>
+        <div class="r-tags"><span class="r-tag t-pain">#폭로프레임</span><span class="r-tag t-fomo">#진짜이유</span></div>
+        <ul class="r-sl" style="margin-top:10px;"><li style="color:#ccc;">문이 열리는 어두운 방 — 비밀 공개 강한 암시</li><li style="color:#ccc;">"숨기고 있는" 단어 = 폭로 저널리즘 톤</li><li style="color:#ccc;">CTR 최강 예상 — 단, 금감원 원수사 직접 언급 주의</li><li style="color:#ccc;">2종 버전 (빛 방향 차이) — A/B 테스트 가능</li></ul>
+      </div>
+    </div>
+    <div class="r-tbl-wrap">
+      <div class="r-tbl-head">카드뉴스 5장 구성 시나리오 <span>STORY FLOW</span></div>
+      <table class="r-tbl">
+        <thead><tr><th>슬라이드</th><th>비주얼</th><th>카피</th><th>역할</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1장 (표지)</strong></td><td>여성 인물 (이미지3)</td><td>"원수사들이 왜 n잡 설계사를 채용할까? 그 이유는 바로..."</td><td>클리프행어 → 스와이프 강요</td></tr>
+          <tr><td><strong>2장</strong></td><td>문 열리는 방 (이미지4/5)</td><td>"원수사들이 숨기고 있는 진짜 이유"</td><td>긴장감 증폭</td></tr>
+          <tr><td><strong>3장</strong></td><td>AI/다이렉트 보험 아이콘</td><td>"명분은 채용이지만, 실상은 고객 셀프 가입 유도입니다"</td><td>폭로 — 공분 자극</td></tr>
+          <tr><td><strong>4장</strong></td><td>분기점 그래픽</td><td>"경쟁할 것인가 vs 관리할 것인가"</td><td>선택 강요 — 설득</td></tr>
+          <tr><td><strong>5장 (CTA)</strong></td><td>에메랄드 그린 배경</td><td>"n잡 설계사 관리 지점장 포지션 — 지금 선착순 상담"</td><td>전환 유도</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- NOTE TAB -->
+  <div id="ds-note" class="draft-sec">
+    <div class="ref-sh"><span class="r-label" style="color:#F57C00;">Sticky Note Series</span><h3>포스트잇 시리즈 4종 — 역발상 심리 CTA</h3><p>"클릭하지 마세요" 금지 효과(Forbidden Fruit)를 활용한 역발상 광고 시리즈.</p></div>
+    <div class="r-hl" style="margin-bottom:24px;">
+      <div class="r-hl-item"><h4>역발상 심리 원리</h4><p>금지 명령 → 반발 심리 자극 → 클릭 충동 증폭. 업계 평균 CTR 대비 <strong>2~3배</strong> 높은 반응률 측정 사례 다수.</p></div>
+      <div class="r-hl-item"><h4>타겟 분리 전략</h4><p>Ver A/B: n잡 광고 기인지 타겟 (이미 문제 인식) vs Ver C/D: 월납 100만+ 고성과자 (현재 수익 만족 → 도발)</p></div>
+      <div class="r-hl-item"><h4>운영 권장 방식</h4><p>4종 동시 집행 → 1주 후 CTR/CPL 상위 2종 선별 → 예산 집중. <strong>A/B × A/B 2중 테스트</strong> 구조.</p></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+      <div class="r-sc">
+        <div style="display:flex;gap:8px;margin-bottom:10px;"><span class="r-tag t-fomo">Ver A</span><span style="font-size:12px;font-weight:700;">n잡 광고 못 본 분 — 품목多 버전</span></div>
+        <div style="background:#FFF176;border-radius:8px;padding:16px;font-size:14px;font-weight:700;line-height:1.8;margin-bottom:12px;text-align:center;border:2px dashed #F9A825;">n잡 보험설계사<br>광고 한번도<br>안보신 분은<br>클릭하지 마세요.</div>
+        <div class="r-agrid"><div class="r-ai"><div class="k">타겟</div><div class="v">n잡 트렌드 미인지 설계사</div></div><div class="r-ai"><div class="k">심리 소구</div><div class="v">소외감 + 호기심</div></div><div class="r-ai"><div class="k">강점</div><div class="v">클리프행어 + 금지효과 2중</div></div><div class="r-ai"><div class="k">약점</div><div class="v">품목 오브젝트로 시선 분산</div></div></div>
+      </div>
+      <div class="r-sc">
+        <div style="display:flex;gap:8px;margin-bottom:10px;"><span class="r-tag t-fomo">Ver B</span><span style="font-size:12px;font-weight:700;">n잡 광고 못 본 분 — 깔끔 버전</span></div>
+        <div style="background:#FFF176;border-radius:8px;padding:16px;font-size:14px;font-weight:700;line-height:1.8;margin-bottom:12px;text-align:center;border:2px dashed #F9A825;">n잡 보험설계사 광고<br>한번도 안보신 분은<br>클릭하지 마세요.</div>
+        <div class="r-agrid"><div class="r-ai"><div class="k">타겟</div><div class="v">동일 (n잡 미인지)</div></div><div class="r-ai"><div class="k">차이점</div><div class="v">품목 제거 → 텍스트 집중</div></div><div class="r-ai"><div class="k">강점</div><div class="v">가독성↑, 모바일 최적</div></div><div class="r-ai"><div class="k">추천</div><div class="v">A vs B 중 B 우선 집행 권장</div></div></div>
+      </div>
+      <div class="r-sc">
+        <div style="display:flex;gap:8px;margin-bottom:10px;"><span class="r-tag t-num">Ver C</span><span style="font-size:12px;font-weight:700;">월납 100만↑ 설계사 — 4행 버전</span></div>
+        <div style="background:#FFF176;border-radius:8px;padding:16px;font-size:14px;font-weight:700;line-height:1.8;margin-bottom:12px;text-align:center;border:2px dashed #F9A825;">월납 100만원 이상<br>하시는 보험설계사<br>분은 절대<br>클릭하지 마세요</div>
+        <div class="r-agrid"><div class="r-ai"><div class="k">타겟</div><div class="v">현재 성과 있는 경력 설계사</div></div><div class="r-ai"><div class="k">심리 소구</div><div class="v">자존심 자극 + 도발</div></div><div class="r-ai"><div class="k">강점</div><div class="v">"절대" 강도 높은 금지어</div></div><div class="r-ai"><div class="k">약점</div><div class="v">4행 → 가독성 낮음</div></div></div>
+      </div>
+      <div class="r-sc">
+        <div style="display:flex;gap:8px;margin-bottom:10px;"><span class="r-tag t-num">Ver D</span><span style="font-size:12px;font-weight:700;">월납 100만↑ 설계사 — 밑줄 버전</span></div>
+        <div style="background:#FFF176;border-radius:8px;padding:16px;font-size:14px;font-weight:700;line-height:1.8;margin-bottom:12px;text-align:center;border:2px dashed #F9A825;">월납 100만원 이상<br>하시는 보험설계사 분<br><span style="text-decoration:underline;text-decoration-thickness:2px;">절대 클릭하지 마세요.</span></div>
+        <div class="r-agrid"><div class="r-ai"><div class="k">타겟</div><div class="v">동일 (고성과 경력)</div></div><div class="r-ai"><div class="k">차이점</div><div class="v">밑줄 강조 + 3행 정리</div></div><div class="r-ai"><div class="k">강점</div><div class="v">가독성↑, 강조 명확</div></div><div class="r-ai"><div class="k">추천</div><div class="v">C vs D 중 D 우선 집행 권장</div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHECKLIST TAB -->
+  <div id="ds-checklist" class="draft-sec">
+    <div class="ref-sh"><span class="r-label" style="color:#D97706;">Checklist Type</span><h3>체크리스트형 — 자가진단 유도 소재</h3><p>타겟이 스스로 "나에게 해당되는 내용"임을 인식하게 만드는 참여형 포맷.</p></div>
+    <div style="display:grid;grid-template-columns:320px 1fr;gap:24px;">
+      <div>
+        <div style="background:#FFFDE7;border:2px solid #F9A825;border-radius:10px;padding:20px;text-align:center;">
+          <div style="font-weight:900;font-size:18px;margin-bottom:14px;color:#111;">이 중 하나라도 해당된다면?</div>
+          <div style="text-align:left;font-size:13px;line-height:2.2;color:#333;background:white;border-radius:7px;padding:12px;">☑ 보험 경력 2년 이상<br>☑ 더 높은 수수료를 원한다<br>☑ 관리자로 성장하고 싶다<br>☑ 지금 회사에 한계를 느낀다<br>☑ 온라인 영업에 관심이 있다</div>
+          <div style="margin-top:12px;background:#E65100;color:white;border-radius:6px;padding:8px 12px;font-size:12px;font-weight:700;">본사 지원 받고 소득 2배 높일 기회!</div>
+        </div>
+      </div>
+      <div>
+        <div class="r-sc" style="margin-bottom:16px;">
+          <h4 style="margin-bottom:12px;">체크리스트 항목별 타겟 분석</h4>
+          <table class="r-tbl" style="border:1px solid #E2E6EA;border-radius:6px;overflow:hidden;">
+            <thead><tr><th>항목</th><th>타겟 심리</th><th>MZF 연결 메시지</th></tr></thead>
+            <tbody>
+              <tr><td>보험 경력 2년 이상</td><td>경력 인정 욕구</td><td>"경험을 자산으로 바꿀 시간"</td></tr>
+              <tr><td>더 높은 수수료 원한다</td><td>소득 불만족</td><td>"투명한 수수료 구조 공개"</td></tr>
+              <tr><td>관리자로 성장하고 싶다</td><td>커리어 갈망</td><td>"지점장 = MZF 핵심 포지션"</td></tr>
+              <tr><td>지금 회사에 한계 느낀다</td><td>이탈 준비 완료</td><td>"변화는 결심에서 시작"</td></tr>
+              <tr><td style="color:#2CBB6B;font-weight:700;">온라인 영업에 관심 있다</td><td style="color:#2CBB6B;font-weight:700;">MZF 핵심 차별점</td><td style="color:#2CBB6B;font-weight:700;">"AI·디지털 지점 구조 소개"</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div class="r-ins"><div class="r-ins-l" style="color:#9B6BFF;">강화 제안</div><p>5번 항목 "온라인 영업 관심" = MZF 유일 차별점. 타이포 크기 2배 + 강조색으로 부각 필요.</p></div>
+          <div class="r-ins" style="background:#FFF3E0;border-color:#F57C00;"><div class="r-ins-l" style="color:#E65100;">운영 전략</div><p>카드뉴스 1장 단독 사용 + "하나라도 해당 시 댓글로 번호 남겨주세요" → 참여율↑</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+`;
 }
 </script>
 </body>
